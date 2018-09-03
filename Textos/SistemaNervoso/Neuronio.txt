@@ -1,0 +1,10 @@
+                                        Neurônio
+Os neurônios são a unidade funcional do sistema nervoso e juntamente com as células neuróglias 
+formam o tecido nervoso. Se comunicam através de sinapses e por eles se propagam os impulsos 
+nervosos. Eles são formados por um dendrito, corpo celular e axônio.
+Podem ser classificados em motores, que transmitem o sinal vindo do SNC até os órgãos efetores,
+neurônios sensoriais que recebem os estímulos do meio-ambiente e interneurônios que contiruem
+extensas redes de neurônios. 
+
+
+Para mais informações, acesse: https://www.infoescola.com/sistema-nervoso/neuronios/

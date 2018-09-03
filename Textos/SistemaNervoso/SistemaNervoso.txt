@@ -1,0 +1,8 @@
+                            Sistema Nervoso 
+O sistema nervoso é responsável pelo controle de um organismo, regulando
+as atividades corporais tanto voluntárias quanto involuntárias.
+O sistema nervoso é divido em Sistema Nervoso Central (SNC) e Sistema Nervoso 
+Periférico (SNP).O SNC é composto pela medula espinhal, cérebro, bulbo, cerebelo
+e ponte. Já o SNP pode ser divido e, voluntário e autonômo.
+
+Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-nervoso/
