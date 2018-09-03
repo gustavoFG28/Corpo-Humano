@@ -28,9 +28,7 @@ create table Acesso(
 idAcesso int primary key not null,
 data datetime not null,
 codigoUsuario int not null
-constraint fkUsuario foreign key(codigoUsuario) references Usuario(codigoUsuario),
-senha varchar(30) not null
-constraint fkSenha foreign key(senha) references Usuario(senha)
+constraint fkUsuario foreign key(codigoUsuario) references Usuario(codigoUsuario)
 )
 
 create table Quiz
