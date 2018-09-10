@@ -1,4 +1,9 @@
-aside#icones
+body
+{
+    background-color: cornflowerblue;
+    margin-left: 0px;
+}
+#icones
 {
     float: right;
     position: relative;
@@ -15,4 +20,26 @@ aside#icones
     height: 20%;
     position: relative;
     left:20%;
+}
+
+#menu
+{
+    float: left;
+    position: relative;
+    background-color: darkseagreen;
+    width: 5%;
+    height: 20%;
+    border-radius: 0 20pt 20pt 0;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.titulo
+{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Agency FB;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: 0
 }
