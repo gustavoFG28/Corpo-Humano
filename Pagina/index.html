@@ -3,21 +3,64 @@
         <meta charset="utf-8">
         <link rel="shortcut icon" href="icoSite.ico" type="image/x-icon" />
         <link rel="stylesheet" href="style.css" type="text/css">
+    <script>
+        //var sistemas = ["Digestorio","Esqueletico","Respiratorio","Cardiovascular",
+        //                "ReprMasc", "ReprFem","Muscular","Nervoso","Urinario"];
+        //window.onload = function IniciaIcones()
+        //{
+            //for(var i = 0; i < sistemas.length; i++)
+           // {
+                        
+            //}
+       // }
+        var estaAumentado = false;
+        // animação d3
+        function aumentaMenu()
+        {
+            var menu = document.getElementById("menu");
+            var titulo = document.getElementById("tituloMenu");
+            titulo.style.position = "relative";
+            if(!estaAumentado)
+            {
+                menu.style.width = "30%";
+                
+                titulo.style.left = "40%";
+                
+                estaAumentado = true;
+            }
+            else
+            {
+                menu.style.width = "5%";
+                
+                titulo.style.left = "0%";
+                
+                estaAumentado = false;  
+            }
+            
+           
+            
+            
+        }
+    </script>
         
-        <title>Corpo-Humano</title>
+        <title>CHI - Corpo Humano Interativo</title>
     </head>
     <body>
-        <header id="cabecalho">
-            <img id="S.Cardiovascular" src="Imagens/S.Cardiovascular.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.Digestorio.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.Esqueletico.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.Muscular.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.Nervoso.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.ReprFem.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.ReprMasc.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.Respiratorio.png" class="icone">
-            <img id="S.Cardiovascular" src="Imagens/S.Urinario.png" class="icone">
-        </header>
-        
+        <aside id="menu" onclick="aumentaMenu();">
+            <font class="titulo" id="tituloMenu">C<br>H<br>I</font>
+        </aside>
+        <aside id="icones">
+            <table>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Digestorio.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Esqueletico.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Respiratorio.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Cardiovascular.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.ReprMasc.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.ReprFem.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Muscular.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Nervoso.png" class="icone"></td></tr>
+                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Urinario.png" class="icone"></td></tr>
+            </table>
+        </aside>
     </body>
 </html>
