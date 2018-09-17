@@ -14,29 +14,31 @@
             //}
        // }
         var estaAumentado = false;
+    
         // animação d3
         function aumentaMenu()
         {
             var menu = document.getElementById("menu");
             var titulo = document.getElementById("tituloMenu");
+            var login = document.getElementById("login");
             titulo.style.position = "relative";
             if(!estaAumentado)
             {
-                menu.style.width = "30%";
-                
+                menu.style.width = "20%";
+                menu.style.height = "50%";
                 titulo.style.left = "40%";
+                login.style.display = "block";
                 
                 estaAumentado = true;
             }
             else
             {
                 menu.style.width = "5%";
-                
+                menu.style.height = "20%";
                 titulo.style.left = "0%";
-                
+                login.style.display = "none";
                 estaAumentado = false;  
             }
-            
            
             
             
@@ -48,18 +50,62 @@
     <body>
         <aside id="menu" onclick="aumentaMenu();">
             <font class="titulo" id="tituloMenu">C<br>H<br>I</font>
+            <div id="login">
+                <form method="post" action="" >
+                    <table>
+                        <tr>
+                            <th class="titulo">LOGIN</th>
+                        </tr>
+                        <tr>
+                            <td><label class="labels" for="txtUsuario">USUÁRIO:</label></td>
+                            <td><input type="text" id="txtUsuario"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labels" for="txtSenha">SENHA</label></td>
+                            <td><input type="password" id="txtUsuario"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit">  </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
         </aside>
+        
+        <img id="imgBanner" src="Imagens/simboloDaVida.png">
+        <p class="textos" id="introducao">A DIVERSÃO E A PRÁTICA SÃO <br> O CAMINHO MAIS CURTO PARA A <br><font>APRENDIZAGEM</font>.</p>
+<!--
+        <div id="banner">
+            <img id="imgBanner" src="Imagens/simboloDaVida.png">
+            <p class="textos">A diversão e a prática são <br> o caminho mais curto para a aprendizagem.</p>
+        </div>
+-->
+        
+        
         <aside id="icones">
             <table>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Digestorio.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Esqueletico.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Respiratorio.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Cardiovascular.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.ReprMasc.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.ReprFem.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Muscular.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Nervoso.png" class="icone"></td></tr>
-                <tr><td><img id="S.Cardiovascular" src="Imagens/S.Urinario.png" class="icone"></td></tr>
+                <tr>
+                    <td><img id="S.Digestorio" src="Imagens/S.Digestorio.png" class="icone"></td>
+                    <td><img id="S.Esqueletico" src="Imagens/S.Esqueletico.png" class="icone"></td>
+                </tr>
+                <tr>
+                    <td><img id="S.Respiratorio" src="Imagens/S.Respiratorio.png" class="icone"></td>
+                    <td><img id="S.Cardiovascular" src="Imagens/S.Cardiovascular.png" class="icone"></td>
+                </tr>
+                <tr>
+                    <td><img id="S.ReprMasc" src="Imagens/S.ReprMasc.png" class="icone"></td>
+                    <td><img id="S.ReprFem" src="Imagens/S.ReprFem.png" class="icone"></td>
+                </tr>
+                <tr>
+                    <td><img id="S.Muscular" src="Imagens/S.Muscular.png" class="icone"></td>
+                    <td><img id="S.Nervoso" src="Imagens/S.Nervoso.png" class="icone"></td>
+                </tr>
+                <tr>
+                    <td><img id="S.Urinario" src="Imagens/S.Urinario.png" class="icone"></td>
+                    <td><img id="Relatorio" src="Imagens/IconeRelatorio.png" class="icone"></td>
+                </tr>
             </table>
         </aside>
     </body>
