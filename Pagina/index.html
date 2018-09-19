@@ -6,13 +6,12 @@
     <script>
         //var sistemas = ["Digestorio","Esqueletico","Respiratorio","Cardiovascular",
         //                "ReprMasc", "ReprFem","Muscular","Nervoso","Urinario"];
-        //window.onload = function IniciaIcones()
-        //{
-            //for(var i = 0; i < sistemas.length; i++)
-           // {
-                        
-            //}
-       // }
+        window.onload = function()
+        {
+            document.getElementById("tituloMenu").onclick = aumentaMenu; 
+        }
+        
+          
         var estaAumentado = false;
     
         // animação d3
@@ -48,7 +47,7 @@
         <title>CHI - Corpo Humano Interativo</title>
     </head>
     <body>
-        <aside id="menu" onclick="aumentaMenu();">
+        <aside id="menu">
             <font class="titulo" id="tituloMenu">C<br>H<br>I</font>
             <div id="login">
                 <form method="post" action="" >
@@ -66,7 +65,7 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="submit">  </td>
+                            <td><input type="submit" class="button">  </td>
                         </tr>
                     </table>
                 </form>

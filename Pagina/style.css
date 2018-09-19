@@ -13,12 +13,12 @@ body
     margin-bottom: 1%;
     border-radius: 20pt;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    top: 2%;
+    top: 6%;
 }
 .icone
 {
-    width: 70%;
-    height: 20%;
+    width: 65%;
+    height: 18%;
     position: relative;
     left:20%;
 }
@@ -82,5 +82,24 @@ body
 
 .textos font
 {
+    color: white;
+}
+
+.button 
+{
+    background-color: #4CAF50; 
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: darkgoldenrod;
     color: white;
 }
