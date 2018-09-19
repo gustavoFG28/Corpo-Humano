@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <link rel="shortcut icon" href="icoSite.ico" type="image/x-icon" />
         <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         //var sistemas = ["Digestorio","Esqueletico","Respiratorio","Cardiovascular",
         //                "ReprMasc", "ReprFem","Muscular","Nervoso","Urinario"];
@@ -25,8 +26,12 @@
             {
                 menu.style.width = "20%";
                 menu.style.height = "50%";
+                
                 titulo.style.left = "40%";
+                
                 login.style.display = "block";
+                login.style.position = "absolute";
+                login.style.top = "3%";
                 
                 estaAumentado = true;
             }
@@ -56,18 +61,17 @@
                             <th class="titulo">LOGIN</th>
                         </tr>
                         <tr>
-                            <td><label class="labels" for="txtUsuario">USUÁRIO:</label></td>
-                            <td><input type="text" id="txtUsuario"></td>
+                            <td class="tdImg"><img class="labelImg" src="Imagens/Usua%CC%81rio.png"><input type="text" id="txtUsuario"></td>
                         </tr>
                         <tr>
-                            <td><label class="labels" for="txtSenha">SENHA</label></td>
-                            <td><input type="password" id="txtUsuario"></td>
+                            <td><img class="labelImg" src="Imagens/Senha.png"><input type="password" id="txtSenha"></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td><input type="submit" class="button">  </td>
                         </tr>
                     </table>
+                    <font class="titulo">Cadastrar-se</font>
                 </form>
             </div>
             
