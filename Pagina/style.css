@@ -42,10 +42,12 @@ body
     font-family: Agency FB;
     font-size: 45px;
     font-weight: bold;
+    text-align: center;
 }
 #login
 {
     display: none;
+    text-align: center;
 }
 
 .labels
@@ -54,12 +56,6 @@ body
     text-shadow: 2px 2px 4px #000000;
     font-family: Agency FB;
     font-weight: bold;
-}
-.labelImg
-{
-    width: 25%;
-    height: 25%;
-    
 }
 #imgBanner
 {
@@ -103,8 +99,51 @@ body
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
+    font-family: Agency FB;
+    font-size: 20px;
+    font-weight: bold;
+    
 }
 .button:hover{
-    background-color: darkgoldenrod;
+    background-color: #4682B4;
     color: white;
+}
+#cadastro
+{
+    background-color: #008B8B;
+    border-radius: 20pt;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+    width: 18%;
+    height:25%;
+    position: absolute;
+    left: 49%;
+    top: 1%;
+    padding: 2%;
+}
+
+#btnLogin{
+    cursor: pointer;
+}
+
+#tabelaCadastro
+{
+    font-family: Agency FB;
+    font-size: 20px;
+    font-weight: bold;
+    color:  white;
+}
+.clicaLabel
+{
+    cursor: pointer;
+}
+
+table#tabelaLogin 
+{
+    margin-left: 10%;
+}
+
+input
+{
+    border-radius: 20pt;
 }

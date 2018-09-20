@@ -1,4 +1,4 @@
-<html>
+,<html>
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="icoSite.ico" type="image/x-icon" />
@@ -10,11 +10,18 @@
         window.onload = function()
         {
             document.getElementById("tituloMenu").onclick = aumentaMenu; 
+            document.getElementById("txtCadastrar").onclick = menuCadastro;
+            document.getElementById("btnCancelar").onclick = fechaCadastro;
         }
         
-          
         var estaAumentado = false;
     
+        function menuCadastro()
+        {
+            document.getElementById("cadastro").style.display = "block";
+            aumentaMenu();
+            
+        }
         // animação d3
         function aumentaMenu()
         {
@@ -25,7 +32,7 @@
             if(!estaAumentado)
             {
                 menu.style.width = "20%";
-                menu.style.height = "50%";
+                menu.style.height = "37%";
                 
                 titulo.style.left = "40%";
                 
@@ -43,9 +50,11 @@
                 login.style.display = "none";
                 estaAumentado = false;  
             }
-           
-            
-            
+        }
+        
+        function fechaCadastro()
+        {
+            document.getElementById("cadastro").style.display = "none";
         }
     </script>
         
@@ -53,25 +62,30 @@
     </head>
     <body>
         <aside id="menu">
-            <font class="titulo" id="tituloMenu">C<br>H<br>I</font>
+            <font class="titulo clicaLabel" id="tituloMenu">C<br>H<br>I</font>
             <div id="login">
                 <form method="post" action="" >
-                    <table>
+                    <table id="tabelaLogin">
                         <tr>
-                            <th class="titulo">LOGIN</th>
+                            <th colspan="2" class="titulo">LOGIN</th>
+                        </tr>
+                        <tr>    
+                            <td><img src="Imagens/Usua%CC%81rio.png"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>    
+                            <td><img src="Imagens/Senha.png"></td>
+                            <td><input type="password"></td>
                         </tr>
                         <tr>
-                            <td class="tdImg"><img class="labelImg" src="Imagens/Usua%CC%81rio.png"><input type="text" id="txtUsuario"></td>
+                            <th colspan="2" class="titulo"><input type="submit" class="button" id="btnLogin" value="Entrar"></th>
                         </tr>
                         <tr>
-                            <td><img class="labelImg" src="Imagens/Senha.png"><input type="password" id="txtSenha"></td>
+                            <th colspan="2" class="titulo"><font class="titulo clicaLabel" id="txtCadastrar">Cadastrar-se</font></th>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="submit" class="button">  </td>
-                        </tr>
+                        
                     </table>
-                    <font class="titulo">Cadastrar-se</font>
+                    
                 </form>
             </div>
             
@@ -79,13 +93,38 @@
         
         <img id="imgBanner" src="Imagens/simboloDaVida.png">
         <p class="textos" id="introducao">A DIVERSÃO E A PRÁTICA SÃO <br> O CAMINHO MAIS CURTO PARA A <br><font>APRENDIZAGEM</font>.</p>
-<!--
-        <div id="banner">
-            <img id="imgBanner" src="Imagens/simboloDaVida.png">
-            <p class="textos">A diversão e a prática são <br> o caminho mais curto para a aprendizagem.</p>
-        </div>
--->
         
+        <div id="cadastro">
+            <table id="tabelaCadastro">
+                <form action="" method="post" > 
+                    <tr>
+                        <td><label for="txtNome">Nome:</label></td>
+                        <td><input type="text" id="txtNome" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="txtSobrenome">Sobrenome:</label></td>
+                        <td><input type="text" id="txtSobrenome" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="txtEmail">E-mail:</label></td>
+                        <td><input type="email" id="txtEmail" placeholder="nome@dominio.com" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="txtSenhaCadastro">Senha:</label></td>
+                        <td><input type="password" id="txtSenhaCadastro" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="txtConfirmaSenha">Confirme a Senha:</label></td>
+                        <td><input type="password" id="txtConfirmaSenha" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Enviar" class="button"></td>
+                        <td><input type="button" value="Cancelar" id="btnCancelar" class="button"></td>
+                    </tr>
+                    
+                </form>
+            </table>
+        </div>
         
         <aside id="icones">
             <table>
