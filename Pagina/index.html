@@ -16,10 +16,16 @@
             for(var i = 1; i <= 10; i++ )
                 document.getElementById(i + "").onclick = exibeCorpo;
             
+            document.getElementById("txtQuiz").onclick = apertaQuiz;
             
         }
         
         var estaAumentado = false;
+        
+        function apertaQuiz()
+        {
+            alert("oi");
+        }
     
         function menuCadastro()
         {
@@ -73,11 +79,15 @@
             img.style.height = "90%";
             img.style.top = "5%";
             
-            var quiz = document.createElement("font");
+            var quiz = document.createElement("p");
             quiz.innerHTML = "TESTE SEUS CONHECIMENTOS!";
             quiz.style.font = "Agency FB";
             quiz.style.position = "absolute";
             quiz.style.left = "20%";
+            quiz.style.zIndex = "2";
+            quiz.id = "txtQuiz";
+            quiz.className = "textos";
+            area.appendChild(quiz);
             
         }
         
