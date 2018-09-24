@@ -12,8 +12,10 @@
             document.getElementById("tituloMenu").onclick = aumentaMenu; 
             document.getElementById("txtCadastrar").onclick = menuCadastro;
             document.getElementById("btnCancelar").onclick = fechaCadastro;
+            criarTabela();
             for(var i = 1; i <= 10; i++ )
                 document.getElementById(i + "").onclick = exibeCorpo;
+            
             
         }
         
@@ -77,6 +79,29 @@
             quiz.style.position = "absolute";
             quiz.style.left = "20%";
             
+        }
+        
+        function criarTabela()
+        {
+            var indice = 1;
+            var tabela = document.createElement("table");
+            for (var i=0; i<5; i++) 
+            {
+                var tr = document.createElement("tr");
+                for(var j =0;j <2; j++)
+                {
+                    var img = document.createElement("img"); 
+                    img.src = "Imagens/" + indice + ".png"; 
+                    img.id = indice;
+                    img.className = "icone";
+                    var td = document.createElement("td");
+                    td.appendChild(img);
+                    tr.appendChild(td);
+                    indice++;
+                }
+                tabela.appendChild(tr);
+            } 
+            document.getElementById("icones").appendChild(tabela);
         }
     </script>
         
@@ -151,28 +176,6 @@
         </div>
         
         <aside id="icones">
-            <table>
-                <tr>
-                    <td><img id="1" src="Imagens/S.Digestorio.png" class="icone"></td>
-                    <td><img id="6" src="Imagens/S.Esqueletico.png" class="icone"></td>
-                </tr>
-                <tr>
-                    <td><img id="2" src="Imagens/S.Respiratorio.png" class="icone"></td>
-                    <td><img id="7" src="Imagens/S.Cardiovascular.png" class="icone"></td>
-                </tr>
-                <tr>
-                    <td><img id="3" src="Imagens/S.ReprMasc.png" class="icone"></td>
-                    <td><img id="8" src="Imagens/S.ReprFem.png" class="icone"></td>
-                </tr>
-                <tr>
-                    <td><img id="4" src="Imagens/S.Muscular.png" class="icone"></td>
-                    <td><img id="9" src="Imagens/S.Nervoso.png" class="icone"></td>
-                </tr>
-                <tr>
-                    <td><img id="5" src="Imagens/S.Urinario.png" class="icone"></td>
-                    <td><img id="10" src="Imagens/IconeRelatorio.png" class="icone"></td>
-                </tr>
-            </table>
         </aside>
     </body>
 </html>
