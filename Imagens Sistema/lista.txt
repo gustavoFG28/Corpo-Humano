@@ -1,9 +1,0 @@
-1 Muscular OK
-2 Esqueletica OK
-3 Cardiovascular OK
-4 Nervoso OK
-5 Digestotio OK
-6 Respiratorio OK
-7 Reprodutor Feminino OK
-8
-9

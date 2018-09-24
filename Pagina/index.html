@@ -12,6 +12,9 @@
             document.getElementById("tituloMenu").onclick = aumentaMenu; 
             document.getElementById("txtCadastrar").onclick = menuCadastro;
             document.getElementById("btnCancelar").onclick = fechaCadastro;
+            for(var i = 1; i <= 10; i++ )
+                document.getElementById(i + "").onclick = exibeCorpo;
+            
         }
         
         var estaAumentado = false;
@@ -56,6 +59,25 @@
         {
             document.getElementById("cadastro").style.display = "none";
         }
+        
+        
+        function exibeCorpo()
+        {
+            var area = document.getElementById("areaCorpo");
+            document.getElementById("introducao").style.display = "none";
+            var img = document.getElementById("imgBanner");
+            var caminhoImg = "ImagensSistema/" + this.id + ".png";
+            img.src = caminhoImg;
+            img.style.height = "90%";
+            img.style.top = "5%";
+            
+            var quiz = document.createElement("font");
+            quiz.innerHTML = "TESTE SEUS CONHECIMENTOS!";
+            quiz.style.font = "Agency FB";
+            quiz.style.position = "absolute";
+            quiz.style.left = "20%";
+            
+        }
     </script>
         
         <title>CHI - Corpo Humano Interativo</title>
@@ -70,7 +92,7 @@
                             <th colspan="2" class="titulo">LOGIN</th>
                         </tr>
                         <tr>    
-                            <td><img src="Imagens/Usua%CC%81rio.png"></td>
+                            <td><img src="Imagens/Usuario.png"></td>
                             <td><input type="text"></td>
                         </tr>
                         <tr>    
@@ -90,9 +112,11 @@
             </div>
             
         </aside>
+        <div id="areaCorpo">
+            <img id="imgBanner" src="Imagens/simboloDaVida.png">
+            <p class="textos" id="introducao">A DIVERSÃO E A PRÁTICA SÃO <br> O CAMINHO MAIS CURTO PARA A <br><font>APRENDIZAGEM</font>.</p>
+        </div>
         
-        <img id="imgBanner" src="Imagens/simboloDaVida.png">
-        <p class="textos" id="introducao">A DIVERSÃO E A PRÁTICA SÃO <br> O CAMINHO MAIS CURTO PARA A <br><font>APRENDIZAGEM</font>.</p>
         
         <div id="cadastro">
             <table id="tabelaCadastro">
@@ -129,24 +153,24 @@
         <aside id="icones">
             <table>
                 <tr>
-                    <td><img id="S.Digestorio" src="Imagens/S.Digestorio.png" class="icone"></td>
-                    <td><img id="S.Esqueletico" src="Imagens/S.Esqueletico.png" class="icone"></td>
+                    <td><img id="1" src="Imagens/S.Digestorio.png" class="icone"></td>
+                    <td><img id="6" src="Imagens/S.Esqueletico.png" class="icone"></td>
                 </tr>
                 <tr>
-                    <td><img id="S.Respiratorio" src="Imagens/S.Respiratorio.png" class="icone"></td>
-                    <td><img id="S.Cardiovascular" src="Imagens/S.Cardiovascular.png" class="icone"></td>
+                    <td><img id="2" src="Imagens/S.Respiratorio.png" class="icone"></td>
+                    <td><img id="7" src="Imagens/S.Cardiovascular.png" class="icone"></td>
                 </tr>
                 <tr>
-                    <td><img id="S.ReprMasc" src="Imagens/S.ReprMasc.png" class="icone"></td>
-                    <td><img id="S.ReprFem" src="Imagens/S.ReprFem.png" class="icone"></td>
+                    <td><img id="3" src="Imagens/S.ReprMasc.png" class="icone"></td>
+                    <td><img id="8" src="Imagens/S.ReprFem.png" class="icone"></td>
                 </tr>
                 <tr>
-                    <td><img id="S.Muscular" src="Imagens/S.Muscular.png" class="icone"></td>
-                    <td><img id="S.Nervoso" src="Imagens/S.Nervoso.png" class="icone"></td>
+                    <td><img id="4" src="Imagens/S.Muscular.png" class="icone"></td>
+                    <td><img id="9" src="Imagens/S.Nervoso.png" class="icone"></td>
                 </tr>
                 <tr>
-                    <td><img id="S.Urinario" src="Imagens/S.Urinario.png" class="icone"></td>
-                    <td><img id="Relatorio" src="Imagens/IconeRelatorio.png" class="icone"></td>
+                    <td><img id="5" src="Imagens/S.Urinario.png" class="icone"></td>
+                    <td><img id="10" src="Imagens/IconeRelatorio.png" class="icone"></td>
                 </tr>
             </table>
         </aside>
