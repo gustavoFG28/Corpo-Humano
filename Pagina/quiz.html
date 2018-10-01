@@ -1,0 +1,56 @@
+<html>
+    <head><title>QUIZ</title></head>
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <script>
+        window.onload = function()
+        {
+           gerarQuiz(); 
+            document.getElementById("btnSalvarQuiz").onclick = corrigirResposta;
+        }
+        
+        function gerarQuiz()
+        {
+            for (var i=0; i<10; i++) 
+            {
+                var tabela = document.createElement("table");
+                var tr = document.createElement("tr");
+                var pergunta = document.createElement("td");
+                pergunta.innerHTML = (i+1) + ") Soma de 2 + " + i + " é:";    // bd
+                tr.appendChild(pergunta);
+                tabela.appendChild(tr);
+                for(var j = 0; j < 4; j++)
+                {
+                    var tr = document.createElement("tr");
+                    var resposta = document.createElement("td");
+                    var input = document.createElement("input");
+                    input.type = "radio";
+                    input.name = "rb" + i;
+                    input.value = j;    //resposta
+                    var respostaTexto = document.createElement("p");
+                    respostaTexto.innerHTML = j + i;
+                    
+                    resposta.appendChild(input);
+                    tr.appendChild(resposta);
+                    tr.appendChild(respostaTexto);
+                    tabela.appendChild(tr);
+                }
+                document.getElementById("areaQuiz").appendChild(tabela);
+            } 
+        }
+        
+        
+        
+        function corrigirResposta()
+        {
+            alert("Você acertou");
+        }
+    
+    </script>
+    <body id="paginaQuiz">
+        <font class="textos">QUIZ SISTEMA</font>
+        <div id="areaQuiz"></div> 
+        <br>
+        <button class="button" id="btnSalvarQuiz">Salvar</button>
+    </body>
+
+</html>

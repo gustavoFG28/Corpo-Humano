@@ -1,4 +1,4 @@
-,<html>
+<html>
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="icoSite.ico" type="image/x-icon" />
@@ -15,8 +15,6 @@
             criarTabela();
             for(var i = 1; i <= 10; i++ )
                 document.getElementById(i + "").onclick = exibeCorpo;
-            
-            document.getElementById("txtQuiz").onclick = apertaQuiz;
             
         }
         
@@ -78,17 +76,20 @@
             img.src = caminhoImg;
             img.style.height = "90%";
             img.style.top = "5%";
+            if(document.getElementById("txtQuiz") == null)
+                var quiz = document.createElement("a");
             
-            var quiz = document.createElement("p");
             quiz.innerHTML = "TESTE SEUS CONHECIMENTOS!";
             quiz.style.font = "Agency FB";
             quiz.style.position = "absolute";
             quiz.style.left = "20%";
-            quiz.style.zIndex = "2";
+            quiz.style.top = "100%";
             quiz.id = "txtQuiz";
             quiz.className = "textos";
+            quiz.href = "quiz.html";
             area.appendChild(quiz);
-            
+            quiz.onclick = realizarQuiz;
+            criarTabelaOrgao(this);
         }
         
         function criarTabela()
@@ -113,6 +114,39 @@
             } 
             document.getElementById("icones").appendChild(tabela);
         }
+        
+        function criarTabelaOrgao(qualIcone)
+        {
+            if(document.getElementById("infoSistema") == null)
+            {
+                var tabela = document.createElement("table");
+                tabela.id = "infoSistema";
+                tabela.style.position = "absolute";
+                tabela.style.top = "10%";
+                tabela.style.left = "50%";
+            }
+            else
+                var tabela = document.getElementById("infoSistema");
+            
+            for (var i=0; i<5; i++) 
+            {
+                var tr = document.createElement("tr");
+                for(var j =0;j <2; j++)
+                {
+                    var td = document.createElement("td");
+                    td.innerHTML = "indice" + qualIcone.id;
+                    tr.appendChild(td);
+                }
+                tabela.appendChild(tr);
+            } 
+            
+            document.getElementById("areaCorpo").appendChild(tabela);
+        }
+        
+        function realizarQuiz()
+        {
+            
+        }
     </script>
         
         <title>CHI - Corpo Humano Interativo</title>
@@ -128,11 +162,11 @@
                         </tr>
                         <tr>    
                             <td><img src="Imagens/Usuario.png"></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" id="txtNome" required></td>
                         </tr>
                         <tr>    
                             <td><img src="Imagens/Senha.png"></td>
-                            <td><input type="password"></td>
+                            <td><input type="password" id="txtSenha required"></td>
                         </tr>
                         <tr>
                             <th colspan="2" class="titulo"><input type="submit" class="button" id="btnLogin" value="Entrar"></th>
@@ -185,7 +219,6 @@
             </table>
         </div>
         
-        <aside id="icones">
-        </aside>
+        <aside id="icones"></aside>
     </body>
 </html>
