@@ -9,12 +9,12 @@ body
 {
     float: right;
     position: relative;
-    background-color: darkseagreen;
+    background-color: transparent;
     width: 25%;
     height: auto;
     margin-bottom: 1%;
     border-radius: 20pt;
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:16px 0px 16px 16px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top: 6%;
 }
 .icone
@@ -23,6 +23,10 @@ body
     height: 18%;
     position: relative;
     left:20%;
+}
+.icone:hover
+{
+    transform: scale(1.1);
 }
 
 #menu
@@ -180,4 +184,14 @@ input
 #paginaQuiz
 {
     text-align: center;
+}
+.inputTexto
+{
+    padding-left: 10px;
+}
+
+#infoSistema th
+{
+    background-color: blue;
+    padding: 0px;
 }

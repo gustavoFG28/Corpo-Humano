@@ -4,150 +4,9 @@
         <link rel="shortcut icon" href="icoSite.ico" type="image/x-icon" />
         <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        //var sistemas = ["Digestorio","Esqueletico","Respiratorio","Cardiovascular",
-        //                "ReprMasc", "ReprFem","Muscular","Nervoso","Urinario"];
-        window.onload = function()
-        {
-            document.getElementById("tituloMenu").onclick = aumentaMenu; 
-            document.getElementById("txtCadastrar").onclick = menuCadastro;
-            document.getElementById("btnCancelar").onclick = fechaCadastro;
-            criarTabela();
-            for(var i = 1; i <= 10; i++ )
-                document.getElementById(i + "").onclick = exibeCorpo;
-            
-        }
-        
-        var estaAumentado = false;
-        
-        function apertaQuiz()
-        {
-            alert("oi");
-        }
-    
-        function menuCadastro()
-        {
-            document.getElementById("cadastro").style.display = "block";
-            aumentaMenu();
-            
-        }
-        // animação d3
-        function aumentaMenu()
-        {
-            var menu = document.getElementById("menu");
-            var titulo = document.getElementById("tituloMenu");
-            var login = document.getElementById("login");
-            titulo.style.position = "relative";
-            if(!estaAumentado)
-            {
-                menu.style.width = "20%";
-                menu.style.height = "37%";
-                
-                titulo.style.left = "40%";
-                
-                login.style.display = "block";
-                login.style.position = "absolute";
-                login.style.top = "3%";
-                
-                estaAumentado = true;
-            }
-            else
-            {
-                menu.style.width = "5%";
-                menu.style.height = "20%";
-                titulo.style.left = "0%";
-                login.style.display = "none";
-                estaAumentado = false;  
-            }
-        }
-        
-        function fechaCadastro()
-        {
-            document.getElementById("cadastro").style.display = "none";
-        }
-        
-        
-        function exibeCorpo()
-        {
-            var area = document.getElementById("areaCorpo");
-            document.getElementById("introducao").style.display = "none";
-            var img = document.getElementById("imgBanner");
-            var caminhoImg = "ImagensSistema/" + this.id + ".png";
-            img.src = caminhoImg;
-            img.style.height = "90%";
-            img.style.top = "5%";
-            if(document.getElementById("txtQuiz") == null)
-                var quiz = document.createElement("a");
-            
-            quiz.innerHTML = "TESTE SEUS CONHECIMENTOS!";
-            quiz.style.font = "Agency FB";
-            quiz.style.position = "absolute";
-            quiz.style.left = "20%";
-            quiz.style.top = "100%";
-            quiz.id = "txtQuiz";
-            quiz.className = "textos";
-            quiz.href = "quiz.html";
-            area.appendChild(quiz);
-            quiz.onclick = realizarQuiz;
-            criarTabelaOrgao(this);
-        }
-        
-        function criarTabela()
-        {
-            var indice = 1;
-            var tabela = document.createElement("table");
-            for (var i=0; i<5; i++) 
-            {
-                var tr = document.createElement("tr");
-                for(var j =0;j <2; j++)
-                {
-                    var img = document.createElement("img"); 
-                    img.src = "Imagens/" + indice + ".png"; 
-                    img.id = indice;
-                    img.className = "icone";
-                    var td = document.createElement("td");
-                    td.appendChild(img);
-                    tr.appendChild(td);
-                    indice++;
-                }
-                tabela.appendChild(tr);
-            } 
-            document.getElementById("icones").appendChild(tabela);
-        }
-        
-        function criarTabelaOrgao(qualIcone)
-        {
-            if(document.getElementById("infoSistema") == null)
-            {
-                var tabela = document.createElement("table");
-                tabela.id = "infoSistema";
-                tabela.style.position = "absolute";
-                tabela.style.top = "10%";
-                tabela.style.left = "50%";
-            }
-            else
-                var tabela = document.getElementById("infoSistema");
-            
-            for (var i=0; i<5; i++) 
-            {
-                var tr = document.createElement("tr");
-                for(var j =0;j <2; j++)
-                {
-                    var td = document.createElement("td");
-                    td.innerHTML = "indice" + qualIcone.id;
-                    tr.appendChild(td);
-                }
-                tabela.appendChild(tr);
-            } 
-            
-            document.getElementById("areaCorpo").appendChild(tabela);
-        }
-        
-        function realizarQuiz()
-        {
-            
-        }
-    </script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         
         <title>CHI - Corpo Humano Interativo</title>
     </head>
@@ -162,11 +21,11 @@
                         </tr>
                         <tr>    
                             <td><img src="Imagens/Usuario.png"></td>
-                            <td><input type="text" id="txtNome" required></td>
+                            <td><input type="text" id="txtNome" required class="inputTexto"></td>
                         </tr>
                         <tr>    
                             <td><img src="Imagens/Senha.png"></td>
-                            <td><input type="password" id="txtSenha required"></td>
+                            <td><input type="password" id="txtSenha required" class="inputTexto"></td>
                         </tr>
                         <tr>
                             <th colspan="2" class="titulo"><input type="submit" class="button" id="btnLogin" value="Entrar"></th>
@@ -192,23 +51,23 @@
                 <form action="" method="post" > 
                     <tr>
                         <td><label for="txtNome">Nome:</label></td>
-                        <td><input type="text" id="txtNome" required></td>
+                        <td><input type="text" id="txtNome" required class="inputTexto"></td>
                     </tr>
                     <tr>
                         <td><label for="txtSobrenome">Sobrenome:</label></td>
-                        <td><input type="text" id="txtSobrenome" required></td>
+                        <td><input type="text" id="txtSobrenome" required class="inputTexto"></td>
                     </tr>
                     <tr>
                         <td><label for="txtEmail">E-mail:</label></td>
-                        <td><input type="email" id="txtEmail" placeholder="nome@dominio.com" required></td>
+                        <td><input type="email" id="txtEmail" placeholder="nome@dominio.com" required class="inputTexto"></td>
                     </tr>
                     <tr>
                         <td><label for="txtSenhaCadastro">Senha:</label></td>
-                        <td><input type="password" id="txtSenhaCadastro" required></td>
+                        <td><input type="password" id="txtSenhaCadastro" required class="inputTexto"></td>
                     </tr>
                     <tr>
                         <td><label for="txtConfirmaSenha">Confirme a Senha:</label></td>
-                        <td><input type="password" id="txtConfirmaSenha" required></td>
+                        <td><input type="password" id="txtConfirmaSenha" required class="inputTexto"></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Enviar" class="button"></td>
