@@ -105,8 +105,6 @@ function criarTabela()
             td.appendChild(img);
             tr.appendChild(td);
             indice++;
-            
-            
         }
         tabela.appendChild(tr);
     } 
@@ -119,48 +117,64 @@ function criarTabelaOrgao(qualIcone)
     {
         var tabela = document.createElement("table");
         tabela.id = "infoSistema";
-        tabela.style.position = "absolute";
-        tabela.style.top = "10%";
-        tabela.style.left = "50%";
-
-        var thOrgao = document.createElement("th");
-        thOrgao.innerHTML = "Órgão";
-       
-        var thDescricao = document.createElement("th");
-        thDescricao.innerHTML = "Descrição";
-
-        tabela.appendChild(thOrgao);
-        tabela.appendChild(thDescricao);
-
-        for (var i=0; i<5; i++) 
+        for(var linha = 0; linha < 2; linha++)
         {
             var tr = document.createElement("tr");
-            for(var j =0;j <2; j++)
+            for(var i = 0; i < 4; i++)
             {
                 var td = document.createElement("td");
-                td.innerHTML = "indice" + qualIcone.id;
-                td.onmouseover = 
+                var div = document.createElement("div");
+                div.className = "plan";
+                var titulo = document.createElement("h3");
+                titulo.innerHTML = "oi";
+                var span = document.createElement("span");
+                span.id = "spanIcone"
+                span.innerHTML = "<img class='iconeOrgao' src='coracao.png'>";
+                span.onclick = abrirOrgao;
+                titulo.appendChild(span);
+                div.appendChild(titulo);
+                td.appendChild(div);
                 tr.appendChild(td);
+                tabela.appendChild(tr);
             }
-            tabela.appendChild(tr);
-        } 
-        
+        }
         document.getElementById("areaCorpo").appendChild(tabela);
+    
+       
     }
     else
     {
-        var i = 0;
         var tabela = $("#infoSistema");
         tabela.find("td").each(function()
-    {
-        $(this).text(qualIcone.id + " e " + ((i % 2 == 0)?i++: i)) ;
-    })
+        {
+            $(this).find("h3").text(qualIcone.id);
+            $("#spanIcone").text("oi");
+        })  
     }
 }
-    function abrirOrgao()
-    {
+function abrirOrgao()
+{
+    var div = document.getElementById("orgao");
+    div.style.display = "block";
+    div.style.zIndex = "2";
+    var fundo = document.createElement("div");
+    fundo.id = "fundoPreto"
+    fundo.style.height = "100%";
+    fundo.style.width = "100%";
+    fundo.style.backgroundColor = "black";    
+    fundo.style.opacity = "0.8";
+    document.getElementById("pagina").appendChild(fundo);
+    document.getElementById("btnSair").onclick = fechaDivOrgao;
 
-    }
+    var img = document.getElementById("imgOrgao");
+    img.src = "intestinoDelgado.png";
+}
+function fechaDivOrgao()
+{
+    document.getElementById("orgao").style.display = "none";
+    var fundo = document.getElementById("fundoPreto");
+    document.getElementById("pagina").removeChild(fundo);
+}
         
 
 

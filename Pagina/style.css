@@ -121,9 +121,9 @@ body
     display: none;
     width: 18%;
     height:25%;
-    position: absolute;
-    left: 49%;
-    top: 1%;
+    position: fixed;
+    top: calc(50% - 25%);
+    left: calc(50% - 18%);
     padding: 2%;
 }
 
@@ -189,8 +189,92 @@ input
     padding-left: 10px;
 }
 
-#infoSistema th
+#orgao
 {
-    background-color: blue;
-    padding: 0px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    display: none;
+    
+}
+.plan
+{
+    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+    text-shadow: 0 1px rgba(255,255,255,.8);
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    width: 180px;
+    position: relative;
+    bottom: 75%;
+    left: 35%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+table#infoSistema
+{
+    position: absolute;
+    bottom: 8%;
+    left: 25%;
+}
+
+#infoSistema td
+{
+    padding-bottom: 20px;
+}
+.plan h3 {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 20px;
+    margin: -20px -20px 50px -20px;
+    background-color: #eee;
+    background-image: linear-gradient(#fff,#eee);
+}
+.plan h3 span {
+    display: block;
+    font: bold 25px/100px Georgia, Serif;
+    color: #777;
+    background: #fff;
+    border: 5px solid #fff;
+    height: 100px;
+    width: 100px;
+    margin: 10px auto -65px;
+    border-radius: 100px;
+    box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+h3 span:hover
+{
+    background-color: A5FFB5;
+    cursor: pointer;
+}
+#imgOrgao
+{
+    width: 420px;
+    height: 400px;
+}
+#campoTexto
+{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+.iconeOrgao
+{
+    position: relative;
+    top: 10px;
+}
+#btnSair
+{
+    position: absolute;
+    top: 0%;
+    left: 93%;
+    border-radius: 100pt;
+    padding: 20px;
 }
