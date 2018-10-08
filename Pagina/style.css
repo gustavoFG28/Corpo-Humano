@@ -10,7 +10,7 @@ body
 {
     float: right;
     position: static;
-    background-color: #B92700;
+    background-color: transparent;
     width: 25%;
     height: 100%;
     box-shadow:16px 0px 16px 16px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
