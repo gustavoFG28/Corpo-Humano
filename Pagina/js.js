@@ -25,15 +25,14 @@ function menuCadastro()
 // animação d3
 function aumentaMenu()
 {
-    
+    var t = d3.transition().duration(250).ease("elastic");
     var menu = document.getElementById("menu");
     var titulo = document.getElementById("tituloMenu");
     var login = document.getElementById("login");
     titulo.style.position = "relative";
     if(!estaAumentado)
     {
-        d3.select("#menu").style("width", "20%");
-        d3.select("#menu").style("height", "37%");
+        d3.select("#menu").transition(t).style("width", "20%").style("height", "37%");
         //menu.style.width = "20%";
         //menu.style.height = "37%";
         
@@ -47,8 +46,7 @@ function aumentaMenu()
     }
     else
     {
-        d3.select("#menu").style("width", "5%");
-        d3.select("#menu").style("height", "20%");
+        d3.select("#menu").transition(t).style("width", "5%").style("height", "20%");
         //menu.style.width = "5%";
         //menu.style.height = "20%";
         titulo.style.left = "0%";

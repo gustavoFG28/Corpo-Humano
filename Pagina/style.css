@@ -4,18 +4,16 @@ body
     background: url(Imagens/fundo.png) no-repeat;
     background-size: 100% 100%;
     margin-left: 0px;
+    margin: 0px;
 }
 #icones
 {
     float: right;
-    position: relative;
-    background-color: transparent;
+    position: static;
+    background-color: #B92700;
     width: 25%;
-    height: auto;
-    margin-bottom: 1%;
-    border-radius: 20pt;
+    height: 100%;
     box-shadow:16px 0px 16px 16px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    top: 6%;
 }
 .icone
 {
@@ -23,6 +21,7 @@ body
     height: 18%;
     position: relative;
     left:20%;
+    margin-top: 10%;
 }
 .icone:hover
 {
