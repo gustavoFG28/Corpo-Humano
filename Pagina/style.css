@@ -1,7 +1,7 @@
 body
 {
    /* background-color: cornflowerblue;*/
-    background: url(Imagens/fundo.png) no-repeat;
+    background: url(Imagens/fundo2.png) no-repeat;
     background-size: 100% 100%;
     margin-left: 0px;
     margin: 0px;
@@ -67,7 +67,7 @@ body
 {
     position: relative;
     top: 20%;
-    left: 5%;
+    left: 2%;
     width: 25%;
     height: auto;
 }

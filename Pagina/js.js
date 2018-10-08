@@ -128,7 +128,6 @@ function criarTabelaOrgao(qualIcone)
                 var titulo = document.createElement("h3");
                 titulo.innerHTML = "oi";
                 var span = document.createElement("span");
-                span.id = "spanIcone"
                 span.innerHTML = "<img class='iconeOrgao' src='coracao.png'>";
                 span.onclick = abrirOrgao;
                 titulo.appendChild(span);
@@ -147,8 +146,8 @@ function criarTabelaOrgao(qualIcone)
         var tabela = $("#infoSistema");
         tabela.find("td").each(function()
         {
-            $(this).find("h3").text(qualIcone.id);
-            $("#spanIcone").text("oi");
+            $(this).find("h3").html(qualIcone.id + "<span onclick='abrirOrgao()'><img class='iconeOrgao' src='coracao.png'></span>");
+            
         })  
     }
 }
