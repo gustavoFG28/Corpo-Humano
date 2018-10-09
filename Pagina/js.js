@@ -25,7 +25,7 @@ function menuCadastro()
 // animação d3
 function aumentaMenu()
 {
-    var t = d3.transition().duration(250).ease("elastic");
+    var t = d3.transition().duration(250).ease("linear");
     var menu = document.getElementById("menu");
     var titulo = document.getElementById("tituloMenu");
     var login = document.getElementById("login");
