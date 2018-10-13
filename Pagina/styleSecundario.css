@@ -1,0 +1,39 @@
+body{
+    background: url(Imagens/fundo2.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header#cabecario
+{
+    background-color: rgb(252, 236, 19);
+    font-size: 64px;
+    font-family: Agency FB;
+    font-weight: bold;
+}
+
+section#areaQuiz
+{
+    background-color: white;
+    padding: 1%;
+    border-radius: 20pt;    
+    width: 70%;
+    margin: 0 auto 0 auto;
+    vertical-align: middle;
+}
+
+.perguntas
+{
+    font-weight: bold;
+    font-family: Agency FB;
+    font-size: 25px;
+}
+
+#frmQuiz label span
+{
+    font-size: 20px;
+}
+#btnSubmit
+{
+    position: relative;
+    width: calc(100% - 1% );
+}

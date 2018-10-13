@@ -1,0 +1,41 @@
+<html>
+    <head><title>Cadastro</title>
+    <link type="text/css" href="styleSecundario.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+    </head>
+    
+    <body id="paginaQuiz">
+        <header id="cabecario" class="row center-align">
+             <font>CADASTRO</font>
+        </header>
+        <section id="areaquiz" class="row">
+            <form id="frmQuiz" action="indexOfLogado.html" method="post">
+                <div class="m12 s6 input-field">
+                    <i class="material-icons prefix">person</i>
+                    <input type="text" id="txtNome" class="validate" required> 
+                    <label for="txtNome">Nome completo</label>
+                </div>
+                <div class="m12 s6 input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" id="txtEmail" class="validate"required> 
+                    <label for="txtEmail">Email</label>
+                </div>
+                <div class="m12 s6 input-field">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input type="password" id="txtSenha" class="validate" required> 
+                    <label for="txtSenha">Senha</label>
+                </div>
+                <div class="m12 s6 input-field">
+                    <i class="material-icons prefix">check_circle</i>
+                    <input type="password" id="txtConfirmaSenha" class="validate" required> 
+                    <label for="txtConfirmaSenha">Confirmar senha</label>
+                </div>
+                <div class="m12 s6">
+                    <button class="btn waves-effect waves-light" id="btnSubmit" type="submit"><i class="material-icons left">input</i>Confirmar cadastro</button>
+                    </div>
+            </form>
+        </section>
+    </body>
+</html>

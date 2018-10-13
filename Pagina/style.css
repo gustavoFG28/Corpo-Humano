@@ -1,8 +1,21 @@
+html
+{
+    line-height: 1.2;
+}
+table
+{
+    border-collapse: unset;
+}
+td
+{
+    padding: 0;
+}
 body
 {
    /* background-color: cornflowerblue;*/
     background: url(Imagens/fundo2.png) no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
     margin-left: 0px;
     margin: 0px;
 }
@@ -25,6 +38,7 @@ body
 }
 .icone:hover
 {
+    cursor: pointer;
     transform: scale(1.1);
 }
 
@@ -107,7 +121,6 @@ body
     font-family: Agency FB;
     font-size: 20px;
     font-weight: bold;
-    
 }
 .button:hover{
     background-color: #4682B4;
@@ -154,7 +167,7 @@ input
 }
 #areaCorpo
 {
-    width: 55%;
+    width: 5%;
     height: 50%;
     margin: 1%;
     position: absolute;
@@ -169,25 +182,7 @@ input
 {
     text-decoration: none;
 }
-#areaQuiz
-{
-    background-color: white;
-    border-radius: 20pt;
-    width: 25%;
-    padding-top: 30px;  
-    padding-left: 50px;
-    padding-bottom: 30px;
-    position: relative;
-    left: 36%;
-}
-#paginaQuiz
-{
-    text-align: center;
-}
-.inputTexto
-{
-    padding-left: 10px;
-}
+
 
 #orgao
 {
@@ -251,7 +246,7 @@ table#infoSistema
 
 h3 span:hover
 {
-    background-color: A5FFB5;
+    background-color: #A5FFB5;
     cursor: pointer;
 }
 #imgOrgao
@@ -269,12 +264,4 @@ h3 span:hover
 {
     position: relative;
     top: 10px;
-}
-#btnSair
-{
-    position: absolute;
-    top: 0%;
-    left: 93%;
-    border-radius: 100pt;
-    padding: 20px;
 }

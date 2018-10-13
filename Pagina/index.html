@@ -2,19 +2,26 @@
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="icoSite.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="js.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         
+        <!-- Compiled and minified CSS -->
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="eventos.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <title>CHI - Corpo Humano Interativo</title>
     </head>
     <body id="pagina">
         <aside id="menu">
             <font class="titulo clicaLabel" id="tituloMenu">C<br>H<br>I</font>
             <div id="login">
-                <form method="post" action="" >
+                <form method="post" action="">
                     <table id="tabelaLogin">
                         <tr>
                             <th colspan="2" class="titulo">LOGIN</th>
@@ -28,7 +35,7 @@
                             <td><input type="password" id="txtSenha required" class="inputTexto"></td>
                         </tr>
                         <tr>
-                            <th colspan="2" class="titulo"><input type="submit" class="button" id="btnLogin" value="Entrar"></th>
+                            <th colspan="2" class="titulo"><button type="submit" class="waves-effect waves-light btn" id="btnLogin">Entrar</button></th>
                         </tr>
                         <tr>
                             <th colspan="2" class="titulo"><font class="titulo clicaLabel" id="txtCadastrar">Cadastrar-se</font></th>
@@ -47,12 +54,12 @@
         <div id="orgao">
             <img id="imgOrgao">
             <section id="campoTexto" class="textos"><p>ddsdsjioj</p></section>
-            <button class="button" id="btnSair">X</button>
+            <button class="btn-floating btn-large waves-effect waves-light red" id="btnSair"><i class="material-icons">close</i></button>
         </div>
         
         <div id="cadastro">
-            <table id="tabelaCadastro">
-                <form action="" method="post" > 
+            <table id="tabelaCadastro" >
+                <form action="" method="post" id="frmCadastro"> 
                     <tr>
                         <td><label for="txtNome">Nome:</label></td>
                         <td><input type="text" id="txtNome" required class="inputTexto"></td>
@@ -74,8 +81,8 @@
                         <td><input type="password" id="txtConfirmaSenha" required class="inputTexto"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Enviar" class="button"></td>
-                        <td><input type="button" value="Cancelar" id="btnCancelar" class="button"></td>
+                        <td><button class="btn waves-effect waves-light" type="submit" class="button">Enviar</button></td>
+                        <td><button id="btnCancelar" class="btn waves-light waves-effect">Cancelar</button></td>
                     </tr>
                     
                 </form>
