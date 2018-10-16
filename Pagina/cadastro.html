@@ -1,64 +1,55 @@
 <html>
     <head><title>Cadastro</title>
-    <link type="text/css" href="styleSecundario.css" rel="stylesheet">
+    <link type="text/css" href="estilo/styleSecundario.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     </head>
-    <script type="text/javascript">
-    	window.onload = function()
-    	{
-    		var sla = document.getElementById("btnSubmit");
-    		sla.onclick = function(){
-    			var o = document.getElementById("inputImgPerfil");
-    			alert(o.value);
-    		}
-    	}
-    </script>
     <body id="paginaQuiz">
         <header id="cabecario" class="row center-align">
              <font>CADASTRO</font>
         </header>
         <section id="areaquiz" class="row">
-            <form id="frmQuiz" action="" method="post">
+            <form id="frmCadastro" action="http://localhost:3000/usuario" method="post">
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">person</i>
-                    <input name="nome" type="text" id="txtNome" class="validate contador" required data-length="30"> 
+                    <input name="nome" type="text" id="txtNome" class="validate" required data-length="30"> 
                     <label for="txtNome">Nome completo</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">email</i>
-                    <input name="nome" type="email" id="txtEmail" class="validate contador" required> 
+                    <input name="email" type="email" id="txtEmail" class="validate"required> 
                     <label for="txtEmail">Email</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">vpn_key</i>
-                    <input name="nome" type="password" id="txtSenha" class="validate contador" required> 
+                    <input name="senha" type="password" id="txtSenha" class="validate" required> 
                     <label for="txtSenha">Senha</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">check_circle</i>
-                    <input name="nome" type="password" id="txtConfirmaSenha" class="validate contador" required> 
+                    <input type="password" id="txtConfirmaSenha" class="validate" required> 
                     <label for="txtConfirmaSenha">Confirmar senha</label>
                 </div>
                 <div class="file-field input-field">
-      				<div class="btn red">
-        				<span>Imagem de perfil</span>
-        				<input type="file" name="imgPerfil" id="inputImgPerfil">
-      				</div>
-      				<div class="file-path-wrapper">
-        				<input class="file-path validate" type="text" id="caminhoImgPerfil">
-      				</div>
-    			</div>
-    			<div class="file-field input-field">
-      				<div class="btn red">
-        				<span>Background</span>
-        				<input type="file" name="imgFundo" id="inputFundoImg">
-      				</div>
-      				<div class="file-path-wrapper">
-        				<input class="file-path validate" type="text" id="caminhoImgPerfil">
-      				</div>
-    			</div>
+                    <div class="btn red">
+                        <span>Imagem de perfil</span>
+                        <input name="imgPerfil" type="file" id="inputImgPerfil">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input   class="file-path validate" type="text" id="caminhoImgPerfil">
+                    </div>
+                </div>
+                <div class="file-field input-field">
+                    <div class="btn red">
+                        <span>Background</span>
+                        <input name="imgFundo" type="file" id="inputFundoImg">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input  class="file-path validate" type="text" id="caminhoImgPerfil">
+                    </div>
+                </div>
                 <div class="m12 s6">
                     <button class="btn waves-effect waves-light" id="btnSubmit" type="button"><i class="material-icons left">input</i>Confirmar cadastro</button>
                 </div>

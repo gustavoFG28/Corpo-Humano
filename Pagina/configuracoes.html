@@ -1,21 +1,41 @@
 <html>
     <head><title>CONFIGURAÇÕES</title>
-    <link type="text/css" href="styleSecundario.css" rel="stylesheet">
+    <link type="text/css" href="estilo/styleSecundario.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
     </head>
-    
     <body id="paginaQuiz">
         <header id="cabecario" class="row center-align">
              <font>CONFIGURAÇÕES</font>
         </header>
-        <section id="areaquiz" class="row">
-            <ul>
-               <li>Alterar nome</li>
-               <li>Alterar email</li>
-               <li>Alterar senha</li> 
-            </ul>
+        <section id="areaquiz" class="row center-align">
+            <div class="col l4 s12"><button class="btn waves-effect waves-light" id="btnAlteraNome">Alterar nome</button></div>
+            <div class="col l4 s12"><button class="btn waves-effect waves-light" id="btnAlteraEmail">Alterar email</button></div>
+            <div class="col l4 s12"><button class="btn waves-effect waves-light" id="btnAlteraSenha">Alterar senha</button></div>
+            <div class="col l6 s12"><button class="btn waves-effect waves-light" id="btnAlteraEmail">Alterar foto de perfil</button></div>
+            <div class="col l6 s12"><button class="btn waves-effect waves-light" id="btnAlteraSenha">Alterar imagem de fundo</button></div>
         </section>
+        <div class="container" id="areaDeAlteracao">
+                <form id="frmAlteraSenha" action="" method="post">
+                        <div class="input-field col s6">
+                                <i class="material-icons prefix">person</i>
+                                <input class="validate" id="txtNomeAntigo" type="text">
+                                <label for="txtNomeAntigo">Nome antigo</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">person</i>
+                            <input class="validate" id="txtNomeAntigo" type="text">
+                            <label for="txtNomeAntigo">Nome antigo</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">person</i>
+                            <input class="validate" id="txtNomeAntigo" type="text">
+                            <label for="txtNomeAntigo">Nome antigo</label>
+                        </div>
+                        <button type="submit" class="btn waves-effect waves-light">Confirmar</button>
+                 </form>
+        </div>
     </body>
 </html>
