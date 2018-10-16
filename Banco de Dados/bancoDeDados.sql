@@ -296,16 +296,24 @@ esquerdo possui dois, pois no pulmão esquerdo existe uma cavidade para o coração
 
 Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/pulmoes/', 'Pulmões','\OrgaosImagens\Respiratorio\pulmao.png', 3)
 
-insert into Sistema values(4, 'Sistema Circulatório', 'O Sistema Circulatório é divido em sistema cardiovascular e linfático. O sistema cardiovascular é formado pelo coração e 
-vasos sanguíneos(veias, artérias e capilares). O coração bombeiao sangue e os vasos sanguíneos o transporta junto com  elementos essenciais para o funcionamento dos tecidos, 
-como gás oxigênio e gás carbônico, hormônios, excretas metabólicas, células de defesa. O sistema linfático protege o organismo das doenças.
+
+
+
+
+
+insert into Sistema values(4, 'Sistema Circulatório', 'O Sistema Circulatório é divido em sistema cardiovascular e linfático. O sistema cardiovascular
+é formado pelo coração e  vasos sanguíneos(veias, artérias e capilares). O coração bombeia o sangue e os vasos sanguíneos o transporta junto com  
+elementos essenciais para o funcionamento dos tecidos, como gás oxigênio, gás carbônico, hormônios, excretas metabólicas e células de defesa. 
+O sistema linfático protege o organismo de doenças.
+
 Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-circulatorio/')
 
-insert into Orgao values(25, '  O coração é um orgão muscular localizado em uma região chamada mediastino na cavidade torácica.
-Ele é auto-excitável e contrátil. Seus movimentos de contração (sístole) e distensão (diástole) são responsáveis por bombear o sangue pelo sistema circulatório.
-Nos humanos ele apresenta quatro cavidades: duas superiores, chamadas átrios, e duas inferiores, chamadas ventrículos. O trajeto percorrido pelo sangue entre o
-coração e os pulmões é chamada de pequena circulação e carrega o sangue venoso (sem oxigênio) para ser oxigenado. A grande circulação é o trajeto percorrido entre o 
-coração e o corpo, leva o sangue que foi oxigenado pelos pulmões  para todas as células do corpo.
+insert into Orgao values(25, 'O coração é um orgão muscular localizado em uma região chamada mediastino na cavidade torácica. Ele é auto-excitável e contrátil.
+Seus movimentos de contração (sístole) e distensão (diástole) são responsáveis por bombear o sangue pelo sistema circulatório. Nos humanos ele apresenta quatro 
+cavidades: duas superiores, chamadas átrios, e duas inferiores, chamadas ventrículos. O trajeto percorrido pelo sangue entre o coração e os pulmões é chamada de 
+pequena circulação e carrega o sangue venoso (sem oxigênio) para ser oxigenado. A grande circulação é o trajeto percorrido entre o coração e o corpo, leva o 
+sangue que foi oxigenado pelos pulmões  para todas as células do corpo.
+
 Para mais infomações, acesse: https://www.infoescola.com/anatomia-humana/coracao/ ', 'Coração', '\OrgaosImagens\Circulatorio\coracao.png', 4)
 
 insert into Orgao values(26, 'Veias surgem da fusão dos capilares e são responsáveis por transportar o sangue do corpo até o coração. Sua capacidade de contrair e expandir 
@@ -314,35 +322,39 @@ Elas possuem válvulas que agem unidirecionalmente para evitar o contrafluxo caus
 
 Para mais informações, acesse: https://www.infoescola.com/sistema-circulatorio/veia/', 'Veias', '\OrgaosImagens\Circulatorio\veias.png', 4)
 
-insert into Orgao values(27, ' As artérias são responsáveis por transportar o sangue do coração para o corpo. Existem diversas artérias no nosso copo, as principais são:
-*Artérias Pulmonares: carregam o sangue venoso do coração para os pulmões.
-*Artéria Aorta: é artéria que carrega o sangue arterial(com oxigênio) do ventriculo esquerdo do coração para o restante do corpo.
-Ela se divide em artérias menores que distribuem esse sangue para as células.
+insert into Orgao values(27, ' As artérias são responsáveis por transportar o sangue do coração para o corpo. Existem diversas artérias no nosso copo, as principais são
+as artérias Pulmonares que carregam o sangue venoso do coração para os pulmões e a artéria Aorta que carrega o sangue arterial(com oxigênio) do ventriculo esquerdo do
+coração para o restante do corpo. Ela se divide em artérias menores que distribuem esse sangue para as células.
 Para mais informações, acesse: https://www.infoescola.com/sistema-circulatorio/arteria/', 'Artérias', '\OrgaosImagens\Circulatorio\arteria.png', 4)
 
 
 
-insert into Sistema values(5, 'Sistema Reprodutor Masculino', 'O Sistema Reprodutor Masculino é formado por órgãos internos e externos, que passam por um lento amadurecimento concluindo-se na puberdade, ou 
-seja, quando as células sexuais ficam disponíveis para originar outro ser. É constítuido pelos testículos, epidídimos, canais deferentes, vesículas seminais, próstata, uretra e pênis. 
+
+
+
+insert into Sistema values(5, 'Sistema Reprodutor Masculino', 'O Sistema Reprodutor Masculino é formado por órgãos internos e externos, que passam por um lento
+amadurecimento concluindo-se na puberdade, ou seja, quando as células sexuais ficam disponíveis para originar outro ser. É constítuido pelos testículos, 
+epidídimos, canais deferentes, vesículas seminais, próstata, uretra e pênis. 
 Para informações, acesse: https://www.infoescola.com/biologia/aparelho-reprodutor-masculino/ http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/')
 
-insert into Orgao values(28, 'O pênis é um órgão cilíndrico externo, que possui dois tipos de tecidos: cavernoso e esponjoso. Através do pênis são eliminados a urina (função excretora) e o sêmen (função reprodutora).
-O tecido esponjoso envolve a uretra e a protege, enquanto o tecido cavernoso se enche de sangue, fazendo com que o pênis fique maior e duro (ereção), pronto para o ato sexual, geralmente levando à 
-ejaculação (processo de expulsão do sêmen). A ereção, no entanto, não ocorre apenas como preparação para uma atividade sexual, pode acontecer por diversos estímulos fisiológicos, por exemplo, 
-quando a bexiga está cheia ou quando o homem tem um sonho à noite.
+insert into Orgao values(28, 'O pênis é um órgão cilíndrico externo, que possui dois tipos de tecidos: cavernoso e esponjoso. Através do pênis são eliminados a 
+urina (função excretora) e o sêmen (função reprodutora). O tecido esponjoso envolve a uretra e a protege, enquanto o tecido cavernoso se enche de sangue, fazendo 
+com que o pênis fique maior e duro (ereção), pronto para o ato sexual, geralmente levando à ejaculação (processo de expulsão do sêmen). A ereção, no entanto, não 
+ocorre apenas como preparação para uma atividade sexual, pode acontecer por diversos estímulos fisiológicos, por exemplo, quando a bexiga está cheia ou quando o homem 
+tem um sonho à noite.
 Para informações, acesse: http://www.anatomiadocorpo.com/penis/
 https://www.infoescola.com/sistema-reprodutor/penis/', 'Pênis', '\OrgaosImagens\ReprMasc\penis.png', 5)
 
-insert into Orgao values(29, 'Os testículos são duas glândulas de forma oval, que estão situadas na bolsa escrotal. Na estrutura de cada testículo encontram-se tubos finos
-e enovelados chamados "tubos seminíferos". Nos testículos são produzidos os espermatozoides, as células reprodutoras (gametas) masculinas, 
-durante o processo chamado espermatogênese, além de diversos hormônios. O principal hormônio é a testosterona, responsável pelo aparecimento 
-das características sexuais secundárias masculinas, como os pelos, modificações da voz, etc.
+insert into Orgao values(29, 'Os testículos são duas glândulas de forma oval, que estão situadas na bolsa escrotal. Na estrutura de cada testículo encontram-se 
+tubos finos e enovelados chamados "tubos seminíferos". Nos testículos são produzidos os espermatozoides, células reprodutoras (gametas) masculinas, 
+durante a chamada espermatogênese e também de diversos hormônios. O principal hormônio é a testosterona, responsável pelo aparecimento das características 
+sexuais secundárias masculinas, como os pelos, modificações da voz, etc.
 
 Para informações, acesse: https://www.infoescola.com/sistema-reprodutor/testiculos/', 'Testículos', '\OrgaosImagens\ReprMasc\testiculos.png', 5)
 
-insert into Orgao values(30, 'A uretra é um canal que, nos homens, serve ao sistema urinário e ao sistema reprodutor. Começa na bexiga, atravessa a próstata e o pênis (sua maior porção) 
-até a ponta da glande, onde há uma abertura pela qual são eliminados o sêmen a a urina. Importante ressaltar que urina e esperma nunca são eliminados ao mesmo tempo graças à musculatura
-da bexiga, na entrada da uretra, que impede que isso ocorra.
+insert into Orgao values(30, 'A uretra é um canal que, nos homens, serve ao sistema urinário e ao sistema reprodutor. Começa na bexiga, atravessa a 
+próstata e o pênis (sua maior porção) até a ponta da glande, onde há uma abertura pela qual são eliminados o sêmen a a urina. Importante ressaltar
+que urina e esperma nunca são eliminados ao mesmo tempo graças à musculatura da bexiga, na entrada da uretra, que impede que isso ocorra.
 
 Para informações, acesse:  http://www.anatomiadocorpo.com/sistema-reprodutor-genital/uretra-masculina-e-feminina/
 https://www.infoescola.com/anatomia-humana/uretra/', 'Uretra', '\OrgaosImagens\ReprMasc\uretra.png', 5)
@@ -360,7 +372,7 @@ Para informações, acesse: https://www.infoescola.com/biologia/aparelho-reproduto
 
 insert into Orgao values(33, 'A vesícula seminal é formada por duas pequenas bolsas localizadas atrás da bexiga. Tem como função produzir o "líquido seminal",
 uma secreção espessa e leitosa, que neutraliza a ação da urina e protege os espermatozoides, além de ajudar seu movimento até a uretra. O líquido seminal 
-também ajuda a neutralizar a acidez da vagina, evitando que os espermatozoides morram no caminho até os óvulos.
+também ajuda a neutralizar a acidez da vagina, evitando que os espermatozoides morram no caminho até os ovócitos.
 
 Para informações, acesse:  http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/
 https://www.infoescola.com/sistema-reprodutor/prostata/', 'Vesícula Seminal', '\OrgaosImagens\ReprMasc\seminal.png', 5)
@@ -371,21 +383,24 @@ Para informações, acesse: https://www.infoescola.com/sistema-reprodutor/epididim
 http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/epididimo-e-vias-espermaticas/', 'Epidídimo', '\OrgaosImagens\ReprMasc\epididimo.png', 5)
 
 
-insert into Sistema values(6, 'Sistema Reprodutor Feminino', 'O Sistema Reprodutor femino é responsável pela reprodução humana é formado pelos ovários que produzem 
-os óvulos(gametas femininos), as tubas uterinas, que transportam os óvulos até o útero e o protegem, o útero, onde o embrião se desenvolve, a vagina e a vulva. 
+
+
+
+insert into Sistema values(6, 'Sistema Reprodutor Feminino', 'O Sistema Reprodutor feminino é responsável pela reprodução humana é formado pelos ovários que produzem 
+os ovócitos(gametas femininos), as tubas uterinas, que transportam os óvulos até o útero e o protegem, o útero, onde o embrião se desenvolve, a vagina e a vulva. 
 Para mais informações, acesse: https://www.todamateria.com.br/sistema-reprodutor-feminino/  
 https://www.infoescola.com/biologia/aparelho-reprodutor-feminino/')
 
-insert into Orgao values(35, 'A vagina é um órgão que se comunica com o útero. Possui paredes franjadas e glândulas secretras de muco. 
-A região externa da vulva é chamada de vestíbulo da vagina, onde encontramos dois orifícos: o urinários (da uretra) e o genital (da vagina).
-A região entre a vagina e a vulva, em mulheres que nunca tiveram uma relação sexual origina o hímen.
+insert into Orgao values(35, 'A vagina é um órgão que se comunica com o útero. Possui paredes franjadas e glândulas secretras de muco. A região externa 
+da vulva é chamada de vestíbulo da vagina, onde encontramos dois orifícos: o urinários (da uretra) e o genital (da vagina).A região entre a vagina e a vulva,
+em mulheres que nunca tiveram uma relação sexual origina o hímen.
 
 Para mais informações, acesse: https://www.infoescola.com/sistema-reprodutor/vagina/ ', 'Vagina', '\OrgaosImagens\ReprFem\vagina.png', 6)
 
 insert into Orgao values(36, 'O útero é musculoso, oco e de grande elasticidade. Está ligado com as tubas uterina e com a vagina. É formado por 5 regiões: 
 corpo, istmo, colo, óstio e fundo. Sua função é receber e implantar embriões, responsável pela expulsão do feto no momento do parto. Tem  uma parede espessa 
 composta por três camadas: a serosa, o miométrio, parede mais espessa do útero e o endométrio, que é a camada de células que reveste a cavidade uterina. Todo mês ele se torna mais 
-espesso para receber o óvulo fertilizado. Caso não ocorra a fertilização, o endométrio que se desenvolveu é eliminado através da menstruação.
+espesso para receber o ovócito fertilizado. Caso não ocorra a fertilização, o endométrio que se desenvolveu é eliminado através da menstruação.
 Para mais informações, acesse: https://www.infoescola.com/sistema-reprodutor/utero/', 'Útero', '\OrgaosImagens\ReprFem\utero.png', 6)
 
 insert into Orgao values(37, 'Os Ovários produzem os ovócitos e os hormônios sexuais estrógeno e progesterona através da ovocitogênese e a esteroidogênese. 
@@ -393,25 +408,23 @@ Durante a fase fértil da mulher um dos ovários lança  um ovócito na tuba uterina
 
 Para mais informações, acesse: https://brasilescola.uol.com.br/biologia/ovarios.htm', 'Ovário', '\OrgaosImagens\ReprFem\ovario.png', 6)
 
-insert into Orgao values(38, 'As tubas uterinas são denominadas ovidutos, são tubos musculares e são responsáveis por transportar o óvulo em direção ao útero. 
+insert into Orgao values(38, 'As tubas uterinas são denominadas ovidutos, são tubos musculares e são responsáveis por transportar o ovócito em direção ao útero. 
 Elas são dividas em 4 partes: infudíbulo, que se  abre em uma cavidade chamada óstio abdominal, ampola,região onde ela sofre uma curvatura para encontrar o ovário, o istmo, 
 porção medial que se abre, e o intramural, que abre-se na cavidade peritoneal próximo ao ovário e possui prolongamentos no formato de franjas.
 Para mais informações, acesse: https://www.infoescola.com/sistema-reprodutor/tubas-uterinas/', 'Tubas Uterinas', '\OrgaosImagens\ReprFem\tuba.png', 6)
 
-insert into Sistema values(7, 'Sistema Muscular','O sistema muscular é composto  por aproximadamente 600 músculos, tecidos, cujas células ou fibras musculares possuem a propriedade de contratilidade e de produção de movimentos.  
-Tem como funções: estabilidade corporal, produção de movimentos, manutenção da temperatura corporal, sustentação, auxílio nos fluxos sanguíneos.
-
-Existem 3 tipos de músculos: 
+insert into Sistema values(7, 'Sistema Muscular','O sistema muscular é composto  por aproximadamente 600 músculos, tecidos, cujas células ou fibras musculares
+possuem a propriedade de contratilidade e de produção de movimentos. Tem como funções: estabilidade corporal, produção de movimentos, manutenção da temperatura 
+corporal, sustentação, auxílio nos fluxos sanguíneos. Existem 3 tipos de músculos: 
 
 Musculo Liso ou não estriado: músculos de contração involuntária, assegura a movimentação dos órgãos internos.
 
 Músculo Estriado Cardíaco: músculos de contração involuntária, asseguram os vigorosos batimentos cardíacos.
 
-Músculo Estriado Esquelético: músculos de contração voluntária, conectados com os ossos e cartilagens e, através das 
-contrações, permitem os movimentos, as posições corporais, além de estabilizarem as articulações do organismo.
+Músculo Estriado Esquelético: músculos de contração voluntária, conectados com os ossos e cartilagens e, através das contrações, permitem os movimentos, 
+as posições corporais, além de estabilizarem as articulações do organismo.
 
-Para mais informações, acesse:
-http://www.anatomiadocorpo.com/sistema-muscular/
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-muscular/
 https://www.infoescola.com/anatomia-humana/sistema-muscular/')
 
 insert into Orgao values(39, 'Os músculos da cabeça se dividem em mastigadores e os da mímica.
