@@ -34,6 +34,10 @@ body
     margin-top: 10%;
     padding: 10px;
 }
+p#intro
+{
+    margin-top: 15%;
+}
 #imgPrincipal
 {
     margin: 0 auto;
@@ -51,18 +55,23 @@ body
     color: white;
 }
 
+.txtNomeOrgao
+{
+    color: orange;
+    font-family: Agency FB;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 .divTextoOrgaos
 {
-    text-align: center;
-    border: black 1px solid;
-    border-radius: 10pt;
-    box-shadow: 1px 1px 1px 1px black;
 }
 .divTextoOrgaos:hover
 {
-    color: blue;
+    color: rgb(136, 136, 248);
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: rgb(141, 211, 202);
 }
 #fundoPreto
 {

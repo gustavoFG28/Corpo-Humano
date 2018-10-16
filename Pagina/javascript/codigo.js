@@ -116,14 +116,12 @@ function criarTabelaDosOrgaos(indice)
 
 function ExibeDados(response) {
     var arr = JSON.parse(response);
-    var out = "<div class='row'>";
+    var out = "<table class='responsive-table'>";
 
     for(var i = 0; i < arr.length; i++) {
-        out += "<div class='col s3 txtIntroducao divTextoOrgaos' value='" + i +"'>" + 
-        arr[i].nome +
-        "</div>";
+        out += "<tr class='txtNomeOrgao' value='" + i +"'><td>" + arr[i].nome + "</td>"+ (((i+1) != arr.length)?"<td>" + arr[++i].nome + "</td>":"") + "</tr>";
     }
-    out += "</div>";
+    out += "</table>";
     document.getElementById("areaOrgaos").innerHTML += out;
 }
 
