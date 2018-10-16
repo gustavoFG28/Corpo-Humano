@@ -139,16 +139,16 @@ palatinos e os cartuchos inferiores.
 Para mais informações, acesse: https://www.anatomiaonline.com/face/
 http://www.anatomiadocorpo.com/esqueleto-humano-sistema-esqueletico-ossos/', 'Ossos da Face','\OrgaosImagens\Esqueleto\face.png' ,2)
 
-insert into Orgao values(8,'O crânio é uma estrutura rígida(dura), cartilagionasa ou óssea. Ele protege e armazena o encéfalo. 
-O crânio humano é composto de oito ossos: Parietal (dois), Temporal (dois), Frontal, Occipital, Esfenóide, Etmóide', 'Ossos da Face.
+insert into Orgao values(8,'O crânio é uma estrutura rígida, cartilagionasa e óssea. Ele protege e armazena o encéfalo. O crânio humano é composto de oito
+ossos: Parietal (dois), Temporal (dois), Frontal, Occipital, Esfenóide, Etmóide
 Para mais informações acesse: https://www.todabiologia.com/dicionario/cranio.htm 
-http://www.anatomiadocorpo.com/esqueleto-humano-sistema-esqueletico-ossos/' ,'\OrgaosImagens\Esqueleto\face.png', 2)
+http://www.anatomiadocorpo.com/esqueleto-humano-sistema-esqueletico-ossos/' , 'Crânio','\OrgaosImagens\Esqueleto\cranio.png', 2)
 
 
 insert into Orgao values(9,
 'Bigorna: Localizada no ouvido médio, tem formato de bigorna e um corpo que se articula com o martelo.
 
-Martelo: Presente no ouvido médio é formado por uma longa projeção, o manúbrio queestá inserido na membrana timpânica.
+Martelo: Presente no ouvido médio é formado por uma longa projeção, o manúbrio que está inserido na membrana timpânica.
 
 Estribo: Forma a cadeia auditiva e é o menor ossso do corpo humano. Articula-se com a bigorna.
 
@@ -156,18 +156,19 @@ Para mais informações, acesse:
 http://www.biologia.seed.pr.gov.br/modules/galeria/detalhe.php?foto=298&evento=3
 http://www.biologia.seed.pr.gov.br/modules/galeria/detalhe.php?foto=452&evento=3
 http://www.biologia.seed.pr.gov.br/modules/galeria/detalhe.php?foto=563&evento=3
-https://www.hear-it.org/pt/O-ouvido-medio', 'Ossos do Ouvido','\OrgaosImagens\Esqueleto\ouvido.png',2)
+https://www.hear-it.org/pt/O-ouvido-medio', 'Ossículos do Ouvido','\OrgaosImagens\Esqueleto\ouvido.png',2)
 
-insert into Orgao values(10, 'O osso hióide é um osso com forma de U superior à laringe, os dois braços projetam-se posteriormente a partir das extremidades laterais do corpo. O osso hióide 
-é altamente móvel para muitos músculos e estruturas de partes moles na cabeça e pescoço e não articula com outro elemento esquelético nem na cabeça e nem no pescoço.
+insert into Orgao values(10, 'O osso hióide é um osso com forma de U superior à laringe, os dois braços projetam-se posteriormente a partir das extremidades 
+laterais do corpo. O osso hióide é altamente móvel para muitos músculos e estruturas de partes moles na cabeça e pescoço, porém não se articula com outro 
+elemento esquelético nem na cabeça e nem no pescoço.
 
-Para mais informações, acesse: https://www.portaleducacao.com.br/conteudo/artigos/fonoaudiologia/osso-hioide/37126', 'Pescoço', '\OrgaosImagens\Esqueleto\pescoco.png',2)
+Para mais informações, acesse: https://www.portaleducacao.com.br/conteudo/artigos/fonoaudiologia/osso-hioide/37126', 'Hióide', '\OrgaosImagens\Esqueleto\pescoco.png',2)
 
-insert into Orgao values(11, 'Clavícula: forma a porção ventral do ombto, é um osso curvado como um "S" itálico,
-situado acima da primeira costela. Articula-se com o manúbrio do esterno e com o  acrômio da escápula.
+insert into Orgao values(11, 'Clavícula: forma a porção ventral do ombro, é um osso curvado como um "S" itálico, situado acima da primeira costela.
+Articula-se com o manúbrio do esterno e com o acrômio da escápula.
 
-Escápula: é um osso chato bem fino, com uma forma triangular podendo ser translúcido 
-em certos pontos. Forma a parte dorsal da cintura escapular.
+Escápula: é um osso chato bem fino, com uma forma triangular podendo ser translúcido em certos pontos. Forma a parte dorsal da cintura escapular.
+
 Para mais informações, acesse: https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-superior/escapula/ 
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-superior/clavicula/', 'Cintura escapular', '\OrgaosImagens\Esqueleto\escapula.png',2)
 
@@ -180,13 +181,12 @@ Rádio - é um osso curto localizado na lateral do antebraço. Articula-se com o úm
 Para mais informações, acesse: https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-superior/umero/
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-superior/ulna/
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-superior/radio/
- ', 'Ossos do Braço', '\OrgaosImagens\Esqueleto\braco.png', 2)
+ ', 'Membros Superiores', '\OrgaosImagens\Esqueleto\braco.png', 2)
 
-insert into Orgao values(13, 'A mão tem no total 27 ossos trabalhando em conjunto. Junto com os músculos e 
-articulações permitem o manuseio de objetos. Ela é divida em 3 regiões diferentes: 
+insert into Orgao values(13, 'A mão tem no total 27 ossos trabalhando em conjunto. Junto com os músculos e articulações permitem o manuseio 
+de objetos. Ela é divida em 3 regiões diferentes: 
 
-O carpo - composto pelos ossos: escafoide, semilunar, piramidal , pisiforme,  trapézio, 
-trapezoide, capitato e hamato.
+O carpo - composto pelos ossos: escafoide, semilunar, piramidal , pisiforme, trapézio, trapezoide, capitato e hamato.
 
 O metacarpo  - composta por 5 ossos metacarpianos.
 
@@ -196,16 +196,11 @@ Para mais informações, acesse: https://www.auladeanatomia.com/novosite/sistemas/
 https://www.todamateria.com.br/ossos-da-mao/
 http://www.anatomiadocorpo.com/esqueleto-humano-sistema-esqueletico-ossos/mao-carpo-metacarpo-falanges/', 'Ossos da Mão', '\OrgaosImagens\Esqueleto\mao.png',2)
 
-insert into Orgao values(14,'Costela: são formadas por 12 pares, alongadas, em forma de semi-arcos e ligam as 
-vértebras torácicas ao esterno e são classificadas em:
-* 7 Pares Verdadeiras: articulam se diretamente ao esterno
-* 3 Pares Falsas Propriamente Ditas: articulam-se indiretamente (cartilagens)
-* 2 Pares Falsas Flutuantes: são livres
+insert into Orgao values(14,'Costela: são formadas por 12 pares, alongadas, em forma de semi-arcos e ligam as vértebras torácicas ao 
+esterno e são classificadas em 7 Pares Verdadeiras que articulam se diretamente ao esterno, 3 Pares Falsas Propriamente Ditas que articulam-se 
+indiretamente (cartilagens) e 2 Pares Falsas Flutuantes que são livres.
 
-Esterno: É um osso chato, plano e ímpar. Apresenta 3 partes:
-* Manúbrio
-* Corpo
-* Processo Xifoide
+Esterno: É um osso chato, plano e ímpar, apresenta três partes: manúbrio, corpo processo e xifoide.
 
 Para mais informações, acesse: https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/torax/esterno/
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/torax/costelas/', 'Tórax', '\OrgaosImagens\Esqueleto\torax.png', 2)
@@ -213,7 +208,8 @@ https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/torax/coste
 insert into Orgao values(15,'
 Vértebras Cervicais: possui um corpo pequeno, exceto a primeira vértebra.
 
-Vértebras Torácicas: não é bifurcado e se apresenta descendente e pontiagudo. Elas se articulam com as costelas e a sua superfície articular é chamada de fóvea e hemi-fóvea.
+Vértebras Torácicas: não é bifurcado e se apresenta descendente e pontiagudo. Elas se articulam com as costelas e a sua superfície articular
+é chamada de fóvea e hemi-fóvea.
  
 Vértebras Lombares: são maiores. O processo espinhal não é bifurcado, além de estar disposto em posição horizontal. 
 
@@ -256,35 +252,42 @@ Dedos – são formados pela falange, falanginha e falangeta.
 Para mais informações, acesse: https://planetabiologia.com/sistema-esqueletico-ossos-do-pe/
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-inferior/ossos-do-pe/', 'Ossos do Pé','\OrgaosImagens\Esqueleto\pe.png', 2)
 
-insert into Sistema values(3, 'Sistema Respiratório', 'O Sistema Respiratório fornece oxigênio e remove gás carbônico do organismo, auxilia as células no metabolismo e
-atua em conjunto com o sistema circulatório. É formado pelo nariz, cavidade do nariz, faringe, laringe, traquéia, brônquios e pulmões.
+
+
+
+
+
+insert into Sistema values(3, 'Sistema Respiratório', 'O Sistema Respiratório fornece oxigênio e remove gás carbônico do organismo, auxilia as células no
+metabolismo e atua em conjunto com o sistema circulatório. É formado pelo nariz, cavidade do nariz, faringe, laringe, traquéia, brônquios e pulmões.
 Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-respiratorio/')
 
-insert into Orgao values(19,'  O ar entra no sistema respiratório por meio das fossas nasais que são separadas por uma cartilagem chamada de septo. No interior do nariz
-são encontrados pelos que retém partículas que entram junto com o ar, o nariz é responsável por esquentar, filtrar e umedecer o ar para os pulmões. 
+insert into Orgao values(19,'O ar entra no sistema respiratório por meio das fossas nasais que são separadas por uma cartilagem chamada de septo. No 
+interior do nariz são encontrados pelos que retém partículas que entram junto com o ar, o nariz é responsável por esquentar, filtrar e umedecer o
+ar para os pulmões. 
 
 Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-respiratorio/ 
 https://www.todamateria.com.br/sistema-respiratorio/', 'Nariz', '\OrgaosImagens\Respiratorio\nariz.png', 3)
 
-insert into Orgao values(20,' A faringe é um órgão tubular que inicia-se nas coanas(abertura nasal posterior) com prolongação para baixo no pescoço com a forma de um funil. 
-Se comunica com o esôfago, fossas nasais e ouvidos mantendo-se ligada à laringe e ao esôfago. Ela é responsável pela circulação de ar e alimentos. Quando respriramos o ar 
-entra nas fossas nasais e passa pela faringe encaminhando-se para traqueia e brônquios até chegar aos pulmões.
+insert into Orgao values(20,'A faringe é um órgão tubular que inicia-se nas coanas(abertura nasal posterior) com prolongação para baixo no pescoço com
+a forma de um funil. Se comunica com o esôfago, fossas nasais e ouvidos mantendo-se ligada à laringe e ao esôfago. Ela é responsável pela circulação de 
+ar e alimentos. Quando respriramos o ar entra nas fossas nasais e passa pela faringe encaminhando-se para traqueia e brônquios até chegar aos pulmões.
+
 Para mais informações,acesse: https://www.infoescola.com/anatomia-humana/faringe/', 'Faringe','\OrgaosImagens\Respiratorio\faringe.png', 3)
 
-insert into Orgao values(21,'A laringe é um tubo de formato irregular, sustentado por peças cartilaginosas irregulares articuladas que une a faringe à traqueia. 
-Este órgão é formado por uma série de cartilagens. A sua entrada é chamada de glote. Acima dele existe uma estrutura chama epiglote que funciona como uma válvula
-que fecha quando o alimento entra, impedindo a entrada a entrada de alimento nas vias áreas.
+insert into Orgao values(21,'A laringe é um tubo de formato irregular, sustentado por peças cartilaginosas irregulares articuladas que une a faringe 
+à traqueia. Este órgão é formado por uma série de cartilagens. A sua entrada é chamada de glote. Acima dela existe uma estrutura chama epiglote que 
+funciona como uma válvula que fecha quando o alimento entra, impedindoa entrada de alimento nas vias áreas.
 
 Para mais informações, acesse: https://www.infoescola.com/sistema-respiratorio/laringe/', 'Laringe','\OrgaosImagens\Respiratorio\laringe.png', 3)
 
-insert into Orgao values(22,'A traqueia é um tubo vertical cilíndrico, cartilaginoso e membranoso, localizado entre a laringe e os brônquios, fortalecido por anéis de cartilagem,
-que levam o ar inspirado até os pulmões. A função da traqueia no sistema respiratório é a condução do ar até os brônquios. Possui um revestimento interno que produzem um muco que 
-umedecem e aquecem o ar que respiramos. Quando inalamos poeira, bactérias e partículas elas aderem-se ao muco e são conduzidas para a garganta pelos cílios e eliminadas pela tosse.
+insert into Orgao values(22,'A traqueia é um tubo vertical cilíndrico, cartilaginoso e membranoso, localizado entre a laringe e os brônquios, fortalecido
+por anéis de cartilagem, que levam o ar inspirado até os brônquios. Possui um revestimento interno que produzem um muco que umedece e aquece o ar que 
+respiramos. Quando inalamos poeira, bactérias e partículas elas aderem-se ao muco e depois são conduzidas para a garganta pelos cílios e eliminadas pela tosse.
 
 Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/traqueia/', 'Traqueia','\OrgaosImagens\Respiratorio\traqueia.png', 3)
 
-insert into Orgao values(23,'  Os brônquios são estruturas tubulares que levam o ar aos pulmões. A traquéia ramifica-se em dois
-brônquios: o direito e o esquerdo. Apesar das características anatômicas iguais às da traquéia, tem um diâmetro menor.
+insert into Orgao values(23,'Os brônquios são estruturas tubulares que levam o ar aos pulmões. A traqueia ramifica-se em dois
+brônquios: o direito e o esquerdo. Apesar das características anatômicas iguais às da traqueia, tem um diâmetro menor.
 
 Para mais informações, acesse: https://www.infoescola.com/sistema-respiratorio/bronquios/', 'Brônquios','\OrgaosImagens\Respiratorio\bronquio.png', 3)
 
