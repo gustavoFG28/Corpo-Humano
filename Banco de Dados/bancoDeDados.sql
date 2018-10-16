@@ -54,17 +54,17 @@ alter table Usuario add imagem varchar(50)
 alter table Usuario add imgFundo varchar(50)
 alter table Usuario drop column sobrenome
 
+select * from Sistema
+select * from Orgao
 
 insert into Sistema values(1, 'Sistema Digestório', 'O Sistema Digestório é formado por um conjunto de órgãos cuja função é transformar os alimentos,
-por meio de processos mecânicos e químicos. É constítuido pela boca, faringe, esôfago, estômago, intestino delgado e intestino grosso.
-Além de órgãos anexos como as glândulas salivares, pâncreas, fígado, vesícula biliar, dentes e língua. 
+por meio de processos mecânicos e químicos. É constítuido pela boca, faringe, esôfago, estômago, intestino delgado e intestino grosso. Além de órgãos
+anexos como as glândulas salivares, pâncreas, fígado, vesícula biliar, dentes e língua. 
 Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/sistema-digestorio/
 http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/')
 
-insert into Orgao values(1,'A boca, cavidade oval, é a porta de entrada dos alimentos. Quando ingeridos, são mastigados através da digestão mecânica.
-Nela, acontece o ínicio da digestão química dos carboidratos, onde o amido é decomposto em moléculas de glicose e maltose, através da saliva.
-
-Anexos envolvidos:
+insert into Orgao values(1,'A boca, cavidade oval, é a porta de entrada dos alimentos, que são mastigados através da digestão mecânica. Nela, acontece
+o ínicio da digestão química dos carboidratos, onde o amido é decomposto em moléculas de glicose e maltose, através da saliva. Anexos envolvidos:
 
 Glândulas salivares: Produzem a saliva, que é constítuida de água, mucina e amilase.
 
@@ -72,64 +72,53 @@ Língua: Sua mobilidade e sensibilidade aos sabores a torna um auxiliar preciso d
 
 Dentes: Órgãos esbranquiçados, duros, de consistêcia pétrea, implantados nos alvéolos dos maxilares.
 
-Para mais informações acesse:
-http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/boca/
+Para mais informações acesse:  http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/boca/
 http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/boca/saliva-mastigacao-degluticao-ptialina-mucina-lisozima/', 'Boca', '\OrgaosImagens\Digestorio\boca.png', 1)
 
-insert into Orgao values(2,'Órgão tubular, com tamanho variado entre 12 à 15cm. É uma estrutura de grande resistência, pois suporta correntes de ar cuja velocidade varia entre 
-IS(respiração normal) e 300km/h(tosse e espirro) sem lhe causar dano algum. Sua função é circulção de bolos alimentares e ar, pois esta comunica-se com a laringe levando o ar e 
-com o esôfago levando alimento.
+insert into Orgao values(2,'Órgão tubular, com tamanho variado entre 12 à 15cm. É uma estrutura de grande resistência, pois suporta correntes de ar 
+cuja velocidade varia entre IS(respiração normal) e 300km/h(tosse e espirro) sem lhe causar dano algum. Sua função é circulção de bolos alimentares 
+e ar, pois ela comunica-se com a laringe e com o esôfago.
 
-Para mais informações, acesse:
-https://www.infoescola.com/anatomia-humana/faringe/
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/faringe/
 http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/faringe/', 'Faringe', '\OrgaosImagens\Digestorio\faringe.png', 1)
 
 
-insert into Orgao values(3,'O esôfago é um conduto musculoso que liga a faringe ao estômago, controlado pelo sistema nervoso autônomo. Assim, por meio de ondas de 
-contrações involuntárias, conhecidas como peristaltismo ou movimentos peristálticos, o conduto musculoso vai espremendo os alimentos e 
-levando-os em direção ao estômago. 
+insert into Orgao values(3,'O esôfago é um conduto musculoso que liga a faringe ao estômago, controlado pelo SNC(Sistema Nervoso Central). Assim, por 
+meio de ondas de  contrações involuntárias, conhecidas como movimentos peristálticos, o conduto musculoso vai espremendo os alimentos levando-os em 
+direção ao estômago. 
 
-Para mais informações, acesse:
-http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/esofago/
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/esofago/
 https://www.infoescola.com/sistema-digestivo/esofago/', 'Esôfago', '\OrgaosImagens\Digestorio\esofago.png' , 1)
 
-insert into Orgao values(4,'O estômago é um órgão do tubo digestivo que tem funções endócrinas e exócrinas. Suas principais 
-funções são adicionar um fluído ácido ao alimento ingerido, transformando este bolo alimentar no chamado quimo, através da atividade muscular e da enzima pepsina, além de
-iniciar a digestão das proteínas. Produz também uma lipase gástrica, que com o auxílio da lipase lingual, digere os triglicerídeos. O epitélio que reveste a mucosa
-gástrica sofre invaginação em direção à lâmina própria, dando origem às fossetas gástricas, sendo que nestas, desembocam as glândulas que secretam o suco gástrico. 
-Para mais informações, acesse:
-http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/estomago/
+insert into Orgao values(4,'O estômago é um órgão do tubo digestivo que tem funções endócrinas e exócrinas. Suas principais funções são adicionar um 
+fluído ácido através da atividade muscular e da enzima pepsina ao alimento ingerido, tranformando-o no chamado quimo  e  iniciar a digestão das proteínas.
+Produz também uma lipase gástrica, que com o auxílio da lipase lingual, digere os triglicerídeos. 
+
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/estomago/
 https://www.infoescola.com/sistema-digestivo/estomago/', 'Estômago','\OrgaosImagens\Digestorio\estomago.png', 1)
 
-insert into Orgao values(5,'O intestino delgado é revestido por uma mucosa enrugada que apresenta inúmeras projeções. Tem a função de segregar as várias enzimas digestivas, dando 
-origem a móleculas pequenas e solúveis como glicose, aminoácidos e glicerol. O intestino delgado está dividido em três porções: o duodeno, o jejuno e o íleo. O duodeno diminui a acidez 
-do quimo por meio do suco pancreático  que contém enzimas que o neutralizam. Logo, o quimo é banhado pela bile, armazenada na vesícula biliar, emulsificando os lipídios. O jejuno e íleo, 
-levam a “pasta” até o intestino grosso.
+insert into Orgao values(5,'O intestino delgado é revestido por uma mucosa enrugada que apresenta inúmeras projeções. Tem a função de segregar as várias
+enzimas digestivas, dando origem a móleculas pequenas e solúveis como glicose, aminoácidos e glicerol. O intestino delgado está dividido em três porções: 
+o duodeno, o jejuno e o íleo. O duodeno diminui a acidez do quimo por meio do suco pancreático que contém enzimas que o neutralizam. Logo, o quimo é banhado
+la bile, armazenada na vesícula biliar, emulsificando os lipídios. O jejuno e íleo, levam a “pasta” até o intestino grosso.
 
 Anexos envolvidos:
-Pâncreas: O pâncreas tem funções endócrinas e exócrinas. A parte endócrina é composta por grupos de células chamadas ilhotas pancreáticas, formadas por três grupos de células 
-que produzem glucagon, insulina e somatostatina ambos lançados diretamente na corrente sanguínea. Já a porção exócrina do pâncreas participa na digestão secretando enzimas digestivas
-para o duodeno, através de estruturas chamas ácinos. 
+Pâncreas: O pâncreas tem funções endócrinas e exócrinas.A porção exócrina do pâncreas participa na digestão secretando enzimas digestivas para o duodeno, 
+através de estruturas chamas ácinos. 
 
 Fígado:
-O fígado é a maior glândula do corpo humano e pode executar mais de 500 funções, como: armazenamento e liberação de glicose, metabolismo de lipídeos e proteínas 
-(conversão de amônia em uréia), síntese da maioria das proteínas do plasma, processamento de drogas e hormônios, destruição das células sanguíneas desgastadas e bactérias,
-emulsificação da gordura durante o processo de digestão através da secreção da bile, etc.
+O fígado é a maior glândula do corpo humano e pode executar mais de 500 funções, como: armazenamento e liberação de glicose, metabolismo de lipídeos e 
+proteínas (conversão de amônia em uréia), processamento de drogas e hormônios, etc.
 
-Para mais informações, acesse:
-https://www.infoescola.com/anatomia-humana/intestino-delgado/
-http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/intestino/
-https://www.infoescola.com/anatomia-humana/pancreas/
-http://www.anatomiadocorpo.com/sistema-endocrino/pancreas/
-http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/figado/
-https://www.infoescola.com/anatomia-humana/figado/','Intestino', 'Intestino Delgado','\OrgaosImagens\Digestorio\intestinoDelgado.png', 1)
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/intestino-delgado/ http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/intestino/
+https://www.infoescola.com/anatomia-humana/pancreas/  http://www.anatomiadocorpo.com/sistema-endocrino/pancreas/
+http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/figado/ https://www.infoescola.com/anatomia-humana/figado/', 'Intestino Delgado','\OrgaosImagens\Digestorio\intestinoDelgado.png', 1)
 
-insert into Orgao values(6, 'O intestino grosso é responsável por armazenar e eliminar os resíduos da digestão e absorver os nutrientes que o intestino delgado não assimilou
-e a água tanto a ingerida, quanto a das secreções digestivas. É dividido em ceco, onde os resíduos alimentares, já constituindo o bolo fecal, passam ao cólon e reto. Quando o 
-alimento chega ao cólon descendente, o bolo fecal permanece estagnado por muitas horas. As fibras vegetais não digeridas nem absorvidas pelo sistema digestivo, passam por todo tubo
-digestivo e formam uma porcentagem significativa da massa fecal. Glândulas da mucosa do intestino grosso, secretam muco, que lubrifica o bolo fecal, facilitando seu trânsito e sua
-eliminação. O reto é a parte final do intestino grosso, e termina com o canal anal que se comunica com o exterior através do ânus, por onde são 
-eliminados os resíduos fecais. O esfíncter é um músculo localizado ao redor do ânus, que controla a passagem das fezes.
+insert into Orgao values(6, 'O intestino grosso é responsável por armazenar e eliminar os resíduos da digestão e por absorver os nutrientes que o intestino 
+delgado não assimilou assim como a água. É dividido em ceco, onde os resíduos alimentares, já constituindo o bolo fecal, passam ao cólon e reto. Quando o 
+alimento chega ao cólon descendente, o bolo fecal permanece estagnado por muitas horas. Glândulas da mucosa do intestino grosso, secretam muco,
+que lubrifica o bolo fecal, facilitando seu trânsito e sua eliminação. O reto é a parte final do intestino grosso, e termina com o canal anal que se
+comunica com o exterior através do ânus, por onde são eliminados os resíduos fecais.
 Para mais informações, acesse: https://www.infoescola.com/sistema-digestivo/intestino-grosso/
 http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/intestino/', 'Intestino Grosso', '\OrgaosImagens\Digestorio\intestinoGrosso.png', 1)
 
@@ -138,9 +127,9 @@ http://www.anatomiadocorpo.com/sistema-digestorio-aparelho-digestivo/intestino/'
 
 
 
-insert into Sistema values(2, 'Sistema Esquelético', 'O sistema esquelético é formado por 206 ossos além de cartilagens, ligamentos e tendões, é responsável por
-sustentar, proteger nossos órgãos e dar forma ao corpo. Atua em conjunto com o sistema articular e muscular para permitir o movimento. Outras funções são a produção de 
-células sanguíneas na medula óssea e armazenamento de sais minerais, como o cálcio. O osso é uma estrutura viva, muito resistente e dinâmica. 
+insert into Sistema values(2, 'Sistema Esquelético', 'O sistema esquelético é formado por 206 ossos além de cartilagens, ligamentos e tendões é responsável por
+sustentar, proteger nossos órgãos e dar forma ao corpo. Atua em conjunto com o sistema articular e muscular para permitir o movimento. Outras funções são a 
+produção de células sanguíneas na medula óssea e armazenamento de sais minerais. O osso é uma estrutura viva, muito resistente e dinâmica. 
 Para mais informações, acesse: https://www.todamateria.com.br/sistema-esqueletico/')
 
 insert into Orgao values(7,'A face é constituída por quatorze ossos: um único móvel que é o maxilar inferior e treze fixos, que em  conjunto, formam o maxilar superior.
@@ -243,17 +232,13 @@ https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/coluna-vert
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/coluna-vertebral/coccix/
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-inferior/iliaco/', 'Ossos da Cintura Pélvica', '\OrgaosImagens\Esqueleto\pelvica.png', 2)
 
-insert into Orgao values(17,'Fêmur –  é o mais longo osso do corpo que se articula com o ossos do quadril, 
-com a patela e com a tíbia.
+insert into Orgao values(17,'Fêmur –  é o mais longo osso do corpo que se articula com o ossos do quadril, com a patela e com a tíbia.
 
-Patela – é um osso pequeno e triangular, também chamado de rótula localizado 
-na articulação do joelho.
+Patela – é um osso pequeno e triangular, também chamado de rótula localizado na articulação do joelho.
 
-Tíbia –  depois do fêmur o osso que suporta mais o peso. Articula-se com o fêmur
- e com a fíbula.
+Tíbia –  depois do fêmur o osso que suporta mais o peso. Articula-se com o fêmur e com a fíbula.
 
-Fíbula – localizada lateralmente a tíbia, serve para a fixação dos músculos e não 
-possui função de sustentação de peso.
+Fíbula – localizada lateralmente a tíbia, serve para a fixação dos músculos e não possui função de sustentação de peso.
 
 Para mais informações, acesse: https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-inferior/femur/
 https://www.auladeanatomia.com/novosite/sistemas/sistema-esqueletico/membro-inferior/patela/
@@ -279,36 +264,136 @@ insert into Orgao values(19,'  O ar entra no sistema respiratório por meio das f
 são encontrados pelos que retém partículas que entram junto com o ar, o nariz é responsável por esquentar, filtrar e umedecer o ar para os pulmões. 
 
 Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-respiratorio/ 
-https://www.todamateria.com.br/sistema-respiratorio/', 'Nariz', '\OrgaosImagens\Respiratorio\nariz.png', 2)
+https://www.todamateria.com.br/sistema-respiratorio/', 'Nariz', '\OrgaosImagens\Respiratorio\nariz.png', 3)
 
-insert into Orgao values(20,' A faringe é um órgão tubular que inicia-se nas coanas(abertura nasal posterior) 
-com prolongação para baixo no pescoço com a forma de um funil. Se comunica com o 
-esôfago, fossas nasais e ouvidos mantendo-se ligada à laringe e ao esôfago.
-Ela é responsável pela circulação de ar e alimentos. Quando respriramos o ar 
-entra nas fossas nasais e passa pela faringe encaminhando-se para traqueia e
-pelos brônquios até chegar aos pulmões.
+insert into Orgao values(20,' A faringe é um órgão tubular que inicia-se nas coanas(abertura nasal posterior) com prolongação para baixo no pescoço com a forma de um funil. 
+Se comunica com o esôfago, fossas nasais e ouvidos mantendo-se ligada à laringe e ao esôfago. Ela é responsável pela circulação de ar e alimentos. Quando respriramos o ar 
+entra nas fossas nasais e passa pela faringe encaminhando-se para traqueia e brônquios até chegar aos pulmões.
+Para mais informações,acesse: https://www.infoescola.com/anatomia-humana/faringe/', 'Faringe','\OrgaosImagens\Respiratorio\faringe.png', 3)
 
+insert into Orgao values(21,'A laringe é um tubo de formato irregular, sustentado por peças cartilaginosas irregulares articuladas que une a faringe à traqueia. 
+Este órgão é formado por uma série de cartilagens. A sua entrada é chamada de glote. Acima dele existe uma estrutura chama epiglote que funciona como uma válvula
+que fecha quando o alimento entra, impedindo a entrada a entrada de alimento nas vias áreas.
 
-Para mais informações,acesse: https://www.infoescola.com/anatomia-humana/faringe/','Faringe','\OrgaosImagens\Respiratorio\faringe.png', 2)
-insert into Orgao values(21,'','Laringe','\OrgaosImagens\Respiratorio\laringe.png', 2)
-insert into Orgao values(22,'','Traqueia','\OrgaosImagens\Respiratorio\traqueia.png', 2)
-insert into Orgao values(23,'','Brônquios','\OrgaosImagens\Respiratorio\bronquio.png', 2)
-insert into Orgao values(24,'','Pulmões','\OrgaosImagens\Respiratorio\pulmao.png', 2)
+Para mais informações, acesse: https://www.infoescola.com/sistema-respiratorio/laringe/', 'Laringe','\OrgaosImagens\Respiratorio\laringe.png', 3)
+
+insert into Orgao values(22,'A traqueia é um tubo vertical cilíndrico, cartilaginoso e membranoso, localizado entre a laringe e os brônquios, fortalecido por anéis de cartilagem,
+que levam o ar inspirado até os pulmões. A função da traqueia no sistema respiratório é a condução do ar até os brônquios. Possui um revestimento interno que produzem um muco que 
+umedecem e aquecem o ar que respiramos. Quando inalamos poeira, bactérias e partículas elas aderem-se ao muco e são conduzidas para a garganta pelos cílios e eliminadas pela tosse.
+
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/traqueia/', 'Traqueia','\OrgaosImagens\Respiratorio\traqueia.png', 3)
+
+insert into Orgao values(23,'  Os brônquios são estruturas tubulares que levam o ar aos pulmões. A traquéia ramifica-se em dois
+brônquios: o direito e o esquerdo. Apesar das características anatômicas iguais às da traquéia, tem um diâmetro menor.
+
+Para mais informações, acesse: https://www.infoescola.com/sistema-respiratorio/bronquios/', 'Brônquios','\OrgaosImagens\Respiratorio\bronquio.png', 3)
+
+insert into Orgao values(24,' O pulmão é formado por milhões de alvéolos que se enchem de ar. O pulmão direitor é maior que o esquerdo e possui três lóbulos, enquanto o 
+esquerdo possui dois, pois no pulmão esquerdo existe uma cavidade para o coração. A principal função dos pulmões é fornecer oxigênio para o sangue.
+
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/pulmoes/', 'Pulmões','\OrgaosImagens\Respiratorio\pulmao.png', 3)
 
 insert into Sistema values(4, 'Sistema Circulatório', 'O Sistema Circulatório é divido em sistema cardiovascular e linfático. O sistema cardiovascular é formado pelo coração e 
 vasos sanguíneos(veias, artérias e capilares). O coração bombeiao sangue e os vasos sanguíneos o transporta junto com  elementos essenciais para o funcionamento dos tecidos, 
 como gás oxigênio e gás carbônico, hormônios, excretas metabólicas, células de defesa. O sistema linfático protege o organismo das doenças.
 Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-circulatorio/')
 
+insert into Orgao values(25, '  O coração é um orgão muscular localizado em uma região chamada mediastino na cavidade torácica.
+Ele é auto-excitável e contrátil. Seus movimentos de contração (sístole) e distensão (diástole) são responsáveis por bombear o sangue pelo sistema circulatório.
+Nos humanos ele apresenta quatro cavidades: duas superiores, chamadas átrios, e duas inferiores, chamadas ventrículos. O trajeto percorrido pelo sangue entre o
+coração e os pulmões é chamada de pequena circulação e carrega o sangue venoso (sem oxigênio) para ser oxigenado. A grande circulação é o trajeto percorrido entre o 
+coração e o corpo, leva o sangue que foi oxigenado pelos pulmões  para todas as células do corpo.
+Para mais infomações, acesse: https://www.infoescola.com/anatomia-humana/coracao/ ', 'Coração', '\OrgaosImagens\Circulatorio\coracao.png', 4)
+
+insert into Orgao values(26, 'Veias surgem da fusão dos capilares e são responsáveis por transportar o sangue do corpo até o coração. Sua capacidade de contrair e expandir 
+permite que as veias armazenem pequenas ou grandes quantidades de sangue. Por sofrerem uma pressão menor do que a sofrida pelas artérias, as veias possuem as paredes mais delgadas.
+Elas possuem válvulas que agem unidirecionalmente para evitar o contrafluxo causado pela gravidade.
+
+Para mais informações, acesse: https://www.infoescola.com/sistema-circulatorio/veia/', 'Veias', '\OrgaosImagens\Circulatorio\veias.png', 4)
+
+insert into Orgao values(27, ' As artérias são responsáveis por transportar o sangue do coração para o corpo. Existem diversas artérias no nosso copo, as principais são:
+*Artérias Pulmonares: carregam o sangue venoso do coração para os pulmões.
+*Artéria Aorta: é artéria que carrega o sangue arterial(com oxigênio) do ventriculo esquerdo do coração para o restante do corpo.
+Ela se divide em artérias menores que distribuem esse sangue para as células.
+Para mais informações, acesse: https://www.infoescola.com/sistema-circulatorio/arteria/', 'Artérias', '\OrgaosImagens\Circulatorio\arteria.png', 4)
+
+
 
 insert into Sistema values(5, 'Sistema Reprodutor Masculino', 'O Sistema Reprodutor Masculino é formado por órgãos internos e externos, que passam por um lento amadurecimento concluindo-se na puberdade, ou 
 seja, quando as células sexuais ficam disponíveis para originar outro ser. É constítuido pelos testículos, epidídimos, canais deferentes, vesículas seminais, próstata, uretra e pênis. 
 Para informações, acesse: https://www.infoescola.com/biologia/aparelho-reprodutor-masculino/ http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/')
 
+insert into Orgao values(28, 'O pênis é um órgão cilíndrico externo, que possui dois tipos de tecidos: cavernoso e esponjoso. Através do pênis são eliminados a urina (função excretora) e o sêmen (função reprodutora).
+O tecido esponjoso envolve a uretra e a protege, enquanto o tecido cavernoso se enche de sangue, fazendo com que o pênis fique maior e duro (ereção), pronto para o ato sexual, geralmente levando à 
+ejaculação (processo de expulsão do sêmen). A ereção, no entanto, não ocorre apenas como preparação para uma atividade sexual, pode acontecer por diversos estímulos fisiológicos, por exemplo, 
+quando a bexiga está cheia ou quando o homem tem um sonho à noite.
+Para informações, acesse: http://www.anatomiadocorpo.com/penis/
+https://www.infoescola.com/sistema-reprodutor/penis/', 'Pênis', '\OrgaosImagens\ReprMasc\penis.png', 5)
+
+insert into Orgao values(29, 'Os testículos são duas glândulas de forma oval, que estão situadas na bolsa escrotal. Na estrutura de cada testículo encontram-se tubos finos
+e enovelados chamados "tubos seminíferos". Nos testículos são produzidos os espermatozoides, as células reprodutoras (gametas) masculinas, 
+durante o processo chamado espermatogênese, além de diversos hormônios. O principal hormônio é a testosterona, responsável pelo aparecimento 
+das características sexuais secundárias masculinas, como os pelos, modificações da voz, etc.
+
+Para informações, acesse: https://www.infoescola.com/sistema-reprodutor/testiculos/', 'Testículos', '\OrgaosImagens\ReprMasc\testiculos.png', 5)
+
+insert into Orgao values(30, 'A uretra é um canal que, nos homens, serve ao sistema urinário e ao sistema reprodutor. Começa na bexiga, atravessa a próstata e o pênis (sua maior porção) 
+até a ponta da glande, onde há uma abertura pela qual são eliminados o sêmen a a urina. Importante ressaltar que urina e esperma nunca são eliminados ao mesmo tempo graças à musculatura
+da bexiga, na entrada da uretra, que impede que isso ocorra.
+
+Para informações, acesse:  http://www.anatomiadocorpo.com/sistema-reprodutor-genital/uretra-masculina-e-feminina/
+https://www.infoescola.com/anatomia-humana/uretra/', 'Uretra', '\OrgaosImagens\ReprMasc\uretra.png', 5)
+
+insert into Orgao values(31, 'O canal deferente é um tubo fino e longo que sai de cada epidídimo. Passa pelas pregas ínguas (virilha) através dos 
+canais inguinais, segue sua trajetória pela cavidade abdominal, circunda a base da bexiga, alarga-se formando uma ampola. Recebe o líquido seminal 
+(proveniente da vesícula seminal), atravessa a próstata, que nele descarrega o líquido prostático, e vai desaguar na uretra. O conjunto dos espermatozoides, 
+do líquido seminal e do líquido prostático, constitui o “esperma” ou “sêmen”.
+
+Para informações, acesse: http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/
+https://www.infoescola.com/biologia/aparelho-reprodutor-masculino/', 'Canal Deferente', '\OrgaosImagens\ReprMasc\deferente.png', 5)
+
+insert into Orgao values(32, 'São duas pequenas glândulas (do tamanho de ervilhas) que se localizam abaixo da próstata. Secretam um muco claro e tem função lubrificante.
+Para informações, acesse: https://www.infoescola.com/biologia/aparelho-reprodutor-masculino/', 'Glândulas Bulboretrais', '\OrgaosImagens\ReprMasc\bulboretrais.png', 5)
+
+insert into Orgao values(33, 'A vesícula seminal é formada por duas pequenas bolsas localizadas atrás da bexiga. Tem como função produzir o "líquido seminal",
+uma secreção espessa e leitosa, que neutraliza a ação da urina e protege os espermatozoides, além de ajudar seu movimento até a uretra. O líquido seminal 
+também ajuda a neutralizar a acidez da vagina, evitando que os espermatozoides morram no caminho até os óvulos.
+
+Para informações, acesse:  http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/
+https://www.infoescola.com/sistema-reprodutor/prostata/', 'Vesícula Seminal', '\OrgaosImagens\ReprMasc\seminal.png', 5)
+
+insert into Orgao values(34, 'Os epidídimos são canais alongados,de aproximadamente 4 a 6 m de comprimento, que se enrolam e recobrem posteriormente a superfície de cada 
+testículo. Corresponde ao local onde os espermatozoides, produzidos no testículo, são armazenados.
+Para informações, acesse: https://www.infoescola.com/sistema-reprodutor/epididimo/
+http://www.anatomiadocorpo.com/sistema-reprodutor-genital/masculino/epididimo-e-vias-espermaticas/', 'Epidídimo', '\OrgaosImagens\ReprMasc\epididimo.png', 5)
+
+
 insert into Sistema values(6, 'Sistema Reprodutor Feminino', 'O Sistema Reprodutor femino é responsável pela reprodução humana é formado pelos ovários que produzem 
 os óvulos(gametas femininos), as tubas uterinas, que transportam os óvulos até o útero e o protegem, o útero, onde o embrião se desenvolve, a vagina e a vulva. 
 Para mais informações, acesse: https://www.todamateria.com.br/sistema-reprodutor-feminino/  
 https://www.infoescola.com/biologia/aparelho-reprodutor-feminino/')
+
+insert into Orgao values(35, 'A vagina é um órgão que se comunica com o útero. Possui paredes franjadas e glândulas secretras de muco. 
+A região externa da vulva é chamada de vestíbulo da vagina, onde encontramos dois orifícos: o urinários (da uretra) e o genital (da vagina).
+A região entre a vagina e a vulva, em mulheres que nunca tiveram uma relação sexual origina o hímen.
+
+Para mais informações, acesse: https://www.infoescola.com/sistema-reprodutor/vagina/ ', 'Vagina', '\OrgaosImagens\ReprFem\vagina.png', 6)
+
+insert into Orgao values(36, 'O útero é musculoso, oco e de grande elasticidade. Está ligado com as tubas uterina e com a vagina. É formado por 5 regiões: 
+corpo, istmo, colo, óstio e fundo. Sua função é receber e implantar embriões, responsável pela expulsão do feto no momento do parto. Tem  uma parede espessa 
+composta por três camadas: a serosa, o miométrio, parede mais espessa do útero e o endométrio, que é a camada de células que reveste a cavidade uterina. Todo mês ele se torna mais 
+espesso para receber o óvulo fertilizado. Caso não ocorra a fertilização, o endométrio que se desenvolveu é eliminado através da menstruação.
+Para mais informações, acesse: https://www.infoescola.com/sistema-reprodutor/utero/', 'Útero', '\OrgaosImagens\ReprFem\utero.png', 6)
+
+insert into Orgao values(37, 'Os Ovários produzem os ovócitos e os hormônios sexuais estrógeno e progesterona através da ovocitogênese e a esteroidogênese. 
+Durante a fase fértil da mulher um dos ovários lança  um ovócito na tuba uterina(ovulação). No início da vida ele é pequeno, mas vai aumentando de tamanho até a fase adulta. 
+
+Para mais informações, acesse: https://brasilescola.uol.com.br/biologia/ovarios.htm', 'Ovário', '\OrgaosImagens\ReprFem\ovario.png', 6)
+
+insert into Orgao values(38, 'As tubas uterinas são denominadas ovidutos, são tubos musculares e são responsáveis por transportar o óvulo em direção ao útero. 
+Elas são dividas em 4 partes: infudíbulo, que se  abre em uma cavidade chamada óstio abdominal, ampola,região onde ela sofre uma curvatura para encontrar o ovário, o istmo, 
+porção medial que se abre, e o intramural, que abre-se na cavidade peritoneal próximo ao ovário e possui prolongamentos no formato de franjas.
+Para mais informações, acesse: https://www.infoescola.com/sistema-reprodutor/tubas-uterinas/', 'Tubas Uterinas', '\OrgaosImagens\ReprFem\tuba.png', 6)
 
 insert into Sistema values(7, 'Sistema Muscular','O sistema muscular é composto  por aproximadamente 600 músculos, tecidos, cujas células ou fibras musculares possuem a propriedade de contratilidade e de produção de movimentos.  
 Tem como funções: estabilidade corporal, produção de movimentos, manutenção da temperatura corporal, sustentação, auxílio nos fluxos sanguíneos.
@@ -326,16 +411,127 @@ Para mais informações, acesse:
 http://www.anatomiadocorpo.com/sistema-muscular/
 https://www.infoescola.com/anatomia-humana/sistema-muscular/')
 
+insert into Orgao values(39, 'Os músculos da cabeça se dividem em mastigadores e os da mímica.
+Músculos mastigadores — músculos elevadores e os abaixadores do maxilar. Os elevadores são o temporal, o masseter, o pterigóideo interno e o pterigóideo externo. 
+Já o músculo abaixador do maxilar é o digástrico.
+
+Músculos da mímica – São também chamados músculos cuticulares, por se acharem intimamente relacionados com a pele. Quase todos se dispõem em torno dos orifícios palpebrais, 
+das narinas e da boca, concorrendo para as expressões fisionômicas. Sendo alguns deles: o frontal, os orbiculares dos olhos, o superciliar, os orbiculares dos lábios, o 
+buzinador, entre outros.
+
+Músculos do Pescoço: Os mais importantes são ocuticular, esterno-cleidomastdideo, escaleno e o digástrico.
+
+Para mais informações, acesse:http://www.anatomiadocorpo.com/sistema-muscular/musculos-da-cabeca-pescoco/
+https://www.infoescola.com/anatomia-humana/sistema-muscular/', 'Cabeça e pescoço', '\OrgaosImagens\Muscular\rosto.png', 7)
+
+insert into Orgao values(40, '- Trapézio, superficialmente situado, triangular, estendendo-se desde o occipital até a parte inferior da coluna dorsal, atrai para a direção da linha mediana a espádua, ao mesmo tempo que a eleva.
+
+- Grande dorsal, na parte posterior e inferior do tronco, largo e delgado, de forma triangular, leva o braço, ao contrair-se, para trás, para baixo e para dentro.
+
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-muscular/musculos-tronco-trapezio-coluna-dorso/
+http://www.anatomiadocorpo.com/sistema-muscular/musculos-do-ombro/
+https://www.infoescola.com/anatomia-humana/sistema-muscular/', 'Região Posterior do Corpo', '\OrgaosImagens\Muscular\costas.png', 7)
+
+insert into Orgao values(41, 'Com estes músculos é possível a respiração, além de impedir o corpo de se curvar e ceder ao próprio peso, entre outros movimentos.
+Os músculos que se destacam são: 
+- Grande peitoral, na região ântero-lateral, situado superficialmente, é triangular, e, pela função, adutor do braço
+
+_ Pequeno peitoral, por baixo do precedente, também triangular, faz descer, quando se contrai, a articulação da espádua
+
+- Grande denteado, largo, aplicado sobre á parede lateral do tórax, ora atua como inspirador, ora solicita para diante a articulação da espádua
+ 
+Os músculos do abdômen (músculos abdominais) revestem as paredes laterais, anterior e posterior do abdome, funcionando como uma espécie de cinta que contém as vísceras. Alguns exemplos são: o 
+grande reto do abdômen, o médio reto do abdômen, o pequeno reto do abdômen, o transverso do abdômen, o músculo quadrado lombar e o diafragma.
+
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-muscular/musculos-tronco-trapezio-coluna-dorso/ http://www.anatomiadocorpo.com/sistema-muscular/musculos-do-ombro/
+http://www.anatomiadocorpo.com/sistema-muscular/musculos-torax-peito/ https://www.infoescola.com/anatomia-humana/sistema-muscular/', 'Tórax e Abdomem', '\OrgaosImagens\Muscular\peito.png', 7)
+
+insert into Orgao values(42, 'São músculos capazes de fazer a pressão exata e permitem flexibilidade e precisão para tarefas delicadas ou que exigem muita força. Exemplos:
+
+- Bíceps, longo e fusiforme, situado na parte anterior do braço, em que faz, ao contrair-se, é flexor do antebraço sobre o braço
+
+- Tríceps braquial, músculo longo situado na parte posterior do braço, é extensor do antebraço.
+
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-muscular/musculos-do-braco-antebraco-e-mao/
+https://www.infoescola.com/anatomia-humana/sistema-muscular/', 'Membros superiores', '\OrgaosImagens\Muscular\superior.png', 7)
+
+insert into Orgao values(43, 'Esses são os músculos mais fortes do corpo, graças aos músculos das pernas podemos ficar de pé e manter o equilíbrio. Exemplos:
+- Costureiro (ou sartório), é músculo mais longo do corpo, ao se contrair dobra a perna e gira o quadril, é o músculo das costureiras, por isso o nome.
+
+- Os flexores dorsais do pé fazem os dedos levantarem. 
+
+- Flexores plantares (sóleo, plantar delgado e gastrocnêmio) ligado ao tendão de Aquilesé responsável pelo movimento de ficar na ponta dos pés.
+
+- os três glúteos (grande, pequeno e médio) responsáveis por firmar a bacia sobre o fêmur.
+
+- Gêmeos da perna, em número de dois, o externo e o interno, formam a região da panturrilha, ou barriga da perna, e terminam em baixo no tendão de Aquiles
+
+Para mais informações, acesse: http://www.anatomiadocorpo.com/sistema-muscular/musculos-da-coxa-perna-e-pe/
+https://www.infoescola.com/anatomia-humana/sistema-muscular/', 'Membros inferiores', '\OrgaosImagens\Muscular\inferiores.png', 7)
+
+
 insert into Sistema values(8, 'Sistema Nervoso','O sistema nervoso é responsável pelo controle de um organismo, regulando as atividades corporais tanto voluntárias quanto involuntárias.
 O sistema nervoso é divido em Sistema Nervoso Central (SNC) e Sistema Nervoso  Periférico (SNP).O SNC é composto pela medula espinhal, cérebro, bulbo, cerebelo
 e ponte. Já o SNP pode ser divido em voluntário e autonômo. Para mais informações, acesse: https://www.infoescola.com/biologia/sistema-nervoso/')
+
+insert into Orgao values(44, 'A função do bulbo está relacionada com a respiração e tem contato direto com a medula espinhal. Também está relacionado com os reflexos 
+cardiovasculares, transmissão de informações sensoriais e motoras, controle da deglutição, tosse e vômito.
+
+Para mais informações, acesse: https://www.sobiologia.com.br/conteudos/FisiologiaAnimal/nervoso8.php', 'Bulbo', '\OrgaosImagens\Nervoso\bulbo.png', 8)
+
+insert into Orgao values(45, 'O cerebelo é responsável pelas atividades dos músculos esqueléticos, pelo tato, visão e audição. Está relacionado com o 
+equilíbrio e postura conecta o córtex cerebral e o tronco encefálico. A superfície é composta por fissuras transversas e curvas, com aspecto laminado. 
+Pesquisas demonstraram que o cerebelo pode ter funções em atividades como mémoria, emoções, atenção e controle de atos impulsivos.
+
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/cerebelo/', 'Cerebelo', '\OrgaosImagens\Nervoso\cerebelo.png', 8)
+
+insert into Orgao values(46, 'O cérebro é a parte mais desenvolvida do encéfalo, está relacionado com a maioria das funções do organismo.  Ele está dividido em aréas 
+chamadas de lobos com funções diferentes e especializadas. Sua massa de tecido cinza-résea apresenta duas substâncias, uma branca e uma cinzenta. O cérebro é divido em 
+hemisfério esquerdo e direito, o primeiro é responsável pelo pensamento lógico e competência comunicativa. Já o hemisfério direito é quem cuida do pensamento simbólico e
+ da criatividade. Nos canhotos essas funções são trocadas.
+
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/cerebro/', 'Cérebro', '\OrgaosImagens\Nervoso\cerebro.png', 8)
+
+insert into Orgao values(47, 'A medula espinhal é a porção alongada so SNC, se inicia abaixo do bulbo. É subordinada ao cérebro, mas pode agir independente dele.
+Pode ser divida em 6 partes: cervical superior, dilatação cervical, cone terminal, lombar, dorsal e filamento terminal. As suas funções incluem conduzir impulsos nervosos,
+produzir movimentos musculares e coordenar os reflexos.
+
+Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/medula-espinhal/', 'Medula', '\OrgaosImagens\Nervoso\medula.png', 8)
+
+insert into Orgao values(48, 'Os neurônios são a unidade funcional do sistema nervoso e juntamente com as células neuróglias formam o tecido nervoso. Se comunicam através 
+de sinapses e por eles se propagam os impulsos nervosos. Eles são formados por um dendrito, corpo celular e axônio. Podem ser classificados em motores, que transmitem o sinal 
+vindo do SNC até os órgãos efetores, sensoriais que recebem os estímulos do meio-ambiente e interneurônios que constituem extensas redes de neurônios. 
+
+Para mais informações, acesse: https://www.infoescola.com/sistema-nervoso/neuronios/', 'Neurônios', '\OrgaosImagens\Nervoso\neuronio.png', 8)
+
+insert into Orgao values(49, 'A ponte é responsável pela postura corporal, por transmitir informações da medula e do bulbo até o cortéx 
+cerebral e pelo equilíbrio do corpo.
+Para mais informações, acesse: http://neuralsystem.blogspot.com/2008/11/ponte.html', 'Ponte', '\OrgaosImagens\Nervoso\ponte.png', 8)
+
 
 insert into Sistema values(9, 'Sistema Urinário','O sistema urinário é responsável pela produção e eliminação de urina composta de aproximadamente 95% de água. 
 Os principais excretas da urina humana são: a ureia, o cloreto de sódio e o ácido úrico., que filtram as  impurezas do sangue que circula no organismo. É composto pelos rins, 
 ureteres, bexiga urinária e a uretra.
 Para mais informações acesse: https://www.todamateria.com.br/sistema-urinario/')
 
-insert into Orgao values( , 'A uretra é um tubo muscular que leva a urina da bexiga para o exterior. No sexo masculino ela dá passagem para o esperma durante a ejaculação e 
+insert into Orgao values(50, 'A principal função dos rins é filtrar dejetos presentes no sangue e excretá-los junto com a água. Existe um rim em cada lado da coluna, 
+o direito localizado abaixo do fígado e o esquerdo abaixo do baço. Acima de cada um encontra-se a glândula supra-renal. Cada rim é formado por 1 a 4 milhões de néfrons, 
+capazes de realizar todas as funções renais.
+
+Para mais informações, acesse: https://www.infoescola.com/sistema-urinario/rim/', 'Rins', 'OrgaosImagens\Urinario\rins.png', 9)
+
+insert into Orgao values(51, 'Os Ureteres são dois tubos que conduzem a urina dos rins para a bexiga. Eles são envolvidos por algumas camadas 
+musculares, dessa maneira, facilita-se a prevenção contra o refluxo da urina.
+
+Para mais informações, acesse: https://www.grupoescolar.com/pesquisa/ureter--corpo-humano.html', 'Ureteres', 'OrgaosImagens\Urinario\ureteres.png', 9)
+
+insert into Orgao values(52, 'A bexiga urinária é um órgão oco, muscular e elástico, localizado na cavidade pélvica. Ela é responsável por armazenar a urina produzida pelos
+rins até o momento da micção. Possui a capacidade de armazenar entre 650 a 800 ml de urina. Porém quando o volume chega a aproximadamente 300ml, os sensores nervosos
+enviam mensagens para o sistema nervoso, fazendo com que a pessoa sinta vontade de urinar.
+
+Para mais informações, acesse: https://www.todabiologia.com/anatomia/bexiga_urinaria.htm', 'Bexiga Urinária', 'OrgaosImagens\Urinario\bexiga.png', 9)
+
+insert into Orgao values(53, 'A uretra é um tubo muscular que leva a urina da bexiga para o exterior. No sexo masculino ela dá passagem para o esperma durante a ejaculação e 
 é formado pela porção prostática, uretra membrosa e a uretra esponjosa, já no sexo feminino é um órgao exclusivamente do aparelho urinário e é revestida pelo epitélio plano
 estratificado. Para mais informações, acesse: https://www.infoescola.com/anatomia-humana/uretra/', 'Uretra', 'OrgaosImagens\Urinario\uretra.png', 9)
 
