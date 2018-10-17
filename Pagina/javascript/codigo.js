@@ -104,7 +104,7 @@ function criarTabelaDosOrgaos(indice)
     var url = "http://localhost:3000/orgao/" + indice;
     ajax.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {
-            ExibeDados(this.responseText);
+            ExibeDados(this.responseText, indice);
         }
     }
 
@@ -114,15 +114,36 @@ function criarTabelaDosOrgaos(indice)
    
 }
 
-function ExibeDados(response) {
+function ExibeDados(response, indice) {
     var arr = JSON.parse(response);
-    var out = "<table class='responsive-table'>";
+    var out = "<div class='col s8' id='areaSistema'><table class='responsive-table' id='tabelaNomeOrgaos'>";
 
     for(var i = 0; i < arr.length; i++) {
-        out += "<tr class='txtNomeOrgao' value='" + i +"'><td>" + arr[i].nome + "</td>"+ (((i+1) != arr.length)?"<td>" + arr[++i].nome + "</td>":"") + "</tr>";
+        out += "<tr value='" + i +"'><td class='txtNomeOrgao'>" + arr[i].nome + "</td>"+ (((i+1) != arr.length)?"<td class='txtNomeOrgao'>" + arr[++i].nome + "</td>":"") + "</tr>";
     }
-    out += "</table>";
+    out += "</table></div>";
     document.getElementById("areaOrgaos").innerHTML += out;
+    var nomes = document.getElementsByClassName("txtNomeOrgao");
+    for(x in nomes)
+        nomes[x].onclick = criarDivOrgao;
+
+    var ajaxDescricao = iniciaAjax();
+    var url = "http://localhost:3000/sistema/" + indice;
+
+    ajaxDescricao.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            exibeDescricaoSistema(this.responseText);
+        }
+    }
+    
+    ajaxDescricao.open("GET", url, true);
+    ajaxDescricao.send();
+}
+function exibeDescricaoSistema(response)
+{
+    var objDesc = JSON.parse(response);
+    var out = "<p id='descricaoSistema'>" + objDesc[0].descricao + "</p>";
+    document.getElementById("areaSistema").innerHTML += out;
 }
 
 function criarRelatorio()

@@ -45,7 +45,6 @@ execSQL('select nome from Orgao' + filtro, resposta);
 rota.post('/usuario', (requisicao, resposta) =>
 {
 const cod = codUsuario();
-
 const nome = requisicao.body.nome;
 const email = String(requisicao.body.email);
 const senha = String(requisicao.body.senha);
@@ -62,6 +61,13 @@ function codUsuario()
 	cod++;
 	return cod;
 }
+
+rota.get("/sistema/:codigoSistema?", (requisicao, resposta) =>{
+	let filtro = ' ';
+	if (requisicao.params.codigoSistema)
+	filtro = ' where codigoSistema =' + parseInt(requisicao.params.codigoSistema);
+	execSQL('select descricao from Sistema' + filtro, resposta);
+})
 
 // rota.post("/loginUsuario", (requisicao, resposta) => {
 // const email = requisicao.body.email;
