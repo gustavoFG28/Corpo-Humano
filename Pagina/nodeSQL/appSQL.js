@@ -56,13 +56,9 @@ const imgFundo = requisicao.body.imgFundo.substring(0,50);
 execSQL(`INSERT INTO Usuario(codigoUsuario, nome, senha, email, imagem, imgFundo) VALUES('${cod}','${nome}','${senha}','${email}','${imgPerfil}','${imgFundo}')`, resposta);
 })
 
+
 function codUsuario()
 {
-	var cod = execSQL("select count(*) from Usuario");
-	if(cod == null)
-		return 1;
-	cod++;
-	return cod;
 }
 
 rota.get("/sistema/:codigoSistema?", (requisicao, resposta) =>{
@@ -76,13 +72,22 @@ rota.get("/usuario/:codigoUsuario?", (requisicao, resposta) =>{
 	let filtro = ' ';
 	if(requisicao.params.codigoUsuario)
 	filtro = 'where codigoUsuario = ' + parseInt(requisicao.params.codigoUsuario);
-	console.log(filtro);
 	execSQL('select * from Usuario' + filtro, resposta);
 })
 
 
-// rota.post("/loginUsuario", (requisicao, resposta) => {
-// const email = requisicao.body.email;
-// const senha = requisicao.body.senha;
-// const registro = execSQL("select * from Usuario where email ='" + email + "'", resposta);
-// })
+rota.post("/loginUsuario", (requisicao, resposta) => {
+const email = requisicao.body.email;
+const senha = requisicao.body.senha;
+execSQL("select * from Usuario", resposta);
+})
+
+
+rota.get("/ranking/:nome?", (requisicao, resposta) =>{
+const nome = requisicao.body.buscaNome;
+console.log(nome);
+let filtro = ' ';
+if(requisicao.params.nome)
+	filtro = "where nome = '"+ nome+ "%'";
+execSQL('select * from Ranking ' + filtro, resposta);	
+}) 

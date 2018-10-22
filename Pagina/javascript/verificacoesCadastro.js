@@ -6,6 +6,9 @@
     document.getElementById("txtEmail").onchange = function(){
         verificaEmail();
     }
+    document.getElementById("frmCadastro").onsubmit = function(){
+        cadastrar();
+    }
 }
 
 function verificacoesFinais()
@@ -26,7 +29,7 @@ function verificaNome()
 function verificaEmail()
 {
     var email = document.getElementById("txtEmail");
-    var regExEmail = /[A-Z|a-z]*@[A-Z|a-z]\.[a-z]*/;
+    var regExEmail = /[A-Z|a-z]*\@[A-Z|a-z]\.[a-z]*/;
     var emailEstaCerto = regExEmail.test(email.value);
 
     atualizaCampo(emailEstaCerto, email);
@@ -72,4 +75,27 @@ function atualizaCampo(estaCorreto, campo)
             campo.style.boxShadow = "0 1px 0 0 red";
         }
     }
+}
+
+function iniciaAjax()
+{
+    var objetoAjax;
+    if(window.XMLHttpRequest)
+        objetoAjax = new XMLHttpRequest();
+    else if(window.ActiveXObject)
+    {
+        objetoAjax = new ActiveXObject("Msxml2.XMLHTTP");
+        if(!objetoAjax)
+            objetoAjax = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else
+        alert("Seu navegado não suporta esta aplicação!");
+
+    return objetoAjax;
+}
+
+function cadastrar()
+{
+   // verificacoesFinais();
+   window.open("indexLogado.html", '_self');
 }

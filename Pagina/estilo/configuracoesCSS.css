@@ -1,0 +1,14 @@
+form
+{
+    display: none;
+}
+
+#areaDeAlteracao
+{
+    display: none;
+    position: relative;
+    top: 10%;
+    background: white;
+    border-radius: 20pt;
+    padding: 1%;
+}

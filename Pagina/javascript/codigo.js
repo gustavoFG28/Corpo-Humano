@@ -137,8 +137,6 @@ function criarTabelaDosOrgaos(indice)
 
     ajax.open("GET", url, true);
     ajax.send();
-
-   
 }
 
 function exibeDados(response, indice) {
@@ -179,29 +177,84 @@ function exibeDescricaoSistema(response)
 
 function criarRelatorio()
 {
-    var out = "<table id='tabelaPontuacao' class='highlight '><th>Usuário</th><th>Pontuação</th>";
-    for(var i = 1; i <= 5;i++)
-        out += "<tr><td>" + (i + (pagina * 5)) + "</td><td>" + (i+1) + "</td></tr>";
-    out += "</table>";
+    var out = "<table id='tabelaPontuacao' class='highlight '><th>Usuário</th><th>Pontuação</th></table>";
     out += "<p><div class='row'><div class='col s2'><button id='btnRetroceder' class='btn-floating waves-effect waves-light" + ((pagina == 0)?" disabled":"") +"'><i class='material-icons'>arrow_back</i></button></div>";
-    out += "<div class='input-field col s8'><form id='frmBusca' action='http://localhost:3000/loginUsuario/'><i class='material-icons prefix'>search</i><input type='text' id='txtBuscaNome'><label for='txtBuscaNome'>Buscar</label></div>";
+    out += "<div class='input-field col s8'><i class='material-icons prefix'>search</i>,<form action='http://localhost:3000/ranking' method='get'><input name='buscaNome' type='text' id='txtBuscaNome'><label for='txtBuscaNome'>Buscar</label></div>";
     out += "<div class='col s2'><button id='btnAvancar' class='btn-floating waves-effect waves-light'><i class='material-icons'>arrow_forward</i></button></div></div></p>";
     
     document.getElementById("areaOrgaos").innerHTML = out;
     document.getElementById("btnRetroceder").onclick = clickBtnRetroceder;
     document.getElementById("btnAvancar").onclick = clickBtnAvancar;
+    document.getElementById("txtBuscaNome").onchange = atualizaRelatorio;
+
+    ajaxRelatorio();
+}
+
+function ajaxRelatorio()
+{
+    var ajax = iniciaAjax();
+    var url = "http://localhost:3000/ranking";
+    ajax.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            exibeNomesRelatorio(this.responseText);
+        }
+    }
+
+    ajax.open("GET", url, true);
+    ajax.send();
 }
 
 function clickBtnRetroceder()
 {
     pagina--;
-    criarRelatorio();
+    ajaxRelatorio();
 }
 
 function clickBtnAvancar()
 {
     pagina++;
-    criarRelatorio();
+    ajaxRelatorio();
 }
 
+function atualizaRelatorio()
+{
+    var ajax = iniciaAjax();
+    var nome = document.getElementById("txtBuscaNome").value;
+    var url = "http://localhost:3000/ranking/" + nome;
+    ajax.onreadystatechange=function() {
+        if (this.readyState == 4 && this.status == 200) {
+            exibeNomesRelatorio(this.responseText);
+        }
+    }
 
+    ajax.open("GET", url, true);
+    ajax.send();
+}
+
+function exibeNomesRelatorio(response)
+{
+    var obj = JSON.parse(response);
+    var out = "<th>Usuário</th><th>Pontuação</th>";
+    var indice = 0;
+    for(var i = pagina * 5; i < obj.length; i++)
+    {
+        out +=  "<tr><td>" + obj[i].nome + "</td><td>" + obj[i].pontos + "</td></tr>";
+        indice++;
+        if(indice == 5)
+            break;
+    }
+
+    document.getElementById("tabelaPontuacao").innerHTML = out;
+
+    if(pagina == 0)
+        document.getElementById("btnRetroceder").className = "btn-floating waves-effect waves-light disabled";
+    else
+        document.getElementById("btnRetroceder").className = "btn-floating waves-effect waves-light";
+
+    if(pagina == Math.round(obj.length / 5))
+        document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light disabled";  
+    else
+        document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light";      
+
+
+}
