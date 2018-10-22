@@ -35,12 +35,15 @@ function execSQL(sql, resposta) {
 		.catch(erro => resposta.json(erro));
 }
 
-rota.get("/orgao/:cod?", (requisicao, resposta) =>{
+rota.get("/orgao/:cod?/:nome?", (requisicao, resposta) =>{
 let filtro = ' ';
 if (requisicao.params.cod)
 filtro = ' where codigoSistema =' + parseInt(requisicao.params.cod);
-execSQL('select nome from Orgao' + filtro, resposta);
+if(requisicao.params.nome)
+   filtro+= "and nome ='"+ requisicao.params.nome+"'";
+execSQL('select * from Orgao' + filtro, resposta);
 })
+
 
 rota.post('/usuario', (requisicao, resposta) =>
 {
@@ -66,8 +69,17 @@ rota.get("/sistema/:codigoSistema?", (requisicao, resposta) =>{
 	let filtro = ' ';
 	if (requisicao.params.codigoSistema)
 	filtro = ' where codigoSistema =' + parseInt(requisicao.params.codigoSistema);
-	execSQL('select descricao from Sistema' + filtro, resposta);
+	execSQL('select * from Sistema' + filtro, resposta);
 })
+
+rota.get("/usuario/:codigoUsuario?", (requisicao, resposta) =>{
+	let filtro = ' ';
+	if(requisicao.params.codigoUsuario)
+	filtro = 'where codigoUsuario = ' + parseInt(requisicao.params.codigoUsuario);
+	console.log(filtro);
+	execSQL('select * from Usuario' + filtro, resposta);
+})
+
 
 // rota.post("/loginUsuario", (requisicao, resposta) => {
 // const email = requisicao.body.email;

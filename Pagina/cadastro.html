@@ -3,6 +3,7 @@
     <link type="text/css" href="estilo/styleSecundario.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script type="text/javascript" src="javascript/verificacoesCadastro.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     </head>
@@ -14,22 +15,22 @@
             <form id="frmCadastro" action="http://localhost:3000/usuario" method="post">
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">person</i>
-                    <input name="nome" type="text" id="txtNome" class="validate" required data-length="30"> 
+                    <input name="nome" type="text" id="txtNome"> 
                     <label for="txtNome">Nome completo</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">email</i>
-                    <input name="email" type="email" id="txtEmail" class="validate"required> 
+                    <input name="email" type="email" id="txtEmail"> 
                     <label for="txtEmail">Email</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">vpn_key</i>
-                    <input name="senha" type="password" id="txtSenha" class="validate" required> 
+                    <input name="senha" type="password" id="txtSenha"> 
                     <label for="txtSenha">Senha</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">check_circle</i>
-                    <input type="password" id="txtConfirmaSenha" class="validate" required> 
+                    <input type="password" id="txtConfirmaSenha"> 
                     <label for="txtConfirmaSenha">Confirmar senha</label>
                 </div>
                 <div class="file-field input-field">

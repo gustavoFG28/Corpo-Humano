@@ -73,6 +73,20 @@ p#intro
     cursor: pointer;
     background-color: rgb(141, 211, 202);
 }
+.descricaoSistema
+{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.descricaoSistema li
+{
+    color: darkcyan;
+}
+.txtDescOrgao
+{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
 #fundoPreto
 {
     width: 100%;
