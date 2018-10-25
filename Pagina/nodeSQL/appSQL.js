@@ -45,21 +45,15 @@ execSQL('select * from Orgao' + filtro, resposta);
 })
 
 
-rota.post('/usuario', (requisicao, resposta) =>
-{
-const cod = codUsuario();
+rota.post('/usuario', (requisicao, resposta) =>{
 const nome = requisicao.body.nome;
 const email = String(requisicao.body.email);
 const senha = String(requisicao.body.senha);
 const imgPerfil = requisicao.body.imgPerfil.substring(0,50);
 const imgFundo = requisicao.body.imgFundo.substring(0,50);
-execSQL(`INSERT INTO Usuario(codigoUsuario, nome, senha, email, imagem, imgFundo) VALUES('${cod}','${nome}','${senha}','${email}','${imgPerfil}','${imgFundo}')`, resposta);
+execSQL(`cadastrar '${nome}','${senha}','${email}','${imgPerfil}','${imgFundo}'`, resposta);
 })
 
-
-function codUsuario()
-{
-}
 
 rota.get("/sistema/:codigoSistema?", (requisicao, resposta) =>{
 	let filtro = ' ';
