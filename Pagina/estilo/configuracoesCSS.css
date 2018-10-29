@@ -1,14 +1,18 @@
-form
-{
-    display: none;
+body{
+    background: url(Imagens/fundo.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #areaDeAlteracao
 {
-    display: none;
-    position: relative;
+    position: fixed;
     top: 10%;
     background: white;
     border-radius: 20pt;
     padding: 1%;
+}
+#banner
+{
+    size: 100% 100%;
 }

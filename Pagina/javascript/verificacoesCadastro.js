@@ -6,15 +6,29 @@
     document.getElementById("txtEmail").onchange = function(){
         verificaEmail();
     }
-    document.getElementById("frmCadastro").onsubmit = function(){
+    document.getElementById("txtConfirmaSenha").onchange = function(){
+          verificaSenha();
+    }
+    document.getElementById("txtSenha").onchange = function(){
+        verificaSenha();
+  }
+    document.getElementById("btnSubmit").onclick = function(){
         cadastrar();
     }
 }
 
 function verificacoesFinais()
 {
-    verificaNome();
-    verificaEmail();
+    if(!verificaNome())
+        return false;
+
+    if(!verificaEmail())
+       return false;
+
+    if(!verificaSenha())
+        return false;
+
+    return true;
 }
 
 function verificaNome()
@@ -23,23 +37,28 @@ function verificaNome()
     var regExNome = /[A-Z][a-z]*( [a-z|A-Z][a-z]*)*/;
     var nomeEstaCerto = regExNome.test(nome.value);
 
-    atualizaCampo(nomeEstaCerto, nome);
+    return atualizaCampo(nomeEstaCerto, nome);
 }
 
 function verificaEmail()
 {
     var email = document.getElementById("txtEmail");
-    var regExEmail = /[A-Z|a-z]*\@[A-Z|a-z]\.[a-z]*/;
+    var regExEmail = /[A-Z|a-z]*\@[A-Z|a-z]*\.[a-z]*/;
     var emailEstaCerto = regExEmail.test(email.value);
 
-    atualizaCampo(emailEstaCerto, email);
+    return atualizaCampo(emailEstaCerto, email);
 }
 function verificaSenha()
 {
-    var senha = document.getElementById("txtSenha").value;
-    var confirmaSenha = document.getElementById("txtConfirmaSenha").value;
-
-
+    if(document.getElementById("txtConfirmaSenha").value !=  document.getElementById("txtSenha").value){
+        atualizaCampo(false,document.getElementById("txtSenha"));
+        return atualizaCampo(false, document.getElementById("txtConfirmaSenha"));
+    }
+     else{
+        atualizaCampo(true, document.getElementById("txtConfirmaSenha"));
+        return atualizaCampo(true,document.getElementById("txtSenha"));
+     }  
+      
 }
 function verificaImgPerfil()
 {
@@ -75,27 +94,15 @@ function atualizaCampo(estaCorreto, campo)
             campo.style.boxShadow = "0 1px 0 0 red";
         }
     }
+    return estaCorreto;
 }
-
-function iniciaAjax()
-{
-    var objetoAjax;
-    if(window.XMLHttpRequest)
-        objetoAjax = new XMLHttpRequest();
-    else if(window.ActiveXObject)
-    {
-        objetoAjax = new ActiveXObject("Msxml2.XMLHTTP");
-        if(!objetoAjax)
-            objetoAjax = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    else
-        alert("Seu navegado não suporta esta aplicação!");
-
-    return objetoAjax;
-}
-
 function cadastrar()
 {
-   // verificacoesFinais();
-   window.open("indexLogado.html", '_self');
+   if(verificacoesFinais())
+   {
+        document.getElementById("frmCadastro").submit();  
+        //window.location.href='indexLogado.html';
+   }
+    else
+       return;
 }
