@@ -1,7 +1,6 @@
 <html>
     <head><title>CONFIGURAÇÕES</title>
     <link type="text/css" href="estilo/styleSecundario.css" rel="stylesheet">
-    <link type="text/css" href="estilo/configuracoesCss.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,24 +11,130 @@
         <header id="cabecario" class="row center-align">
              <font>CONFIGURAÇÕES</font>
         </header>
-        <section id="areaquiz" class="row center-align">
-            <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraNome" href="#alteraNome">Alterar nome</a></div>
-            <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraEmail">Alterar email</a></div>
-            <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraSenha">Alterar senha</a></div>
-            <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraPerfil">Alterar foto de perfil</a></div>
-            <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraFundo">Alterar imagem de fundo</a></div>
-        </section>
-        <div class="parallax-container">
-                <div class="parallax"><img id='banner' src="estilo/Imagens/bannerConfiguracoes.png"></div>
+        <div class="row" id="mainConfig">
+            <div class="col s12 m3" id="informativo"><img src="estilo/Imagens/informativo.png"></div>
+            <div class="col s12 m9 quadro">
+                <section id="seletor" class=" row center-align">
+                  <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraNome" href="#alteraNome">Alterar nome</a></div>
+                  <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraEmail">Alterar email</a></div>
+                  <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraSenha">Alterar senha</a></div>
+                  <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraPerfil">Alterar foto de perfil</a></div>
+                  <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraFundo">Alterar imagem de fundo</a></div>
+                </section>
+            </div>
         </div>
-            
-        
           <div id="alteraNome" class="modal">
             <div class="modal-content">
-            </div>
+            	<h2 class="titulo">ALTERAR NOME</h2>
+            	<form action="" method="patch" id="frmAlteraNome">
+            		<div class="input-field">
+            			<i class="material-icons prefix">person</i>
+            			<input type="text" name="nomeAntigo" id="txtNomeAntigo">
+            			<label for="txtNomeAntigo">Nome anterior:</label>
+            		</div>
+            		<div class="input-field">
+            			<i class="material-icons prefix">person</i>
+            			<input type="text" name="nomeAntigo" id="txtNomeAntigo">
+            			<label for="txtNomeAntigo">Novo nome:</label>
+            		</div>
+            	</form>
+            </div> 
             <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
             </div>
           </div>
+
+          <div id="alteraEmail" class="modal">
+            <div class="modal-content">
+              <h2 class="titulo">ALTERAR EMAIL</h2>
+              <form action="" method="patch" id="frmAlteraEmail">
+                <div class="input-field">
+                  <i class="material-icons prefix">email</i>
+                  <input type="text" name="emaiAntigo" id="txtEmailAntigo">
+                  <label for="txtNomeAntigo">Email anterior:</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">email</i>
+                  <input type="email" name="novoEmail" id="txtNovoEmail">
+                  <label for="txtNomeAntigo">Novo email:</label>
+                </div>
+              </form>
+            </div> 
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+            </div>
+          </div>
+
+          <div id="alteraNome" class="modal">
+            <div class="modal-content">
+              <h2 class="titulo">ALTERAR NOME</h2>
+              <form action="" method="patch" id="frmAlteraNome">
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
+                  <label for="txtNomeAntigo">Nome anterior:</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
+                  <label for="txtNomeAntigo">Novo nome:</label>
+                </div>
+              </form>
+            </div> 
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+            </div>
+          </div>
+
+          <div id="alteraNome" class="modal">
+            <div class="modal-content">
+              <h2 class="titulo">ALTERAR NOME</h2>
+              <form action="" method="patch" id="frmAlteraNome">
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
+                  <label for="txtNomeAntigo">Nome anterior:</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
+                  <label for="txtNomeAntigo">Novo nome:</label>
+                </div>
+              </form>
+            </div> 
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+            </div>
+          </div>
+
+          <footer class="page-footer green">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 CHI 
+            <a class="grey-text text-lighten-4 right" href="#!">Sobre nós</a>
+            </div>
+          </div>
+        </footer>
     </body>
 </html>
