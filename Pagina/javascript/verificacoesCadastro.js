@@ -96,30 +96,12 @@ function atualizaCampo(estaCorreto, campo)
     }
     return estaCorreto;
 }
-
-function iniciaAjax()
-{
-    var objetoAjax;
-    if(window.XMLHttpRequest)
-        objetoAjax = new XMLHttpRequest();
-    else if(window.ActiveXObject)
-    {
-        objetoAjax = new ActiveXObject("Msxml2.XMLHTTP");
-        if(!objetoAjax)
-            objetoAjax = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    else
-        alert("Seu navegado não suporta esta aplicação!");
-
-    return objetoAjax;
-}
-
 function cadastrar()
 {
    if(verificacoesFinais())
    {
         document.getElementById("frmCadastro").submit();  
-        window.location.href='indexLogado.html'
+        //window.location.href='indexLogado.html';
    }
     else
        return;

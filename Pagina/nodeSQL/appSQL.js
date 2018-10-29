@@ -46,12 +46,14 @@ execSQL('select * from Orgao' + filtro, resposta);
 
 
 rota.post('/usuario', (requisicao, resposta) =>{
-const nome = requisicao.body.nome;
-const email = String(requisicao.body.email);
-const senha = String(requisicao.body.senha);
-const imgPerfil = requisicao.body.imgPerfil.substring(0,50);
-const imgFundo = requisicao.body.imgFundo.substring(0,50);
-execSQL(`cadastrar '${nome}','${senha}','${email}','${imgPerfil}','${imgFundo}'`, resposta);
+const nome = requisicao.body.nome.substring(0,30);
+const email = requisicao.body.email.substring(0,40);
+const senha = requisicao.body.senha.substring(0,30);
+const imgPerfil = (requisicao.body.imgPerfil == "")? null: "'" + requisicao.body.imgPerfil.substring(0,50) + "'";
+const imgFundo = (requisicao.body.imgFundo == "")?null: "'" + requisicao.body.imgFundo.substring(0,50) + "'";
+
+execSQL(`cadastrar_sp '${nome}','${senha}','${email}',${imgPerfil},${imgFundo}`, resposta);
+rota.redirect('indexLogado.html');
 })
 
 
@@ -73,7 +75,7 @@ rota.get("/usuario/:codigoUsuario?", (requisicao, resposta) =>{
 rota.post("/loginUsuario", (requisicao, resposta) => {
 const email = requisicao.body.email;
 const senha = requisicao.body.senha;
-execSQL("select * from Usuario", resposta);
+execSQL(`login_sp '${email}','${senha}'`, resposta);
 })
 
 

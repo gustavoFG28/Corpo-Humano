@@ -15,31 +15,31 @@
             <form id="frmCadastro" action="http://localhost:3000/usuario" method="post">
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">person</i>
-                    <input name="nome" type="text" id="txtNome"> 
+                    <input name="nome" type="text" id="txtNome" maxlength="30"> 
                     <label for="txtNome">Nome completo</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">email</i>
-                    <input name="email" type="text" id="txtEmail"> 
+                    <input name="email" type="text" id="txtEmail" maxlength="40"> 
                     <label for="txtEmail">Email</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">vpn_key</i>
-                    <input name="senha" type="password" id="txtSenha"> 
+                    <input name="senha" type="password" id="txtSenha" maxlength="30"> 
                     <label for="txtSenha">Senha</label>
                 </div>
                 <div class="m12 s6 input-field">
                     <i class="material-icons prefix">check_circle</i>
-                    <input type="password" id="txtConfirmaSenha"> 
+                    <input type="password" id="txtConfirmaSenha" maxlength="30"> 
                     <label for="txtConfirmaSenha">Confirmar senha</label>
                 </div>
                 <div class="file-field input-field">
                     <div class="btn red">
                         <span>Imagem de perfil</span>
-                        <input name="imgPerfil" type="file" id="inputImgPerfil">
+                        <input name="imgPerfil" type="file" id="inputImgPerfil" maxlength="50">
                     </div>
                     <div class="file-path-wrapper">
-                        <input   class="file-path validate" type="text" id="caminhoImgPerfil">
+                        <input   class="file-path validate" type="text" id="caminhoImgPerfil" maxlength="50">
                     </div>
                 </div>
                 <div class="file-field input-field">

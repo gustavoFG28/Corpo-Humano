@@ -13,33 +13,23 @@
              <font>CONFIGURAÇÕES</font>
         </header>
         <section id="areaquiz" class="row center-align">
-            <div class="col l4 s12"><button class="btn waves-effect waves-light" id="btnAlteraNome" value="frmAlteraNome">Alterar nome</button></div>
-            <div class="col l4 s12"><button class="btn waves-effect waves-light" id="btnAlteraEmail" value="frmAlteraNome">Alterar email</button></div>
-            <div class="col l4 s12"><button class="btn waves-effect waves-light" id="btnAlteraSenha" value="frmAlteraNome">Alterar senha</button></div>
-            <div class="col l6 s12"><button class="btn waves-effect waves-light" id="btnAlteraEmail" value="frmAlteraNome">Alterar foto de perfil</button></div>
-            <div class="col l6 s12"><button class="btn waves-effect waves-light" id="btnAlteraSenha" value="frmAlteraNome">Alterar imagem de fundo</button></div>
+            <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraNome" href="#alteraNome">Alterar nome</a></div>
+            <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraEmail">Alterar email</a></div>
+            <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraSenha">Alterar senha</a></div>
+            <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraPerfil">Alterar foto de perfil</a></div>
+            <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraFundo">Alterar imagem de fundo</a></div>
         </section>
-        <div class="container" id="areaDeAlteracao">
-                <form id="frmAlteraNome" action="" method="post">
-                    <div class="input-field col s6">
-                            <i class="material-icons prefix">person</i>
-                            <input class="validate" id="txtNomeAntigo" type="text">
-                            <label for="txtNomeAntigo">Nome antigo</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">person</i>
-                        <input class="validate" id="txtNomeAntigo" type="text">
-                        <label for="txtNomeAntigo">Novo nome</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">person</i>
-                        <input class="validate" id="txtNomeAntigo" type="text">
-                        <label for="txtNomeAntigo">Novo nome</label>
-                    </div>
-                    <div class="col s12">
-                        <button type="submit" class="btn waves-effect waves-light">Confirmar</button>
-                    </div>
-                </form>
+        <div class="parallax-container">
+                <div class="parallax"><img id='banner' src="estilo/Imagens/bannerConfiguracoes.png"></div>
         </div>
+            
+        
+          <div id="alteraNome" class="modal">
+            <div class="modal-content">
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
     </body>
 </html>
