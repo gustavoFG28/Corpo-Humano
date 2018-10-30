@@ -79,11 +79,12 @@ execSQL(`login_sp '${email}','${senha}'`, resposta);
 })
 
 
-rota.get("/ranking/:nome?", (requisicao, resposta) =>{
-const nome = requisicao.body.buscaNome;
-console.log(nome);
-let filtro = ' ';
-if(requisicao.params.nome)
-	filtro = "where nome = '"+ nome+ "%'";
-execSQL('select * from Ranking ' + filtro, resposta);	
+rota.get("/ranking/:nome", (requisicao, resposta) =>{
+execSQL("select * from Ranking where nome like '" + requisicao.params.nome + "%'", resposta);	
 }) 
+
+rota.post("/alteraNome", (requisicao, resposta) =>{
+const email = requisicao.body.nomeAntigo;
+const novoNome = requisicao.body.novoNome;
+execSQL("update Usuario set nome = '"+ novoNome + "' where email = '"+ email +"'", resposta);
+})

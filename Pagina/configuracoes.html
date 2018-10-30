@@ -1,6 +1,7 @@
 <html>
     <head><title>CONFIGURAÇÕES</title>
     <link type="text/css" href="estilo/styleSecundario.css" rel="stylesheet">
+    <link type="text/css" href="estilo/estiloConfiguracoes.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,34 +16,35 @@
             <div class="col s12 m3" id="informativo"><img src="estilo/Imagens/informativo.png"></div>
             <div class="col s12 m9 quadro">
                 <section id="seletor" class=" row center-align">
-                  <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraNome" href="#alteraNome">Alterar nome</a></div>
-                  <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraEmail">Alterar email</a></div>
-                  <div class="col l4 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraSenha">Alterar senha</a></div>
-                  <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraPerfil">Alterar foto de perfil</a></div>
-                  <div class="col l6 s12"><a class="btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraFundo">Alterar imagem de fundo</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraNome" href="#alteraNome">Alterar nome</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraEmail" href="#alteraEmail">Alterar email</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraSenha">Alterar senha</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraPerfil" href="#alteraPerfil">Alterar foto de perfil</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraFundo" href="#alteraFundo">Alterar imagem de fundo</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light red" id="btnExcluir" >Excluir conta</a></div>
                 </section>
             </div>
         </div>
           <div id="alteraNome" class="modal">
+            <form action="http://localhost:3000/alteraNome" method="post" id="frmAlteraNome">
             <div class="modal-content">
             	<h2 class="titulo">ALTERAR NOME</h2>
-            	<form action="" method="patch" id="frmAlteraNome">
             		<div class="input-field">
             			<i class="material-icons prefix">person</i>
-            			<input type="text" name="nomeAntigo" id="txtNomeAntigo">
-            			<label for="txtNomeAntigo">Nome anterior:</label>
+            			<input type="email" name="nomeAntigo" id="txtNomeAntigo">
+            			<label for="txtNomeAntigo">Email:</label>
             		</div>
             		<div class="input-field">
             			<i class="material-icons prefix">person</i>
-            			<input type="text" name="nomeAntigo" id="txtNomeAntigo">
+            			<input type="text" name="novoNome" id="txtNovoNome">
             			<label for="txtNomeAntigo">Novo nome:</label>
             		</div>
-            	</form>
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat">
             </div>
+            </form>
           </div>
 
           <div id="alteraEmail" class="modal">
@@ -51,13 +53,13 @@
               <form action="" method="patch" id="frmAlteraEmail">
                 <div class="input-field">
                   <i class="material-icons prefix">email</i>
-                  <input type="text" name="emaiAntigo" id="txtEmailAntigo">
-                  <label for="txtNomeAntigo">Email anterior:</label>
+                  <input type="text" name="emailAntigo" id="txtEmailAntigo">
+                  <label for="txtEmailAntigo">Email anterior:</label>
                 </div>
                 <div class="input-field">
                   <i class="material-icons prefix">email</i>
                   <input type="email" name="novoEmail" id="txtNovoEmail">
-                  <label for="txtNomeAntigo">Novo email:</label>
+                  <label for="txtNovoEmail">Novo email:</label>
                 </div>
               </form>
             </div> 
@@ -67,19 +69,19 @@
             </div>
           </div>
 
-          <div id="alteraNome" class="modal">
+          <div id="alteraSenha" class="modal">
             <div class="modal-content">
-              <h2 class="titulo">ALTERAR NOME</h2>
-              <form action="" method="patch" id="frmAlteraNome">
+              <h2 class="titulo">ALTERAR SENHA</h2>
+              <form action="" method="patch" id="frmAlteraSenha">
                 <div class="input-field">
-                  <i class="material-icons prefix">person</i>
-                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
-                  <label for="txtNomeAntigo">Nome anterior:</label>
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input type="text" name="senhaAntiga" id="txtSenhaAntiga">
+                  <label for="txtSenhaAntiga">Senha anterior:</label>
                 </div>
                 <div class="input-field">
-                  <i class="material-icons prefix">person</i>
-                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
-                  <label for="txtNomeAntigo">Novo nome:</label>
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input type="text" name="novaSenha" id="txtNovaSenha">
+                  <label for="txtNovaSenha">Nova senha:</label>
                 </div>
               </form>
             </div> 
@@ -89,19 +91,39 @@
             </div>
           </div>
 
-          <div id="alteraNome" class="modal">
+          <div id="alteraPerfil" class="modal">
             <div class="modal-content">
-              <h2 class="titulo">ALTERAR NOME</h2>
-              <form action="" method="patch" id="frmAlteraNome">
-                <div class="input-field">
-                  <i class="material-icons prefix">person</i>
-                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
-                  <label for="txtNomeAntigo">Nome anterior:</label>
+              <h2 class="titulo">ALTERAR IMAGEM DE PERFIL</h2>
+              <form action="" method="patch" id="frmAlteraPerfil">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Imagem de perfil</span>
+                        <input name="imgPerfil" type="file" id="txtNovoPerfil">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path" type="text" id="caminhoNovoPerfil">
+                    </div>
                 </div>
-                <div class="input-field">
-                  <i class="material-icons prefix">person</i>
-                  <input type="text" name="nomeAntigo" id="txtNomeAntigo">
-                  <label for="txtNomeAntigo">Novo nome:</label>
+              </form>
+            </div> 
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+            </div>
+          </div>
+
+          <div id="alteraFundo" class="modal">
+            <div class="modal-content">
+              <h2 class="titulo">ALTERAR IMAGEM DE FUNDO</h2>
+              <form action="" method="patch" id="frmAlteraFundo">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Imagem de Fundo</span>
+                        <input name="imgFundo" type="file" id="txtNovoFundo">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path" type="text" id="caminhoNovoFundo">
+                    </div>
                 </div>
               </form>
             </div> 
