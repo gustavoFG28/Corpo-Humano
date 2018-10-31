@@ -5,13 +5,13 @@ body{
 }
 header#cabecario
 {
-    background-color: rgb(252, 236, 19);
+    background-color: orange;
     font-size: 64px;
     font-family: Agency FB;
     font-weight: bold;
 }
 
-section.quadro
+.quadro
 {
     background-color: white;
     padding: 1%;
@@ -58,5 +58,4 @@ section.quadro div
 {
     margin-bottom: 2%;
 }
-
 
