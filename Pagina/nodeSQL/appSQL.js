@@ -3,7 +3,7 @@ const app = express();					// objeto do tipo express - acessar o banco
 const bodyParser = require('body-parser');		// variavel associada com o modulo do pacote body-parser
 const porta = 3000;						 //porta padrão - passar na url para acessar a aplicação
 const sql = require('mssql');			// variavel que usa as funções do pacote mssql
-const conexaoStr = "Server=regulus.cotuca.unicamp;Database=PR118194;User Id=PR118194;Password=guisa2018;";	// string necessária para conectar-se ao banco
+const conexaoStr = "Server=regulus;Database=PR118194;User Id=PR118194;Password=guisa2018;";	// string necessária para conectar-se ao banco
 
 //conexao com BD
 sql.connect(conexaoStr)	// sql é instancia, connect conecta ao banco q tem como param a string
