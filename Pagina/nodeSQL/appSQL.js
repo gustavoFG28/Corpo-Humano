@@ -53,7 +53,6 @@ const imgPerfil = (requisicao.body.imgPerfil == "")? null: "'" + requisicao.body
 const imgFundo = (requisicao.body.imgFundo == "")?null: "'" + requisicao.body.imgFundo.substring(0,50) + "'";
 
 execSQL(`cadastrar_sp '${nome}','${senha}','${email}',${imgPerfil},${imgFundo}`, resposta);
-rota.redirect('indexLogado.html');
 })
 
 
@@ -79,6 +78,7 @@ execSQL(`login_sp '${email}','${senha}'`, resposta);
 })
 
 
+<<<<<<< HEAD
 rota.get("/ranking/:nome?", (requisicao, resposta) =>{
 const nome = requisicao.body.buscaNome;
 let filtro = ' ';
@@ -92,4 +92,14 @@ rota.get("/quiz/:dif?", (requisicao, resposta) =>{
 	if(requisicao.params.dif)
 	filtro = "where dificuldade = '" + requisicao.params.dif + "'";
 	execSQL('select * from Quiz ' + filtro, resposta);
+=======
+rota.get("/ranking/:nome", (requisicao, resposta) =>{
+execSQL("select * from Ranking where nome like '" + requisicao.params.nome + "%'", resposta);	
+}) 
+
+rota.post("/alteraNome", (requisicao, resposta) =>{
+const email = requisicao.body.nomeAntigo;
+const novoNome = requisicao.body.novoNome;
+execSQL("update Usuario set nome = '"+ novoNome + "' where email = '"+ email +"'", resposta);
+>>>>>>> 9bf3e89857da7f887cbba6f03388b3d2db0d600d
 })
