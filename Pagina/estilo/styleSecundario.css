@@ -5,13 +5,13 @@ body{
 }
 header#cabecario
 {
-    background-color: rgb(252, 236, 19);
+    background-color: orange;
     font-size: 64px;
     font-family: Agency FB;
     font-weight: bold;
 }
 
-section#areaQuiz
+.quadro
 {
     background-color: white;
     padding: 1%;
@@ -21,7 +21,7 @@ section#areaQuiz
     vertical-align: middle;
 }
 
-section#areaQuiz div
+section.quadro div
 {
     margin-bottom: 1%;
 }
@@ -42,3 +42,20 @@ section#areaQuiz div
     position: relative;
     width: calc(100% - 1% );
 }
+
+.titulo
+{
+    font-family: Agency FB;
+    font-weight: bold;
+    color: orange;
+}
+#mainConfig
+{
+    margin-bottom: 3.2%;
+}
+
+.btnConfiguracoes
+{
+    margin-bottom: 2%;
+}
+

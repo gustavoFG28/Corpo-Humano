@@ -19,7 +19,7 @@ function fazerLogin()
     ajax.send();
 }
 
-atualizaPaginaLogado(response)
+function atualizaPaginaLogado(response)
 {
     var arr = JSON.parse(response);
     alert(arr[0]);
