@@ -90,7 +90,6 @@ function exibeQuiz(response)
         btn.className = 'waves-effect waves-light btn';
         btn.innerHTML = "<i class='material-icons'>save</i>";
         btn.id = 'btnSubmit';
-        btn.type = 'submit';
         btn.onclick = corrigirResposta;
         form.appendChild(btn);
     
@@ -105,5 +104,6 @@ function exibeQuiz(response)
         for(var i =0; i < 9; i++)
          if(respostas[i] == assinalado[i])
           acertos++;
-          alert(acertos);
+        
+        alert(acertos);
     }

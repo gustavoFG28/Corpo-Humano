@@ -14,6 +14,7 @@
   }
     document.getElementById("btnSubmit").onclick = function(){
         cadastrar();
+        location.href = 'indexLogado.html'
     }
 }
 
@@ -100,9 +101,18 @@ function cadastrar()
 {
    if(verificacoesFinais())
    {
-        document.getElementById("frmCadastro").submit();  
-        //window.location.href='indexLogado.html';
+       var txt = "";
+       var form = $("#frmCadastro");
+       $.post("http://localhost:3000/cadastrarUsuario", form.serialize()).done(function(data){
+           if(!data.erro)
+            form.each(function(data){
+                this.reset();
+                
+            });
+        alert(data.mensagem);
+        });
+
+        
+        
    }
-    else
-       return;
 }
