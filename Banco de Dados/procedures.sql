@@ -3,6 +3,10 @@ sp_help Usuario
 
 select * from Acesso
 delete from Acesso
+select * from Quiz where dificuldade = 'avancado'
+
+alter table Quiz add dificuldade varchar(10)
+update Quiz set opcaoC = 'hímen, menstruação, transportar.' where codigoQuiz = 8
 
 create proc cadastrar_sp
 @nome varchar(30) = null,
@@ -89,41 +93,41 @@ As palavras que completam as sentenças são respectivamente:
 insert into Quiz values(9,'9 - O pênis elimina dois líquidos que possuem funções, são eles:','a',' a) Sêmen, função reprodutora e urina, função excretora.',
 'b) Saliva, função excretora e sêmen, função ','c) Água e suor, função excretora.','d) Sêmen, função excretora e urina, função reprodutora.',null)
 
-insert into Quiz values(10,'10 - (UEPB-2006) - Num incêndio é comum o indivíduo morrer, antes por asfixia, do que por queimaduras. Tal situação ocorre, porque:','c',
+
+insert into Quiz values(10,'1 - (UEPB-2006) - Num incêndio é comum o indivíduo morrer, antes por asfixia, do que por queimaduras. Tal situação ocorre, porque:','c',
 'a) a fumaça destrói os leucócitos. ','b) as plaquetas são destruídas na presença do monóxido de carbono. ','c) a hemoglobina combina-se com o monóxido de carbono, 
 formando um composto estável, tornando-se irrecuperável. ','d) a hemoglobina combina-se com todo o oxigênio disponível.','e) a hemoglobina, nessa situação, só transporta dióxido de carbono.')
 
-insert into Quiz values(11,'11 -(MACK) - Assinale a alternativa correta a respeito do processo digestivo.','d',
+insert into Quiz values(11,'2 -(MACK) - Assinale a alternativa correta a respeito do processo digestivo.','d',
 'a) A digestão enzimática de carboidratos só se inicia no duodeno. ','b) O pH ácido do estômago inativa todas as enzimas digestivas. ',
 'c) A retirada da vesícula biliar pode provocar dificuldade de digestão de lipídios, devido à falta de enzimas. ',
 'd) A superfície interna do jejuno-íleo apresenta dobras para facilitar a absorção de nutrientes. ','e) As bactérias presentes no intestino grosso são parasitas, mas só provocam sintomas quando seu número se eleva muito.')
 
-insert into Quiz values(12,'12 - (Faap-SP) - Em relação à circulação humana, é incorreto afirmar: ','c','a) Todo vaso que sai do coração é artéria. ',
+insert into Quiz values(12,'3 - (Faap-SP) - Em relação à circulação humana, é incorreto afirmar: ','c','a) Todo vaso que sai do coração é artéria. ',
 'b) Todo vaso que chega ao coração é veia. ','c) Todo sangue que chega ao coração é sangue venoso. ','d) O sangue rico em oxigênio é o arterial. ','e) O sangue venoso passa do átrio direito para o ventrículo direito.')
 
-insert into Quiz values(13,'13 - (Unicamp 2014 - 1ª Fase) - O tecido muscular cardíaco apresenta fibras','d','a) lisas, de contração voluntária e aeróbia.',
+insert into Quiz values(13,'4 - (Unicamp 2014 - 1ª Fase) - O tecido muscular cardíaco apresenta fibras','d','a) lisas, de contração voluntária e aeróbia.',
 'b) lisas, de contração involuntária e anaeróbia.','c) estriadas, de contração voluntária e anaeróbia.','d) estriadas, de contração involuntária e aeróbia.',null)
 
-insert into Quiz values(14,'14 - (Fgv) - Trata-se de um líquido constituinte do esperma que apresenta aspecto leitoso e é alcalino, contribui para neutralizar a acidez das secreções vaginais além de promover um aumento da motilidade dos
+insert into Quiz values(14,'5 - (Fgv) - Trata-se de um líquido constituinte do esperma que apresenta aspecto leitoso e é alcalino, contribui para neutralizar a acidez das secreções vaginais além de promover um aumento da motilidade dos
 espermatozoides. Esse líquido é produzido ','c','a) pelo epidídimo. ','b) pelo testículo. ','c) pela próstata. ','d) pela vesícula seminal. ','
 e) pelas glândulas bulbouretrais.')
 
-insert into Quiz values(15,'15 - (UFMG) - A ocorrência de gravidez na adolescência tem aumentado consideravelmente. O conhecimento e o uso adequado de métodos contraceptivos
+insert into Quiz values(15,'6 - (UFMG) - A ocorrência de gravidez na adolescência tem aumentado consideravelmente. O conhecimento e o uso adequado de métodos contraceptivos
 podem reverter esse problema. Em relação a esses métodos, é CORRETO afirmar-se que: ','c','a) o diafragma impede a nidação da mórula. ','b) o dispositivo intra-uterino, D.I.U, impede a chegada dos espermatozoides ao útero. ','
 c) o método hormonal feminino, pílula, impede a ovulação. ','d) o método de tabela é eficiente se forem evitadas relações sexuais entre o décimo segundo e o décimo quarto dia do ciclo. ','
 e) o preservativo masculino, camisinha, tem ação espermicida.')
 
-insert into Quiz values(16,'16 - (UFSC) - Cada ureter conduz a urina:','a','a) do rim à bexiga. ','b) da bexiga ao meio externo. ',
+insert into Quiz values(16,'7 - (UFSC) - Cada ureter conduz a urina:','a','a) do rim à bexiga. ','b) da bexiga ao meio externo. ',
 'c) da bexiga ao rim. ','d) da pelve renal aos cálices. ','e) dos cálices às pelves renais.')
 
-insert into Quiz values(17,'17 -  (Fuvest-1998) Além da sustentação do corpo, são funções dos ossos:','a','
+insert into Quiz values(17,'8 -  (Fuvest-1998) Além da sustentação do corpo, são funções dos ossos:','a','
 a) armazenar cálcio e fósforo; produzir hemácias e leucócitos.','b) armazenar cálcio e fósforo; produzir glicogênio.','
 c) armazenar glicogênio; produzir hemácias e leucócitos.','
 d) armazenar vitaminas; produzir hemácias e leucócitos.','
 e) armazenar vitaminas; produzir proteínas do plasma.')
 
-insert into Quiz values(18,'
-18 - (Fuvest-SP) - Qual dos seguintes comportamentos envolve maior número de órgãos do sistema nervoso? ','e','a) Salivar ao sentir o aroma de comida gostosa. ',
+insert into Quiz values(18,'9- (Fuvest-SP) - Qual dos seguintes comportamentos envolve maior número de órgãos do sistema nervoso? ','e','a) Salivar ao sentir o aroma de comida gostosa. ',
 'b) Levantar a perna quando o médico toca com martelo no joelho do paciente. ','c) Piscar com a aproximação brusca de um objeto. ',
 'd) Retirar bruscamente a mão ao tocar um objeto muito quente. ','e) Preencher uma ficha de identificação.')
 

@@ -81,9 +81,15 @@ execSQL(`login_sp '${email}','${senha}'`, resposta);
 
 rota.get("/ranking/:nome?", (requisicao, resposta) =>{
 const nome = requisicao.body.buscaNome;
-console.log(nome);
 let filtro = ' ';
 if(requisicao.params.nome)
 	filtro = "where nome = '"+ nome+ "%'";
 execSQL('select * from Ranking ' + filtro, resposta);	
 }) 
+
+rota.get("/quiz/:dif?", (requisicao, resposta) =>{
+	let filtro = ' ';
+	if(requisicao.params.dif)
+	filtro = "where dificuldade = '" + requisicao.params.dif + "'";
+	execSQL('select * from Quiz ' + filtro, resposta);
+})
