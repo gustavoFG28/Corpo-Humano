@@ -6,6 +6,10 @@ body
     overflow-x: hidden;
 }
 /* Header css */
+.btnVoltar
+{
+    width: 100%;
+}
 #btnMenu
 {
     margin: 2%;
@@ -33,6 +37,7 @@ body
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 10%;
     padding: 10px;
+    z-index: 2;
 }
 p#intro
 {
@@ -140,9 +145,19 @@ p#intro
 /* aside css end */
 
 /* footer css begin */
-footer#rodape
+footer
 {
-    position: fixed;
-    top: calc(100% - 250px);
+    position: relative;
+}
+.iconFooter
+{
+    width: 25%;
 }
 /* footer css end */
+
+
+
+#areaQuiz
+{
+    margin-bottom: 1%;
+}

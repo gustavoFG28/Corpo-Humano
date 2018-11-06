@@ -1,4 +1,4 @@
- window.onload = function()
+window.onload = function()
 {
     document.getElementById("txtNome").onchange = function(){
         verificaNome();
@@ -11,10 +11,16 @@
     }
     document.getElementById("txtSenha").onchange = function(){
         verificaSenha();
-  }
+    }
+    document.getElementById("inputImgPerfil").onchange = function(){
+        verificaImgPerfil();
+    }
+    document.getElementById("inputFundoImg").onchange = function(){
+        verificaImgFundo();
+    }
     document.getElementById("btnSubmit").onclick = function(){
         cadastrar();
-        location.href = 'indexLogado.html'
+        location.href = 'indexLogado.html';
     }
 }
 
@@ -63,16 +69,21 @@ function verificaSenha()
 }
 function verificaImgPerfil()
 {
-    var img = document.getElementById("inputImgPerfil").value;
+    var img = document.getElementById("inputImgPerfil").files[0];
+    var r = new FileReader();
+    r.onload = function(e)
+    {
+        document.getElementById("inputImgPerfil").value = e.target.result;
+    }
+    r.readAsDataURL(img);
 
-    alert(img);
+    alert(document.getElementById("inputImgPerfil").value);
 }
 
 function verificaImgFundo()
 {
-    var img = document.getElementById("inputFundoImg").value;
-    document.getElementById("imgLa").src= img;
-    alert(img);
+    var img = document.getElementById("inputFundoImg").files[0];
+    alert(img.name);
 }
 
 function atualizaCampo(estaCorreto, campo)
@@ -111,8 +122,5 @@ function cadastrar()
             });
         alert(data.mensagem);
         });
-
-        
-        
    }
 }
