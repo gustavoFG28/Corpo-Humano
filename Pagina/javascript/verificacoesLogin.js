@@ -1,10 +1,33 @@
 window.onload = function(){
     document.getElementById("btnLogin").onclick = function()
     {
+        var ajax = iniciaAjax();
+       
+        var url = "http://localhost:3000/entrar/" +  document.getElementById("txtEmail").value + "/" +  document.getElementById("txtSenha").value;
+        ajax.onreadystatechange=function() {
+            if (this.readyState == 4 && this.status == 200) {
+                verificaUsuario(this.responseText);
+            }
+        }
+    
+        ajax.open("GET", url, true);
+        ajax.send();
+
+    }
+
+}
+
+function verificaUsuario(responseText)
+{ 
+    var arr = JSON.parse(responseText);
+
+    if(arr[0] == null)
+        alert("Senha ou email incorretos!");
+    else  
+    {
         login();
         location.href = "indexLogado.html?usuario=" + document.getElementById("txtEmail").value;
     }
-
 }
 
 function login()

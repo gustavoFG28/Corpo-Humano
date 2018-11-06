@@ -24,4 +24,6 @@ function carregarInfo(responseText)
    document.getElementById("emailUsuario").innerHTML = arr[0].email;
    document.getElementById("imgPerfilUsuario").src = arr[0].imgPerfil;
    document.getElementById("imgFundoUsuario").src = arr[0].imgFundo;
+   document.getElementById("quizBasico").href = "quiz.html?valor=basico?email="+  arr[0].email;
+   document.getElementById("quizAvancado").href = "quiz.html?valor=avancado?email="+ arr[0].email;
 }

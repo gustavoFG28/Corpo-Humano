@@ -179,7 +179,7 @@ function criarRelatorio()
 {
     var out = "<table id='tabelaPontuacao' class='highlight '><th>Usuário</th><th>Pontuação</th></table>";
     out += "<p><div class='row'><div class='col s2'><button id='btnRetroceder' class='btn-floating waves-effect waves-light" + ((pagina == 0)?" disabled":"") +"'><i class='material-icons'>arrow_back</i></button></div>";
-    out += "<div class='input-field col s8'><i class='material-icons prefix'>search</i><form action='http://localhost:3000/ranking' method='get'><input name='buscaNome' type='text' id='txtBuscaNome'><label for='txtBuscaNome'>Buscar</label></div>";
+    out += "<form action='http://localhost:3000/ranking' method='get'><div class='input-field col s8'><i class='material-icons prefix'>search</i><input name='buscaNome' type='text' id='txtBuscaNome'><label for='txtBuscaNome'>Buscar</label></div></form>";
     out += "<div class='col s2'><button id='btnAvancar' class='btn-floating waves-effect waves-light'><i class='material-icons'>arrow_forward</i></button></div></div></p>";
     
     document.getElementById("areaOrgaos").innerHTML = out;
