@@ -24,16 +24,16 @@
                   <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraSenha" href="#alteraSenha">Alterar senha</a></div>
                   <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraPerfil" href="#alteraPerfil">Alterar foto de perfil</a></div>
                   <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light modal-trigger" id="btnAlteraFundo" href="#alteraFundo">Alterar imagem de fundo</a></div>
-                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light red" id="btnExcluir" >Excluir conta</a></div>
+                  <div class="col  s12"><a class="btnConfiguracoes btn waves-effect waves-light red modal-trigger" id="btnExcluir" href="#excluirConta" >Excluir conta</a></div>
                 </section>
             </div>
         </div>
           <div id="alteraNome" class="modal">
-            <form action="http://localhost:3000/alteraNome" method="post" id="frmAlteraNome">
+            <form action="http://localhost:3000/alteraNome" method="patch" id="frmAlteraNome">
             <div class="modal-content">
             	<h2 class="titulo">ALTERAR NOME</h2>
             		<div class="input-field">
-            			<i class="material-icons prefix">person</i>
+            			<i class="material-icons prefix">email</i>
             			<input type="email" name="nomeAntigo" id="txtNomeAntigo">
             			<label for="txtNomeAntigo">Email:</label>
             		</div>
@@ -45,7 +45,7 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <input type="submit" class="modal-close waves-effect waves-green btn-flat">
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitNome">
             </div>
             </form>
           </div>
@@ -68,7 +68,7 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+              <button class="modal-close waves-effect waves-green btn-flat" id="btnSubmitEmail">Confirmar</button>
             </div>
           </div>
 
@@ -90,7 +90,7 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+              <button class="modal-close waves-effect waves-green btn-flat" id="btnSubmitSenha">Confirmar</button>
             </div>
           </div>
 
@@ -98,6 +98,11 @@
             <div class="modal-content">
               <h2 class="titulo">ALTERAR IMAGEM DE PERFIL</h2>
               <form action="" method="patch" id="frmAlteraPerfil">
+                  <div class="input-field">
+                      <i class="material-icons prefix">email</i>
+                      <input type="text" name="emailPerfil" id="txtEmailPerfil">
+                      <label for="txtEmailPerfil">Email:</label>
+                    </div>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Imagem de perfil</span>
@@ -111,7 +116,7 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+              <button class="modal-close waves-effect waves-green btn-flat"  id="btnSubmitPerfil">Confirmar</button>
             </div>
           </div>
 
@@ -119,6 +124,11 @@
             <div class="modal-content">
               <h2 class="titulo">ALTERAR IMAGEM DE FUNDO</h2>
               <form action="" method="patch" id="frmAlteraFundo">
+                  <div class="input-field">
+                      <i class="material-icons prefix">email</i>
+                      <input type="text" name="emailFundo" id="txtEmailFundo">
+                      <label for="txtEmailFundo">Email:</label>
+                    </div>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Imagem de Fundo</span>
@@ -132,7 +142,29 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+              <button class="modal-close waves-effect waves-green btn-flat"  id="btnSubmitFundo">Confirmar</button>
+            </div>
+          </div>
+
+          <div id="excluirConta" class="modal">
+            <div class="modal-content">
+              <h2 class="titulo">EXCLUIR CONTA</h2>
+              <form method="delete" id="frmExcluiConta">
+                <div class="input-field">
+                  <i class="material-icons prefix">email</i>
+                  <input type="text" name="emailExcluir" id="txtEmailExcluir">
+                  <label for="txtEmailExcluir">Email:</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input type="text" name="senhaExcluir" id="txtSenhaExcluir">
+                  <label for="txtSenhaExcluir">Senha:</label>
+                </div>
+              </form>
+            </div> 
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <button class="modal-close waves-effect waves-green btn-flat" id="btnSubmitExcluir">Confirmar</button>
             </div>
           </div>
 

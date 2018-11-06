@@ -1,27 +1,19 @@
 window.onload = function(){
-    document.getElementById("btnSubmit").onclick = fazerLogin;
-}
-function fazerLogin()
-{
-    document.getElementById("frmLogin").submit()
-    window.location.href = "indexLogado.html";
-    alert("oi");
-    var ajax = iniciaAjax();
-    var url = "http://localhost:3000/loginUsuario";
-
-    ajax.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
-            atualizaPaginaLogado(this.responseText);
-        }
+    document.getElementById("btnLogin").onclick = function()
+    {
+        login();
+        location.href = "indexLogado.html?usuario=" + document.getElementById("txtEmail").value;
     }
 
-    ajax.open("post", url, true);
-    ajax.send();
 }
 
-function atualizaPaginaLogado(response)
+function login()
 {
-    var arr = JSON.parse(response);
-    alert(arr[0]);
-
+    var form = $("#frmLogin");
+    $.post("http://localhost:3000/loginUsuario", form.serialize()).done(function(data){
+        if(!data.erro)
+        form.each(function(data){
+            this.reset();
+        });
+    });
 }
