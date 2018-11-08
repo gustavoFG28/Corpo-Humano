@@ -2,10 +2,8 @@ window.onload = function()
 {
     var ajax = iniciaAjax();
 
-    var urlSite = new URL(this.location.href);
-    var valor = urlSite.searchParams.get("usuario");
-
-    var url = "http://localhost:3000/entrar/" + valor;
+    var url = "http://localhost:3000/entrar/" + window.sessionStorage.getItem("email");
+    window.sessionStorage.removeItem("email");
     ajax.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {
             carregarInfo (this.responseText);

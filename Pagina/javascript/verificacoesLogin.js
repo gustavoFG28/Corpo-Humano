@@ -26,7 +26,8 @@ function verificaUsuario(responseText)
     else  
     {
         login();
-        location.href = "indexLogado.html?usuario=" + document.getElementById("txtEmail").value;
+        window.sessionStorage.setItem("email", document.getElementById("txtEmail").value);
+        location.href = "indexLogado.html";
     }
 }
 
