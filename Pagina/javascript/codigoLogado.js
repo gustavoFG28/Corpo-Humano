@@ -3,7 +3,6 @@ window.onload = function()
     var ajax = iniciaAjax();
 
     var url = "http://localhost:3000/entrar/" + window.sessionStorage.getItem("email");
-    window.sessionStorage.removeItem("email");
     ajax.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {
             carregarInfo (this.responseText);
@@ -22,6 +21,6 @@ function carregarInfo(responseText)
    document.getElementById("emailUsuario").innerHTML = arr[0].email;
    document.getElementById("imgPerfilUsuario").src = arr[0].imgPerfil;
    document.getElementById("imgFundoUsuario").src = arr[0].imgFundo;
-   document.getElementById("quizBasico").href = "quiz.html?valor=basico?email="+  arr[0].email;
-   document.getElementById("quizAvancado").href = "quiz.html?valor=avancado?email="+ arr[0].email;
+   document.getElementById("quizBasico").href = "quiz.html?valor=basico";
+   document.getElementById("quizAvancado").href = "quiz.html?valor=avancado";
 }

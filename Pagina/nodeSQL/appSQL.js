@@ -96,10 +96,11 @@ rota.get("/ranking/:nome", (requisicao, resposta) =>{
 execSQL("select * from Ranking where nome like '" + requisicao.params.nome + "%'", resposta);	
 }) 
 
-rota.patch("/alteraNome/:email/:novoNome", (requisicao, resposta) =>{
+rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
-	const novoNome = requisicao.params.novoNome;
-	execSQL("update Usuario set nome = '"+ novoNome + "' where email = '"+ email +"'", resposta);
+	const novoNome = requisicao.body.novoNome;
+	console.log(email);
+		execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
 })
 
 rota.get("/entrar/:email/:senha?", (requisicao, resposta) =>{

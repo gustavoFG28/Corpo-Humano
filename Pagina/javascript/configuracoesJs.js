@@ -3,18 +3,15 @@ window.onload = function()
     $('.modal').modal();
     document.getElementById("btnSubmitNome").onclick = function()
     {
-        enviarSubmitAlteracao(document.getElementById("frmAlteraNome"),"http://localhost:3000/alteraNome");
+        var obj = new Object();
+        obj.novoNome = $("#txtNovoNome").val();
+        obj.email = window.sessionStorage.getItem("email");
+        $.ajax({
+            url: "http://localhost:3000/alteraNome/" + obj.email,
+            type: 'patch',
+            data: obj
+        })
         location.href = "configuracoes.html";
+        return false; 
     }
-}
-
-
-function enviarSubmitAlteracao(formulario, url)
-{
-    $.patch(url, formulario.serialize()).done(function(data){
-        if(!data.erro)
-        formulario.each(function(data){
-            this.reset();
-        });
-    });
 }

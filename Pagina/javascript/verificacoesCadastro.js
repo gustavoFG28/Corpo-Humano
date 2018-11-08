@@ -15,7 +15,8 @@ window.onload = function()
     }
     document.getElementById("btnSubmit").onclick = function(){
         cadastrar();
-        location.href = 'indexLogado.html?usuario=' + document.getElementById("txtEmail").value;
+        window.sessionStorage.setItem("email", document.getElementById("txtEmail").value);
+        location.href = 'indexLogado.html';
     }
 }
 
