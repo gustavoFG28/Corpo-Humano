@@ -33,11 +33,6 @@
             <div class="modal-content">
             	<h2 class="titulo">ALTERAR NOME</h2>
             		<div class="input-field">
-            			<i class="material-icons prefix">email</i>
-            			<input type="email" name="nomeAntigo" id="txtNomeAntigo">
-            			<label for="txtNomeAntigo">Email:</label>
-            		</div>
-            		<div class="input-field">
             			<i class="material-icons prefix">person</i>
             			<input type="text" name="novoNome" id="txtNovoNome">
             			<label for="txtNomeAntigo">Novo nome:</label>
@@ -56,11 +51,6 @@
               <form action="" method="patch" id="frmAlteraEmail">
                 <div class="input-field">
                   <i class="material-icons prefix">email</i>
-                  <input type="text" name="emailAntigo" id="txtEmailAntigo">
-                  <label for="txtEmailAntigo">Email anterior:</label>
-                </div>
-                <div class="input-field">
-                  <i class="material-icons prefix">email</i>
                   <input type="email" name="novoEmail" id="txtNovoEmail">
                   <label for="txtNovoEmail">Novo email:</label>
                 </div>
@@ -68,7 +58,7 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat" id="btnSubmitEmail">Confirmar</button>
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitEmail">
             </div>
           </div>
 
@@ -78,19 +68,14 @@
               <form action="" method="patch" id="frmAlteraSenha">
                 <div class="input-field">
                   <i class="material-icons prefix">vpn_key</i>
-                  <input type="text" name="senhaAntiga" id="txtSenhaAntiga">
-                  <label for="txtSenhaAntiga">Senha anterior:</label>
-                </div>
-                <div class="input-field">
-                  <i class="material-icons prefix">vpn_key</i>
-                  <input type="text" name="novaSenha" id="txtNovaSenha">
+                  <input type="password" name="novaSenha" id="txtNovaSenha" >
                   <label for="txtNovaSenha">Nova senha:</label>
                 </div>
               </form>
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat" id="btnSubmitSenha">Confirmar</button>
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitSenha">
             </div>
           </div>
 
@@ -151,21 +136,11 @@
               <h2 class="titulo">EXCLUIR CONTA</h2>
               <form method="delete" id="frmExcluiConta">
                 <div class="input-field">
-                  <i class="material-icons prefix">email</i>
-                  <input type="text" name="emailExcluir" id="txtEmailExcluir">
-                  <label for="txtEmailExcluir">Email:</label>
-                </div>
-                <div class="input-field">
-                  <i class="material-icons prefix">vpn_key</i>
-                  <input type="text" name="senhaExcluir" id="txtSenhaExcluir">
-                  <label for="txtSenhaExcluir">Senha:</label>
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                  <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnExcluir">
                 </div>
               </form>
-            </div> 
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat" id="btnSubmitExcluir">Confirmar</button>
-            </div>
+          </div>
           </div>
 
          <footer class="page-footer orange">

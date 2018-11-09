@@ -99,8 +99,35 @@ execSQL("select * from Ranking where nome like '" + requisicao.params.nome + "%'
 rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novoNome = requisicao.body.novoNome;
-	console.log(email);
-		execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
+    execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
+})
+
+rota.patch("/alteraEmail/:email", (requisicao, resposta) =>{
+	const email = requisicao.params.email;
+	const novoEmail = requisicao.body.novoEmail;
+    execSQL(`update Usuario set email='${novoEmail}' where email='${email}'`, resposta);
+})
+
+rota.patch("/alteraSenha/:email", (requisicao, resposta) =>{
+	const email = requisicao.params.email;
+	const novaSenha = requisicao.body.novaSenha;
+    execSQL(`update Usuario set senha='${novaSenha}' where email='${email}'`, resposta);
+})
+/*rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
+	const email = requisicao.params.email;
+	const novoNome = requisicao.body.novoNome;
+    execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
+})
+rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
+	const email = requisicao.params.email;
+	const novoNome = requisicao.body.novoNome;
+    execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
+})*/
+
+
+rota.delete("/excluiConta/:email", (requisicao, resposta)=>{
+	const email = requisicao.params.email;
+	execSQL("delete from Usuario where email='"+ email, resposta);
 })
 
 rota.get("/entrar/:email/:senha?", (requisicao, resposta) =>{
