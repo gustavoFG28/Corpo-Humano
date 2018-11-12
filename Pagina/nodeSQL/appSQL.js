@@ -78,11 +78,10 @@ execSQL(`login_sp '${email}','${senha}'`, resposta);
 
 
 rota.get("/ranking/:nome?", (requisicao, resposta) =>{
-const nome = requisicao.body.buscaNome;
 let filtro = ' ';
 if(requisicao.params.nome)
-	filtro = "where nome = '"+ nome+ "%'";
-execSQL('select * from Ranking ' + filtro, resposta);	
+	filtro = " where nome like '"+ requisicao.params.nome + "%'";
+execSQL("select * from Ranking" + filtro + " order by pontos desc", resposta);	
 }) 
 
 rota.post("/ranking/:email/:pontos", (requisicao, resposta)=>{
@@ -95,10 +94,6 @@ rota.get("/quiz/:dif?", (requisicao, resposta) =>{
 	filtro = "where dificuldade = '" + requisicao.params.dif + "'";
 	execSQL('select * from Quiz ' + filtro, resposta);
 })
-
-rota.get("/ranking/:nome", (requisicao, resposta) =>{
-execSQL("select * from Ranking where nome like '" + requisicao.params.nome + "%'", resposta);	
-}) 
 
 rota.post("/alteraNome/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;

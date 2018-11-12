@@ -24,6 +24,14 @@ $("document").ready(function(){
     gerarSistemas();
 })  
 
+$(document).keypress(function(e) {
+    if(e.which == 13) 
+    {
+        atualizaRelatorio();
+        return false;
+    }
+});
+
 
 
 function gerarSistemas()
@@ -185,8 +193,7 @@ function criarRelatorio()
     document.getElementById("areaOrgaos").innerHTML = out;
     document.getElementById("btnRetroceder").onclick = clickBtnRetroceder;
     document.getElementById("btnAvancar").onclick = clickBtnAvancar;
-    document.getElementById("txtBuscaNome").onchange = atualizaRelatorio;
-
+    document.getElementById("txtBuscaNome").onkeyup  = atualizaRelatorio;
     ajaxRelatorio();
 }
 
@@ -250,9 +257,10 @@ function exibeNomesRelatorio(response)
         document.getElementById("btnRetroceder").className = "btn-floating waves-effect waves-light disabled";
     else
         document.getElementById("btnRetroceder").className = "btn-floating waves-effect waves-light";
-
-    if(pagina == Math.round(obj.length / 5))
-        document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light disabled";  
+    
+   
+    if(pagina == Math.trunc(obj.length / 5)|| (pagina + 1  == obj.length/5 && obj.length%5 == 0))
+        document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light disabled"; 
     else
         document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light";      
 
