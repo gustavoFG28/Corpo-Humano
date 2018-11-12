@@ -86,13 +86,15 @@ function exibeQuiz(response)
             }
             
         } 
-        var btn = document.createElement("button");
+        var btn = document.createElement("a");
         btn.className = 'waves-effect waves-light btn';
         btn.innerHTML = "<i class='material-icons'>save</i>";
         btn.id = 'btnSubmit';
         btn.onclick =  function()
         {
             corrigirResposta();
+            location.href = 'quiz.html?' + valor;
+            return false;
         }
         form.appendChild(btn);
     
@@ -109,4 +111,13 @@ function exibeQuiz(response)
           acertos++;
         
         alert(acertos);
+        atualizaRanking(acertos);
+    }
+
+    function atualizaRanking(acertos)
+    {
+        $.ajax({
+            url: "http://localhost:3000/ranking/" + window.sessionStorage.getItem("email"),
+            type: 'post'
+        })
     }

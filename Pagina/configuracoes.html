@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+    <script src="javascript/JIC.js"></script>
     <script src="javascript/configuracoesJs.js"></script>   
     </head>
     <body id="paginaQuiz">
@@ -44,24 +45,22 @@
             </div>
             </form>
           </div>
-
           <div id="alteraEmail" class="modal">
-            <div class="modal-content">
-              <h2 class="titulo">ALTERAR EMAIL</h2>
-              <form action="" method="patch" id="frmAlteraEmail">
-                <div class="input-field">
-                  <i class="material-icons prefix">email</i>
-                  <input type="email" name="novoEmail" id="txtNovoEmail">
-                  <label for="txtNovoEmail">Novo email:</label>
-                </div>
+              <form action="http://localhost:3000/alteraEmail" method="patch" id="frmAlteraEmail">
+              <div class="modal-content">
+                <h2 class="titulo">ALTERAR EMAIL</h2>
+                  <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="text" name="novoEmail" id="txtNovoEmail">
+                    <label for="txtNovoEmail">Novo email:</label>
+                  </div>
+              </div> 
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitEmail">
+              </div>
               </form>
-            </div> 
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitEmail">
             </div>
-          </div>
-
           <div id="alteraSenha" class="modal">
             <div class="modal-content">
               <h2 class="titulo">ALTERAR SENHA</h2>
@@ -82,12 +81,8 @@
           <div id="alteraPerfil" class="modal">
             <div class="modal-content">
               <h2 class="titulo">ALTERAR IMAGEM DE PERFIL</h2>
+              <h5 class="aviso">Só serão aceitas imagens menores que 150kb</h5>
               <form action="" method="patch" id="frmAlteraPerfil">
-                  <div class="input-field">
-                      <i class="material-icons prefix">email</i>
-                      <input type="text" name="emailPerfil" id="txtEmailPerfil">
-                      <label for="txtEmailPerfil">Email:</label>
-                    </div>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Imagem de perfil</span>
@@ -101,19 +96,16 @@
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat"  id="btnSubmitPerfil">Confirmar</button>
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitPerfil">
             </div>
           </div>
 
           <div id="alteraFundo" class="modal">
+              <form action="" method="patch" id="frmAlteraFundo">
             <div class="modal-content">
               <h2 class="titulo">ALTERAR IMAGEM DE FUNDO</h2>
-              <form action="" method="patch" id="frmAlteraFundo">
-                  <div class="input-field">
-                      <i class="material-icons prefix">email</i>
-                      <input type="text" name="emailFundo" id="txtEmailFundo">
-                      <label for="txtEmailFundo">Email:</label>
-                    </div>
+              <h5 class="aviso">Só serão aceitas imagens menores que 150kb</h5>
+              
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Imagem de Fundo</span>
@@ -123,24 +115,24 @@
                         <input class="file-path" type="text" id="caminhoNovoFundo">
                     </div>
                 </div>
-              </form>
+              
             </div> 
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-              <button class="modal-close waves-effect waves-green btn-flat"  id="btnSubmitFundo">Confirmar</button>
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitFundo">
             </div>
+          </form>
           </div>
 
           <div id="excluirConta" class="modal">
             <div class="modal-content">
-              <h2 class="titulo">EXCLUIR CONTA</h2>
-              <form method="delete" id="frmExcluiConta">
-                <div class="input-field">
-                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-                  <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnExcluir">
-                </div>
+              <form action="" method="delete" id="frmExcluiConta">
               </form>
-          </div>
+            </div> 
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+              <input type="submit" class="modal-close waves-effect waves-green btn-flat" id="btnSubmitExcluir">
+            </div>
           </div>
 
          <footer class="page-footer orange">

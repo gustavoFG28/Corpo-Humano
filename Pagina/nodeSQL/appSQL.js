@@ -85,6 +85,10 @@ if(requisicao.params.nome)
 execSQL('select * from Ranking ' + filtro, resposta);	
 }) 
 
+rota.post("/ranking/:email/:pontos", (requisicao, resposta)=>{
+	execSQL(`insereRanking_sp '${requisicao.params.email}, ${requisicao.params.pontos}`, resposta)
+})
+
 rota.get("/quiz/:dif?", (requisicao, resposta) =>{
 	let filtro = ' ';
 	if(requisicao.params.dif)
@@ -96,38 +100,37 @@ rota.get("/ranking/:nome", (requisicao, resposta) =>{
 execSQL("select * from Ranking where nome like '" + requisicao.params.nome + "%'", resposta);	
 }) 
 
-rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
+rota.post("/alteraNome/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novoNome = requisicao.body.novoNome;
-    execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
+    execSQL(`AlteraNome_sp '${email}', '${novoNome}'`, resposta);
 })
-
 rota.patch("/alteraEmail/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novoEmail = requisicao.body.novoEmail;
     execSQL(`update Usuario set email='${novoEmail}' where email='${email}'`, resposta);
 })
-
 rota.patch("/alteraSenha/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novaSenha = requisicao.body.novaSenha;
     execSQL(`update Usuario set senha='${novaSenha}' where email='${email}'`, resposta);
 })
-/*rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
+rota.post("/alteraImgPerfil/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
-	const novoNome = requisicao.body.novoNome;
-    execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
+	const perfil = requisicao.body.novaImg;
+    execSQL(`update Usuario set imgPerfil ='${perfil}' where email='${email}'`, resposta);
 })
-rota.patch("/alteraNome/:email", (requisicao, resposta) =>{
+
+rota.post("/alteraImgFundo/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
-	const novoNome = requisicao.body.novoNome;
-    execSQL(`update Usuario set nome='${novoNome}' where email='${email}'`, resposta);
-})*/
+	const novaImg = requisicao.body.novaImg;
+    execSQL(`update Usuario set imgFundo='${novaImg}' where email='${email}'`, resposta);
+})
 
 
 rota.delete("/excluiConta/:email", (requisicao, resposta)=>{
 	const email = requisicao.params.email;
-	execSQL("delete from Usuario where email='"+ email, resposta);
+	execSQL(`delete from Usuario where email='${email}'`, resposta);
 })
 
 rota.get("/entrar/:email/:senha?", (requisicao, resposta) =>{
