@@ -110,7 +110,7 @@ function exibeQuiz(response)
          if(respostas[i] == assinalado[i])
           acertos++;
         
-        alert(acertos);
+        criaImgAlerta('informativoRanking');
         atualizaRanking(acertos);
     }
 
@@ -120,4 +120,14 @@ function exibeQuiz(response)
             url: "http://localhost:3000/ranking/" + window.sessionStorage.getItem("email"),
             type: 'post'
         })
+    }
+
+    function criaImgAlerta(qual)
+    {
+        var container = document.createElement("div");
+        container.className = 'container';
+        var img = document.createElement('img');
+        img.src = 'estilo/Imagens/' + qual + '.png';
+        container.appendChild(img);
+        document.getElementById('paginaQuiz').appendChild(container);
     }
