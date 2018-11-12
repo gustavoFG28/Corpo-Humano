@@ -33,7 +33,6 @@ function execSQL(sql, resposta) {
 	global.conexao.request()
 				  .query(sql)
 				  .then(resultado => resposta.json(resultado.recordset))
-          //.then(resultado => console.log(resultado.recordset))
 				  .catch(erro => resposta.json(erro));
 }
 
@@ -113,7 +112,8 @@ rota.patch("/alteraSenha/:email", (requisicao, resposta) =>{
 rota.post("/alteraImgPerfil/:email", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const perfil = requisicao.body.novaImg;
-    execSQL(`update Usuario set imgPerfil ='${perfil}' where email='${email}'`, resposta);
+	console.log(perfil);
+	console.log(`update Usuario set imgPerfil ='${perfil}' where email='${email}'`);
 })
 
 rota.post("/alteraImgFundo/:email", (requisicao, resposta) =>{

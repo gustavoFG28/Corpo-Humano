@@ -41,17 +41,17 @@ window.onload = function()
     document.getElementById("btnSubmitPerfil").onclick = function()
     {
         var img = document.getElementById("txtNovoPerfil").files[0];
-        if (img.size > 153600)
-        {
-            alert('Não será possível inserir esta imagem!');
-            return;
-        }
+        // if (img.size > 153600)
+        // {
+        //     alert('Não será possível inserir esta imagem!');
+        //     return;
+        // }
         var r = new FileReader();
         r.onload = function(e)
         {
-            imgPerfil = e.target.result;
             var obj = new Object();
-            obj.novaImg = imgPerfil;
+            obj.novaImg = e.target.result;
+            console.log(obj);
             $.ajax({
                 url: "http://localhost:3000/alteraImgPerfil/" + window.sessionStorage.getItem("email"),
                 type: 'post',
@@ -61,16 +61,16 @@ window.onload = function()
         }
         r.readAsDataURL(img);
         
-        return false; 
+         return false; 
     }
     document.getElementById("btnSubmitFundo").onclick = function()
     {
         var img = document.getElementById("txtNovoFundo").files[0];
-        if (img.size > 153600)
-        {
-            alert('Não será possível inserir esta imagem!');
-            return;
-        }
+        // if (img.size > 153600)
+        // {
+        //     alert('Não será possível inserir esta imagem!');
+        //     return;
+        // }
 
         var r = new FileReader();
         r.onload = function(e)
