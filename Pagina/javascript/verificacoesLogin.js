@@ -17,6 +17,10 @@ window.onload = function(){
 
 }
 
+$(document).keypress(function(e) {
+    if(e.which == 13) $('#btnLogin').click();
+});
+
 function verificaUsuario(responseText)
 { 
     var arr = JSON.parse(responseText);

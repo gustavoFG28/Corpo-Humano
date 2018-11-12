@@ -24,14 +24,6 @@ $("document").ready(function(){
     gerarSistemas();
 })  
 
-$(document).keypress(function(e) {
-    if(e.which == 13) 
-    {
-        atualizaRelatorio();
-        return false;
-    }
-});
-
 
 
 function gerarSistemas()
@@ -194,6 +186,8 @@ function criarRelatorio()
     document.getElementById("btnRetroceder").onclick = clickBtnRetroceder;
     document.getElementById("btnAvancar").onclick = clickBtnAvancar;
     document.getElementById("txtBuscaNome").onkeyup  = atualizaRelatorio;
+    document.getElementById("txtBuscaNome").onkeypress  = function(e){ if(e.which == 13) return false;} 
+
     ajaxRelatorio();
 }
 

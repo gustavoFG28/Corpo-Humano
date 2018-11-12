@@ -59,3 +59,15 @@ section.quadro div
     margin-bottom: 2%;
 }
 
+#cabecalho{
+  text-align: center;
+  font-family: Agency FB;
+  font-size: 32.5px;
+}
+
+#texto{
+    text-align: left;
+    font-family: Agency FB;
+    font-size: 22.5px;
+}
+
