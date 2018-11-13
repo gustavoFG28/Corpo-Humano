@@ -1,4 +1,5 @@
 ﻿const express = require('express');
+const fs = require('fs');
 const app = express();         
 const bodyParser = require('body-parser');
 const porta = 3000; //porta padrão
@@ -11,8 +12,8 @@ sql.connect(conexaoStr)
    .catch(erro => console.log(erro));
 
 // configurando o body parser para pegar POSTS mais tarde   
-app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ limit: '500gb', extended: true}));
+app.use(bodyParser.json({ limit: '500gb', extended: true}));
 //acrescentando informacoes de cabecalho para suportar o CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -84,7 +85,11 @@ execSQL("select * from Ranking" + filtro + " order by pontos desc", resposta);
 }) 
 
 rota.post("/ranking/:email/:pontos", (requisicao, resposta)=>{
+<<<<<<< HEAD
 	execSQL("insereRanking_sp '"+ requisicao.params.email+"', " + requisicao.params.pontos, resposta)
+=======
+	execSQL("insereRanking_sp '"+ requisicao.params.email +"',"+ requisicao.params.pontos, resposta)
+>>>>>>> 89be131b3084b758a36e0577ad96f13f279ab9f5
 })
 
 rota.get("/quiz/:dif?", (requisicao, resposta) =>{
@@ -109,17 +114,24 @@ rota.patch("/alteraSenha/:email", (requisicao, resposta) =>{
 	const novaSenha = requisicao.body.novaSenha;
     execSQL(`update Usuario set senha='${novaSenha}' where email='${email}'`, resposta);
 })
-rota.post("/alteraImgPerfil/:email", (requisicao, resposta) =>{
+rota.post("/alteraImgPerfil/:email/:nomeImg", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const perfil = requisicao.body.novaImg;
-	console.log(perfil);
-	console.log(`update Usuario set imgPerfil ='${perfil}' where email='${email}'`);
+	const caminho = 'estilo/uploadsPerfil/' + requisicao.params.nomeImg;
+	fs.writeFile(caminho, perfil, 'base64', function(err){
+		console.log(err);
+	});
+	execSQL("update Usuario set imgPerfil ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
 })
 
-rota.post("/alteraImgFundo/:email", (requisicao, resposta) =>{
+rota.post("/alteraImgFundo/:email/:nomeImg", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novaImg = requisicao.body.novaImg;
-    execSQL(`update Usuario set imgFundo='${novaImg}' where email='${email}'`, resposta);
+    const caminho = 'estilo/uploadsFundo/' + requisicao.params.nomeImg;
+	fs.writeFile(caminho, novaImg, 'base64', function(err){
+		console.log(err);
+	});
+	execSQL("update Usuario set imgFundo ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
 })
 
 
