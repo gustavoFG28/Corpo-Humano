@@ -120,8 +120,6 @@ function exibeInfoOrgao(response) {
         document.getElementById("pagina").removeChild(fundoPreto);
         document.getElementById("pagina").removeChild(div);
     }
-   
-   
 }
 
 function criarTabelaDosOrgaos(indice)
