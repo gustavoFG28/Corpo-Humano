@@ -41,19 +41,15 @@ window.onload = function()
     document.getElementById("btnSubmitPerfil").onclick = function()
     {
         var img = document.getElementById("txtNovoPerfil").files[0];
-        // if (img.size > 153600)
-        // {
-        //     alert('Não será possível inserir esta imagem!');
-        //     return;
-        // }
+
         var r = new FileReader();
         r.onload = function(e)
         {
-            var obj = new Object();
-            obj.novaImg = e.target.result;
-            console.log(obj);
+            var obj = new Object(); 
+            var perfil = e.target.result.split(',');
+            obj.novaImg = perfil[1];
             $.ajax({
-                url: "http://localhost:3000/alteraImgPerfil/" + window.sessionStorage.getItem("email"),
+                url: "http://localhost:3000/alteraImgPerfil/" + window.sessionStorage.getItem("email") +'/'+ $('#caminhoNovoPerfil').val(),
                 type: 'post',
                 data: obj
             })
@@ -66,20 +62,15 @@ window.onload = function()
     document.getElementById("btnSubmitFundo").onclick = function()
     {
         var img = document.getElementById("txtNovoFundo").files[0];
-        // if (img.size > 153600)
-        // {
-        //     alert('Não será possível inserir esta imagem!');
-        //     return;
-        // }
 
         var r = new FileReader();
         r.onload = function(e)
         {
-            imgFundo = e.target.result;
+            imgFundo = e.target.result.split(',');
             var obj = new Object();
-            obj.novaImg = imgFundo;
+            obj.novaImg = imgFundo[1];
             $.ajax({
-                url: "http://localhost:3000/alteraImgFundo/" + window.sessionStorage.getItem("email"),
+                url: "http://localhost:3000/alteraImgFundo/" + window.sessionStorage.getItem("email") + '/'+ $("#caminhoNovoFundo").val(),
                 type: 'post',
                 data: obj
             })
