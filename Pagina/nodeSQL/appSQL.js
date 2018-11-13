@@ -85,7 +85,15 @@ execSQL("select * from Ranking" + filtro + " order by pontos desc", resposta);
 }) 
 
 rota.post("/ranking/:email/:pontos", (requisicao, resposta)=>{
+<<<<<<< HEAD
 	execSQL("insereRanking_sp '"+ requisicao.params.email +"', "+ requisicao.params.pontos, resposta)
+=======
+<<<<<<< HEAD
+	execSQL("insereRanking_sp '"+ requisicao.params.email+"', " + requisicao.params.pontos, resposta)
+=======
+	execSQL("insereRanking_sp '"+ requisicao.params.email +"',"+ requisicao.params.pontos, resposta)
+>>>>>>> 89be131b3084b758a36e0577ad96f13f279ab9f5
+>>>>>>> dfe33de1d893af0b7c348d555cee3df91bab5944
 })
 
 rota.get("/quiz/:dif?", (requisicao, resposta) =>{
