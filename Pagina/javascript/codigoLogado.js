@@ -19,8 +19,17 @@ function carregarInfo(responseText)
 
    document.getElementById("nomeUsuario").innerHTML = arr[0].nome;
    document.getElementById("emailUsuario").innerHTML = arr[0].email;
-   document.getElementById("imgPerfilUsuario").src = arr[0].imgPerfil;
+   
+   document.getElementById("imgPerfilUsuario").onerror = deuErroNaImagem;
+   document.getElementById("imgFundoUsuario").onerror = deuErroNaImagem;
+
+   document.getElementById("imgFundoUsuario").style.backgroundImage = `url('${arr[0].imgPerfil}')`;
    document.getElementById("imgFundoUsuario").style.backgroundImage = `url('${arr[0].imgFundo}')`;
    document.getElementById("quizBasico").href = "quiz.html?valor=basico";
    document.getElementById("quizAvancado").href = "quiz.html?valor=avancado";
+}
+
+function deuErroNaImagem()
+{
+    this.style.backgroundImage = "url('estilo/Imagens/fundo.png')";
 }

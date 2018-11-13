@@ -127,12 +127,12 @@ rota.post("/alteraImgFundo/:email/:nomeImg", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novaImg = requisicao.body.novaImg;
 	const caminho = 'estilo/uploadsFundo/' + requisicao.params.nomeImg;
-	// if(!fs.existsSync(caminho))
-	// {
-	// 	fs.writeFile(caminho, novaImg, 'base64', function(err){
-	// 	});
-	// 	execSQL("update Usuario set imgFundo ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
-	// }
+	if(!fs.existsSync(caminho))
+	{
+	fs.writeFile(caminho, novaImg, 'base64', function(err){
+	});
+	execSQL("update Usuario set imgFundo ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
+	}
 	
 })
 

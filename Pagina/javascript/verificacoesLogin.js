@@ -34,7 +34,15 @@ function verificaUsuario(responseText)
         
             document.getElementById("pagina").appendChild(div);
             document.getElementById("divAlerta").appendChild(divImg);
+
             
+           setTimeout(function(){$('#divAlerta').fadeOut();
+           setTimeout(function(){document.getElementById("pagina").removeChild(div);}, 200)
+           }, 3000); 
+           document.getElementById("txtEmail").value = "";
+           document.getElementById("txtSenha").value = "";
+           document.getElementById("txtEmail").focus(); 
+           
     }
     else  
     {

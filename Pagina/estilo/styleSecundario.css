@@ -62,13 +62,17 @@ section.quadro div
 #cabecalho{
   text-align: center;
   font-family: Agency FB;
-  font-size: 32.5px;
+  font-size: 32px;
 }
 
 #texto{
     text-align: left;
     font-family: Agency FB;
     font-size: 22.5px;
+}
+
+#divSobreNos{
+    margin-bottom: 0.7%;
 }
 
 #informativo {
@@ -95,4 +99,13 @@ section.quadro div
 #pontuacao{
     position: relative;
     top: 50%;
+}
+
+#frmCadastro
+{
+    margin-bottom: 6.2%;
+}
+#frmQuiz p
+{
+    padding-bottom: 15px;
 }

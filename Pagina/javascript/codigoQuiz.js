@@ -32,6 +32,8 @@ window.onload = function()
           url: "http://localhost:3000/ranking/" + window.sessionStorage.getItem("email") + "/" + acertos,
           type: 'post'
       })
+
+      window.location.href = 'indexLogado.html';
       return false;
    }
 }
