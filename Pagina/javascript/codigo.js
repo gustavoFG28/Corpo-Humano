@@ -256,13 +256,3 @@ function exibeNomesRelatorio(response)
     else
         document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light";      
 }
-
-function criaImgAlerta(qual)
-{
-    var container = document.createElement("div");
-    container.className = 'container';
-    var img = document.createElement('img');
-    img.src = 'estilo/Imagens/' + qual + '.png';
-    container.appendChild(img);
-    document.appendChild(container);
-}
