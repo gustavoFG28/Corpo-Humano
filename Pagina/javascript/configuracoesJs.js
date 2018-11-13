@@ -41,16 +41,14 @@ window.onload = function()
     document.getElementById("btnSubmitPerfil").onclick = function()
     {
         var img = document.getElementById("txtNovoPerfil").files[0];
-
         var r = new FileReader();
         r.onload = function(e)
         {
-            debugger;
             var obj = new Object(); 
             var perfil = e.target.result.split(',');
-            obj.novaImg = perfil[1];
+            obj.dataImagem = perfil[1];
             $.ajax({
-                url: "http://localhost:3000/alteraImgPerfil/" + window.sessionStorage.getItem("email") +'/'+ $('#caminhoNovoPerfil').val(),
+                url: "http://localhost:3000/alterarPerfil/" + window.sessionStorage.getItem("email") +'/'+ $('#caminhoNovoPerfil').val(),
                 type: 'post',
                 data: obj
             })
