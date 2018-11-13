@@ -45,6 +45,7 @@ window.onload = function()
         var r = new FileReader();
         r.onload = function(e)
         {
+            debugger;
             var obj = new Object(); 
             var perfil = e.target.result.split(',');
             obj.novaImg = perfil[1];

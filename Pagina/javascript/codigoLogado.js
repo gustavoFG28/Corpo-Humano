@@ -20,7 +20,7 @@ function carregarInfo(responseText)
    document.getElementById("nomeUsuario").innerHTML = arr[0].nome;
    document.getElementById("emailUsuario").innerHTML = arr[0].email;
    document.getElementById("imgPerfilUsuario").src = arr[0].imgPerfil;
-   document.getElementById("imgFundoUsuario").src = arr[0].imgFundo;
+   document.getElementById("imgFundoUsuario").style.backgroundImage = `url('${arr[0].imgFundo}')`;
    document.getElementById("quizBasico").href = "quiz.html?valor=basico";
    document.getElementById("quizAvancado").href = "quiz.html?valor=avancado";
 }

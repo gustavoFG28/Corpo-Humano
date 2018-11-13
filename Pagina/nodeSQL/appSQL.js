@@ -85,15 +85,7 @@ execSQL("select * from Ranking" + filtro + " order by pontos desc", resposta);
 }) 
 
 rota.post("/ranking/:email/:pontos", (requisicao, resposta)=>{
-<<<<<<< HEAD
-	execSQL("insereRanking_sp '"+ requisicao.params.email +"', "+ requisicao.params.pontos, resposta)
-=======
-<<<<<<< HEAD
-	execSQL("insereRanking_sp '"+ requisicao.params.email+"', " + requisicao.params.pontos, resposta)
-=======
-	execSQL("insereRanking_sp '"+ requisicao.params.email +"',"+ requisicao.params.pontos, resposta)
->>>>>>> 89be131b3084b758a36e0577ad96f13f279ab9f5
->>>>>>> dfe33de1d893af0b7c348d555cee3df91bab5944
+	execSQL("insereRanking_sp '"+ requisicao.params.email +"', "+ requisicao.params.pontos, resposta);
 })
 
 rota.get("/quiz/:dif?", (requisicao, resposta) =>{
@@ -122,20 +114,26 @@ rota.post("/alteraImgPerfil/:email/:nomeImg", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const perfil = requisicao.body.novaImg;
 	const caminho = 'estilo/uploadsPerfil/' + requisicao.params.nomeImg;
-	fs.writeFile(caminho, perfil, 'base64', function(err){
-		console.log(err);
-	});
-	execSQL("update Usuario set imgPerfil ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
+	if(!fs.existsSync(caminho))
+	{
+		fs.writeFile(caminho, perfil, 'base64', function(err){
+		});
+		execSQL("update Usuario set imgPerfil ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
+	}
+	
 })
 
 rota.post("/alteraImgFundo/:email/:nomeImg", (requisicao, resposta) =>{
 	const email = requisicao.params.email;
 	const novaImg = requisicao.body.novaImg;
-    const caminho = 'estilo/uploadsFundo/' + requisicao.params.nomeImg;
-	fs.writeFile(caminho, novaImg, 'base64', function(err){
-		console.log(err);
-	});
-	execSQL("update Usuario set imgFundo ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
+	const caminho = 'estilo/uploadsFundo/' + requisicao.params.nomeImg;
+	// if(!fs.existsSync(caminho))
+	// {
+	// 	fs.writeFile(caminho, novaImg, 'base64', function(err){
+	// 	});
+	// 	execSQL("update Usuario set imgFundo ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
+	// }
+	
 })
 
 
