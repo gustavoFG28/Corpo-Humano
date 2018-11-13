@@ -1,6 +1,7 @@
 var pagina;
 var respostas = new Array;
 var assinalado = new Array;
+var acertos = 0;
 function iniciaAjax()
 {
     var objetoAjax;
@@ -23,6 +24,16 @@ window.onload = function()
    var url = new URL(this.location.href);
    var valor = url.searchParams.get("valor");
    gerarQuiz(valor); 
+   $('.modal').modal();
+
+   document.getElementById("btnSubmitRanking").onclick = function()
+   {
+      $.ajax({
+          url: "http://localhost:3000/ranking/" + window.sessionStorage.getItem("email") + "/" + acertos,
+          type: 'post'
+      })
+      return false;
+   }
 }
 
 function gerarQuiz(valor)
@@ -87,17 +98,12 @@ function exibeQuiz(response)
             
         } 
         var btn = document.createElement("a");
-        btn.className = 'waves-effect waves-light btn';
+        btn.className = "btn waves-effect waves-light  modal-trigger";
+        btn.href="#enviarInformacoes";
         btn.innerHTML = "<i class='material-icons'>save</i>";
         btn.id = 'btnSubmit';
-        btn.onclick =  function()
-        {
-            corrigirResposta();
-            location.href = 'quiz.html?' + valor;
-            return false;
-        }
+        btn.onclick =  function(){ corrigirResposta(); }
         form.appendChild(btn);
-    
     }
    function respostaUsuario()
    {
@@ -105,29 +111,19 @@ function exibeQuiz(response)
    }
     function corrigirResposta()
     {
-        var acertos = 0;
         for(var i =0; i < 9; i++)
          if(respostas[i] == assinalado[i])
           acertos++;
         
-        criaImgAlerta('informativoRanking');
-        atualizaRanking(acertos);
+        criaImgAlerta();
     }
 
-    function atualizaRanking(acertos)
+    function criaImgAlerta()
     {
-        $.ajax({
-            url: "http://localhost:3000/ranking/" + window.sessionStorage.getItem("email"),
-            type: 'post'
-        })
-    }
-
-    function criaImgAlerta(qual)
-    {
-        var container = document.createElement("div");
-        container.className = 'container';
-        var img = document.createElement('img');
-        img.src = 'estilo/Imagens/' + qual + '.png';
-        container.appendChild(img);
-        document.getElementById('paginaQuiz').appendChild(container);
+        var div = document.getElementById("imgRanking");
+        var texto = document.createElement("h1");
+        texto.id = "pontuacao";
+        texto.className = "titulo";
+        texto.innerHTML = "Parabéns, a <br> sua pontuação <br> foi de "+ acertos+"/9";
+        div.appendChild(texto);
     }
