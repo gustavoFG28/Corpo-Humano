@@ -84,7 +84,7 @@ execSQL("select * from Ranking" + filtro + " order by pontos desc", resposta);
 }) 
 
 rota.post("/ranking/:email/:pontos", (requisicao, resposta)=>{
-	execSQL(`insereRanking_sp '${requisicao.params.email}, ${requisicao.params.pontos}`, resposta)
+	execSQL("insereRanking_sp '"+ requisicao.params.email+"', " + requisicao.params.pontos, resposta)
 })
 
 rota.get("/quiz/:dif?", (requisicao, resposta) =>{
