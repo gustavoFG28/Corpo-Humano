@@ -26,7 +26,16 @@ function verificaUsuario(responseText)
     var arr = JSON.parse(responseText);
 
     if(arr[0] == null)
-        alert("Senha ou email incorretos!");
+    {   
+            var div = document.createElement("div");
+            div.id = "divAlerta";
+            var divImg = document.createElement("div");
+            divImg.id = "divImgAlerta";
+        
+            document.getElementById("pagina").appendChild(div);
+            document.getElementById("divAlerta").appendChild(divImg);
+            
+    }
     else  
     {
         login();
