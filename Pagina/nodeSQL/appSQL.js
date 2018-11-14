@@ -116,24 +116,24 @@ rota.post('/alterarPerfil/:email/:novaImagem', (requisicao, resposta) =>{
 	const data = requisicao.body.dataImagem;
 	let caminho = 'estilo/uploadsPerfil/' + requisicao.params.novaImagem;
 	fs.writeFile(caminho, data, 'base64', (err)=>{
-		console.log(err);
-	})
-	caminho = 'nodeSql/' + caminho; 
-	execSQL(`update Usuario set imgPerfil='${caminho}' where email='${email}'`, resposta);
+		if(err)
+			console.log(err);
+		caminho = 'nodeSql/' + caminho; 
+		execSQL(`update Usuario set imgPerfil='${caminho}' where email='${email}'`, resposta);
+	});
 })
 
-// rota.post("/alteraImgFundo/:email/:nomeImg", (requisicao, resposta) =>{
-// 	const email = requisicao.params.email;
-// 	const novaImg = requisicao.body.novaImg;
-// 	const caminho = 'estilo/uploadsFundo/' + requisicao.params.nomeImg;
-// 	if(!fs.existsSync(caminho))
-// 	{
-// 	fs.writeFile(caminho, novaImg, 'base64', function(err){
-// 	});
-// 	execSQL("update Usuario set imgFundo ='"+ 'nodeSql/' + caminho + `' where email='${email}'`);
-// 	}
-	
-// })
+rota.post("/alterarFundo/:email/:novaImagem", (requisicao, resposta) =>{
+	const email = requisicao.params.email;
+	const data = requisicao.body.dataImagem;
+	let caminho = 'estilo/uploadsFundo/' + requisicao.params.novaImagem;
+	fs.writeFile(caminho, data, 'base64', function(err){
+		if(err)
+			console.log(err);
+		caminho = 'nodeSql/' + caminho; 
+		execSQL(`update Usuario set imgFundo='${caminho}' where email='${email}'`, resposta);
+	});	
+})
 
 
 rota.delete("/excluiConta/:email", (requisicao, resposta)=>{

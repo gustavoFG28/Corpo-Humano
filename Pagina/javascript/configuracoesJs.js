@@ -51,8 +51,10 @@ window.onload = function()
                 url: "http://localhost:3000/alterarPerfil/" + window.sessionStorage.getItem("email") +'/'+ $('#caminhoNovoPerfil').val(),
                 type: 'post',
                 data: obj
+            }).done(function(){
+                window.location.href = "configuracoes.html";
             })
-            location.href = "configuracoes.html";
+            
         }
         r.readAsDataURL(img);
         
@@ -65,15 +67,17 @@ window.onload = function()
         var r = new FileReader();
         r.onload = function(e)
         {
-            imgFundo = e.target.result.split(',');
+            fundo = e.target.result.split(',');
             var obj = new Object();
-            obj.novaImg = imgFundo[1];
+            obj.dataImagem = fundo[1];
             $.ajax({
-                url: "http://localhost:3000/alteraImgFundo/" + window.sessionStorage.getItem("email") + '/'+ $("#caminhoNovoFundo").val(),
+                url: "http://localhost:3000/alterarFundo/" + window.sessionStorage.getItem("email") + '/'+ $("#caminhoNovoFundo").val(),
                 type: 'post',
                 data: obj
+            }).done(function(){
+                window.location.href = "configuracoes.html";
             })
-            location.href = "configuracoes.html";
+            
         }
         r.readAsDataURL(img);
         
