@@ -1,3 +1,5 @@
+-- Criação das tabelas
+
 create table Sistema(
 codigoSistema int primary key not null,
 nome varchar(50) not null,
@@ -50,12 +52,13 @@ pontos int not null,
 data datetime not null
 )
 
+alter table Quiz add dificuldade varchar(10)
 alter table Usuario add imagem varchar(50)
 alter table Usuario add imgFundo varchar(50)
 alter table Usuario drop column sobrenome
 
-select * from Sistema
-select * from Orgao
+
+-- Inserção de Valores
 
 insert into Sistema values(1, 'Sistema Digestório', 'O Sistema Digestório é formado por um conjunto de órgãos cuja função é transformar os alimentos,
 por meio de processos mecânicos e químicos. É constítuido pela boca, faringe, esôfago, estômago, intestino delgado e intestino grosso. Além de órgãos

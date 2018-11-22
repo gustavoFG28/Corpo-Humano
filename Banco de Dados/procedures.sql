@@ -1,13 +1,4 @@
-select * from Usuario
-sp_help Usuario
-
-select * from Acesso
-delete from Acesso
-select * from Quiz where dificuldade = 'avancado'
-
-alter table Quiz add dificuldade varchar(10)
-update Quiz set opcaoC = 'hímen, menstruação, transportar.' where codigoQuiz = 8
-
+-- Procedure para efetuar cadastro
 create proc cadastrar_sp
 @nome varchar(30) = null,
 @senha varchar(30) = null,
@@ -18,25 +9,21 @@ as
 declare @cod int
 select @cod = COUNT(*) + 1 from Usuario
 begin transaction
-insert into Usuario values(@cod, @nome, @senha, @email,@img,@fundo)
-if((select count(*) from Usuario where email = @email)>1)
- rollback transaction
- else 
- begin 
-  select * from Usuario where codigoUsuario = @cod
-  commit transaction
-end
+	insert into Usuario values(@cod, @nome, @senha, @email,@img,@fundo)
+	if((select count(*) from Usuario where email = @email)>1)
+		rollback transaction
+	else 
+		begin 
+			select * from Usuario where codigoUsuario = @cod
+			commit transaction
+		end
 
-cadastrar_sp 'Gustavo' ,'123', 'g@gmail.com' ,'null' ,null
-
-delete from Usuario where codigoUsuario>1
-  
+-- Procedure para efetuar login
 create proc login_sp
 @email varchar(40) = null,
 @senha varchar(30) = null
 as
 declare @codigoUsuario int
-
 if exists(select codigoUsuario from Usuario where email = @email and senha = @senha)
 begin
 	select  @codigoUsuario = codigoUsuario from Usuario where email = @email and senha = @senha
@@ -46,20 +33,12 @@ begin
 	select @idAcesso = count(*)+1 from Acesso
 	insert into Acesso values(@idAcesso, @data, @codigoUsuario)
 end
- select codigoUsuario from Usuario where email = @email and senha = @senha
+select codigoUsuario from Usuario where email = @email and senha = @senha
 
 
-create trigger deletaUsuario_tg on Usuario
-instead of delete
-as
 
 
-select * from Acesso
-
-delete from Acesso
-
-select * from Quiz
-sp_help Quiz
+-- Inserindo valores no quiz
 
 insert into Quiz values(1,'1 - Quais é o nome da principal Artéria que leva o sangue arterial do coração para o restante do corpo?',
 'd','a) Artéria pulmonar','b) Artéria Axilar','c) Artéria Radial','d) Artéria Aorta',null)
