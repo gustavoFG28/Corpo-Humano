@@ -12,9 +12,7 @@ window.onload = function(){
     
         ajax.open("GET", url, true);
         ajax.send();
-
     }
-
 }
 
 $(document).keypress(function(e) {

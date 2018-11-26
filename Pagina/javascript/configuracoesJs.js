@@ -13,6 +13,7 @@ window.onload = function()
         location.href = "configuracoes.html";
         return false; 
     }
+
     document.getElementById("btnSubmitEmail").onclick = function()
     {
         var obj = new Object();
@@ -26,6 +27,7 @@ window.onload = function()
         window.sessionStorage.setItem("email", obj.novoEmail)
         return false; 
     }
+
     document.getElementById("btnSubmitSenha").onclick = function()
     {
         var obj = new Object();
@@ -38,6 +40,7 @@ window.onload = function()
         location.href = "configuracoes.html";
         return false; 
     }
+
     document.getElementById("btnSubmitPerfil").onclick = function()
     {
         var img = document.getElementById("txtNovoPerfil").files[0];
@@ -60,6 +63,7 @@ window.onload = function()
         
          return false; 
     }
+    
     document.getElementById("btnSubmitFundo").onclick = function()
     {
         var img = document.getElementById("txtNovoFundo").files[0];

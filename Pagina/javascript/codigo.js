@@ -24,8 +24,6 @@ $("document").ready(function(){
     gerarSistemas();
 })  
 
-
-
 function gerarSistemas()
 {
     var campo = document.getElementById("areaSistemas");
@@ -42,8 +40,10 @@ function gerarSistemas()
         div1.appendChild(icone);
         indice++
     }
+
     var div2 = document.createElement("div");
     div2.className = "col s12 m6";
+
     for(var i = 1; i <= 5; i++)
     {
         var icone = document.createElement("img");
@@ -54,6 +54,7 @@ function gerarSistemas()
         div2.appendChild(icone);
         indice++;
     }
+
     campo.appendChild(div1);
     campo.appendChild(div2);
 }
@@ -67,9 +68,9 @@ function atualizaPrincipal()
         criarTabelaDosOrgaos(this.id);
     }
     else
-        criarRelatorio();
-   
+        criarRelatorio();   
 }
+
 function criarDivOrgao(onde)
 {
     var fundoPreto = document.createElement("div");
@@ -88,10 +89,7 @@ function criarDivOrgao(onde)
 
     ajax.open("GET", url, true);
     ajax.send();
-
-    
 }
-
 
 function exibeInfoOrgao(response) {
     var arr = JSON.parse(response);
@@ -110,7 +108,7 @@ function exibeInfoOrgao(response) {
     for(var i = 1 ; i < sub.length;i++)
        out+= "<a class='linkTextoOrgao' target='_blank' href='http"+sub[i]+"'> http"+sub[i]+"</a>";
     
-     out+="</p></div><button id='btnSair' class='btn-floating waves-effect'><i class='material-icons'>close</i></button>" ;
+    out+="</p></div><button id='btnSair' class='btn-floating waves-effect'><i class='material-icons'>close</i></button>" ;
 
     div.innerHTML = out;
 
@@ -250,7 +248,6 @@ function exibeNomesRelatorio(response)
     else
         document.getElementById("btnRetroceder").className = "btn-floating waves-effect waves-light";
     
-   
     if(pagina == Math.trunc(obj.length / 5)|| (pagina + 1  == obj.length/5 && obj.length%5 == 0))
         document.getElementById("btnAvancar").className = "btn-floating waves-effect waves-light disabled"; 
     else

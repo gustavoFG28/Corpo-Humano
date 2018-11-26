@@ -1,4 +1,5 @@
 var imgPerfil, imgFundo;
+
 window.onload = function()
 {
     document.getElementById("txtNome").onchange = function(){
@@ -8,15 +9,13 @@ window.onload = function()
         verificaEmail();
     }
     document.getElementById("txtConfirmaSenha").onchange = function(){
-          verificaSenha();
+          verificaSenha(this);
     }
     document.getElementById("txtSenha").onchange = function(){
-        verificaSenha();
+        verificaSenha(this);
     }
     document.getElementById("btnSubmit").onclick = function(){
         cadastrar();
-        window.sessionStorage.setItem("email", document.getElementById("txtEmail").value);
-        location.href = 'indexLogado.html';
     }
 }
 
@@ -40,6 +39,12 @@ function verificaNome()
     var regExNome = /[A-Z][a-z]*( [a-z|A-Z][a-z]*)*/;
     var nomeEstaCerto = regExNome.test(nome.value);
 
+    if(!nomeEstaCerto)
+        $("#nomeErro").html("Escreva seu nome corretamente incluindo letras maiúsculas!");
+    else
+        $("#nomeErro").html("");
+    
+
     return atualizaCampo(nomeEstaCerto, nome);
 }
 
@@ -49,31 +54,32 @@ function verificaEmail()
     var regExEmail = /[A-Z|a-z]*\@[A-Z|a-z]*\.[a-z]*/;
     var emailEstaCerto = regExEmail.test(email.value);
 
+    if(!emailEstaCerto)
+        $("#emailErro").html("Escreva seu email corretamente!");
+    else
+        $("#emailErro").html("");
+
     return atualizaCampo(emailEstaCerto, email);
 }
-function verificaSenha()
-{
-    if(document.getElementById("txtConfirmaSenha").value !=  document.getElementById("txtSenha").value){
-        atualizaCampo(false,document.getElementById("txtSenha"));
-        return atualizaCampo(false, document.getElementById("txtConfirmaSenha"));
-    }
-     else{
-        atualizaCampo(true, document.getElementById("txtConfirmaSenha"));
-        return atualizaCampo(true,document.getElementById("txtSenha"));
-     }  
-      
-}
-//function verificaImgPerfil()
-//{
-    // var img = document.getElementById("inputImgPerfil").files[0];
-    // var r = new FileReader();
-    // r.onload = function(e)
-    // {
-    //     imgPerfil = e.target.result;
-    // }
-    // r.readAsDataURL(img);
-//}
 
+function verificaSenha(obj)
+{
+    if(obj.value == "" || obj.value.length < 8)
+        return atualizaCampo(false,obj);
+    
+    if($("#txtConfirmaSenha").val() == "")
+        return atualizaCampo(true,obj);
+    else
+        if($("#txtSenha").val() != $("#txtConfirmaSenha").val())
+        {
+            atualizaCampo(false, document.getElementById("txtSenha"));
+            return atualizaCampo(false, document.getElementById("txtConfirmaSenha"));
+        }
+        
+    
+    atualizaCampo(true, document.getElementById("txtSenha"));
+    return atualizaCampo(true, document.getElementById("txtConfirmaSenha"));
+}
 
 function atualizaCampo(estaCorreto, campo)
 {
@@ -97,6 +103,7 @@ function atualizaCampo(estaCorreto, campo)
     }
     return estaCorreto;
 }
+
 function cadastrar()
 {
    if(verificacoesFinais())
@@ -110,5 +117,8 @@ function cadastrar()
             });
         alert(data.mensagem);
         });
+
+        window.sessionStorage.setItem("email", document.getElementById("txtEmail").value);
+        location.href = 'indexLogado.html';
    }
 }
