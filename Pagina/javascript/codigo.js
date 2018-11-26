@@ -233,11 +233,11 @@ function atualizaRelatorio()
 function exibeNomesRelatorio(response)
 {
     var obj = JSON.parse(response);
-    var out = "<th>Usuário</th><th>Pontuação</th>";
+    var out = "<th>Posição</th><th>Usuário</th><th>Pontuação</th>";
     var indice = 0;
     for(var i = pagina * 5; i < obj.length; i++)
     {
-        out +=  "<tr><td>" + obj[i].nome + "</td><td>" + obj[i].pontos + "</td></tr>";
+        out +=  "<tr><td>" + (i + 1) + "</td><td>" + obj[i].nome + "</td><td>" + obj[i].pontos + "</td></tr>";
         indice++;
         if(indice == 5)
             break;
