@@ -1,4 +1,4 @@
-var imgPerfil, imgFundo;
+﻿var imgPerfil, imgFundo;
 
 window.onload = function()
 {
@@ -55,7 +55,7 @@ function verificaEmail()
     var emailEstaCerto = regExEmail.test(email.value);
 
     if(!emailEstaCerto)
-        $("#emailErro").html("Escreva seu email corretamente!");
+        $("#emailErro").html("Escreva seu email corretamente! EX: nome@dominio.com");
     else
         $("#emailErro").html("");
 
@@ -65,18 +65,26 @@ function verificaEmail()
 function verificaSenha(obj)
 {
     if(obj.value == "" || obj.value.length < 8)
+    {
+        $("#senhaErro").html("8 caracteres requeridos!");
         return atualizaCampo(false,obj);
+    }
+        
     
     if($("#txtConfirmaSenha").val() == "")
+    {
+        $("#senhaErro").html("");
         return atualizaCampo(true,obj);
+    }
     else
         if($("#txtSenha").val() != $("#txtConfirmaSenha").val())
         {
+            $("#senhaErro").html("Os campos referentes as senhas estão diferentes!");
             atualizaCampo(false, document.getElementById("txtSenha"));
             return atualizaCampo(false, document.getElementById("txtConfirmaSenha"));
         }
         
-    
+    $("#senhaErro").html("");
     atualizaCampo(true, document.getElementById("txtSenha"));
     return atualizaCampo(true, document.getElementById("txtConfirmaSenha"));
 }
