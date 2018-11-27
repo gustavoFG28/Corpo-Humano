@@ -1,4 +1,4 @@
-var imgPerfil, imgFundo;
+﻿var imgPerfil, imgFundo;
 
 window.onload = function()
 {
@@ -64,7 +64,7 @@ function verificaEmail()
 
 function verificaSenha(obj)
 {
-    if(obj.value == "" || obj.value.length < 8)
+    if($("#txtSenha").val() == "" || document.getElementById("txtSenha").value.length < 8)
         return atualizaCampo(false,obj);
     
     if($("#txtConfirmaSenha").val() == "")
